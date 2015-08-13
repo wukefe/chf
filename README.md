@@ -9,7 +9,7 @@ Some useful links
 Start to study Java (in depth)
 
 ### eli
-ELI is influenced by [APL](https://en.wikipedia.org/wiki/APL_(programming_language)) and [K,Q](kx.com).  ELI preserves the concise style of APL programming while adopting ASCII characters to present APL symbols.  In fact, ELI only has one or two characters (in most cases, the second character is a dot).  It follows the APL1 standard, but it also contains more advanced features such as **list**, **dictionary** and **table**.
+ELI is influenced by [APL](https://en.wikipedia.org/wiki/APL_(programming_language)) and [K,Q](http://kx.com/).  ELI preserves the concise style of APL programming while adopting ASCII characters to present APL symbols.  In fact, ELI only has one or two characters (in most cases, the second character is a dot).  It follows the APL1 standard, but it also contains more advanced features such as **list**, **dictionary** and **table**.
 
 More details can be found at: http://fastarray.appspot.com
 
