@@ -1,4 +1,4 @@
-# ELI, a System for Programming with Arrays
+# Release Note (v0.3)
 <!--![ELI Icon](http://fastarray.appspot.com/favicon.ico)-->
 
 <!--[TOC]-->

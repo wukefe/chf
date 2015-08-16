@@ -6,8 +6,9 @@ Contents:
 .. toctree::
    :maxdepth: 1
    
-   Introduction
+   Install
    Eli-v0.3
+   DemoScript
    
 Links:
 
