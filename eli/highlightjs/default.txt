@@ -1,0 +1,89 @@
+@.z<-a add b
+z<-a + b
+@.
+
+    10 26 22
+
+        2*0,!10               //append 0 in front of 1..10, and double it
+    0 2 4 6 8 10 12 14 16 18 20
+        2*.0,!10              //2 to the power of 0..10
+    1 2 4 8 16 32 64 128 256 512 1024
+        %1 2 3 5 10           //1 divided by 1 2 3 5 10
+    1 0.5 0.3333333333 0.2 0.1
+        1024*.%1 2 3 5 10     //1024 takes 1 root, square root, cube root, ..
+    1024 32 10.0793684 4 2
+        1-2                   //1 minus 2
+    _1
+
+        _1*.0.5               //square root of minus 1
+    0j1
+        @1                    //pi
+    3.141592654
+        *.0j1*@1              //ei¦° = -1
+    _1
+
+        2012.12.25+!7         //7 days following Christmas of 2012
+    2012.12.26 2012.12.27 2012.12.28 2012.12.29 2012.12.30 2012.12.31 2013.01.01
+        w<-10?.100            //get 10 random numbers from 1..100
+        w
+    14 76 46 54 22 5 68 94 39 52
+        w<50                  //compare w with 50
+    1 0 1 0 1 1 0 0 1 0
+        (w<50)/w              //select elements in w which are less than 50
+    14 46 22 5 39
+        +\(w<50)/w            //partial sums of the vector above
+    14 60 82 87 126
+
+        $_10+5*!10            //reverse of _10 add to 5 10 .. 50
+    40 35 30 25 20 15 10 5 0 _5
+        32+1.8*c<-$_10+5*!10  //Fahrenheit correspond to Celsius above
+    104 95 86 77 68 59 50 41 32 23
+        c,[1.5]32+1.8*c<-$_10+5*!10   //a table of temperature conversion
+     40 104
+     35 95
+     30 86
+     25 77
+     20 68
+     15 59
+     10 50
+      5 41
+      0 32
+     _5 23
+
+        (2 3#!6;`ny `ma `md;'ABCDE')   //a list of numbers, symbols, chars
+     <1 2 3
+      4 5 6
+     <`ny `ma `md
+     <ABCDE
+        #"(2 3#!6;`ny `ma `md;'ABCDE') //shape of each element in the list
+     <2 3
+     <3
+     <5 
+
+        D<-(`sym `price `hq:(`appl `ibm `hp `goog;449.1 108.2 24.5 890.3;4 2#'CANYCACA'))
+        D
+    sym  | appl ibm hp goog
+    price| 449.1 108.2 24.5 890.3
+    hq   | 'CANYCACA'
+        &.D
+    sym  price hq
+    -------------
+    appl 449.1 CA
+    ibm  108.2 NY
+    hp   24.5  CA
+    goog 890.3 CA
+        T<-([]sym<-`appl `ibm `hp `goog;price<-449.1 108.2 24.5 890.3;hq<-4 2#'CANYCACA')
+        T
+    sym  price hq
+    -------------
+    appl 449.1 CA
+    ibm  108.2 NY
+    hp   24.5  CA
+    goog 890.3 CA
+        do 'SELECT sym,hq FROM T WHERE price>100'
+    sym  hq
+    -------
+    appl CA
+    ibm  NY
+    goog CA
+    SELECT successful. 

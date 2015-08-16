@@ -1,4 +1,4 @@
-# ELI Studion Video Tutorial
+# ELI Studio Video Tutorial
 
 ## Installation
 
