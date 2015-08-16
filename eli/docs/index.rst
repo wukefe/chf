@@ -1,24 +1,7 @@
-.. ELI documentation master file, created by
-   sphinx-quickstart on Sun Aug 16 03:39:32 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to ELI's documentation!
 ===============================
 
-Contents:
+## ELI Studio v0.3
 
-.. toctree::
-   :maxdepth: 2
-   
-   Introduction
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+See [release note](Eli-v0.3.html)
 
