@@ -1,0 +1,12 @@
+# ReadMe
+
+## Convert `md` to `rst`
+
+ pandoc: https://github.com/jgm/pandoc
+command: pandoc --from=markdown --to=rst --output=demo.rst demo.md
+
+
+## Scripts
+
+   r.bat: works on Windows, compile and display homepage
+make.bat: be invoked by `r.bat`

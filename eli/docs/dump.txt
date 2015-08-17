@@ -1,0 +1,49 @@
+.. display code - but eli has not been supported
+   so we change to html embed (veto)
+   no highlight is fine, we can later add one into the repository
+
+.. literalinclude:: code1.txt
+   :lines: 1-10
+   :linenos:
+   :language: c
+   
+   
+.. html example:
+   <script> should be put at the beginning
+
+.. raw:: html
+   <embed>
+   <style type="text/css">
+   	span {
+   	font-family: 'Courier New';
+   	font-size: 10pt;
+   	color: #000000;
+   }
+   .sc2 {
+   	font-style: italic;
+   	color: #008000;
+   }
+   .sc3 {
+   }
+   .sc12 {
+   	color: #0000FF;
+   }
+   .sc24 {
+   }
+   </style>
+   </embed>
+
+.. raw:: html
+   
+   <embed>
+   <div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc24">      </span><span class="sc3">1</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">5</span><span class="sc24">
+   </span><span class="sc3">6</span><span class="sc24">
+   	  </span><span class="sc3">1</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">5</span><span class="sc24"> </span><span class="sc3">6</span><span class="sc24"> </span><span class="sc3">7</span><span class="sc24">     </span><span class="sc2">// scalar and vector
+   </span><span class="sc3">6</span><span class="sc24"> </span><span class="sc3">7</span><span class="sc24"> </span><span class="sc3">8</span><span class="sc24">
+   	  </span><span class="sc3">2</span><span class="sc24"> </span><span class="sc12">*</span><span class="sc24"> </span><span class="sc3">3</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">9</span><span class="sc24">     </span><span class="sc2">// right to left execution
+   </span><span class="sc3">24</span><span class="sc24">
+   	  </span><span class="sc3">2</span><span class="sc24"> </span><span class="sc12">*</span><span class="sc24"> </span><span class="sc12">(</span><span class="sc24"> </span><span class="sc3">3</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">9</span><span class="sc24"> </span><span class="sc12">)</span><span class="sc24"> </span><span class="sc2">// parenthesis last
+   </span><span class="sc3">24</span><span class="sc24">
+   	  </span><span class="sc12">(</span><span class="sc3">2</span><span class="sc24"> </span><span class="sc12">*</span><span class="sc24"> </span><span class="sc3">3</span><span class="sc12">)</span><span class="sc24"> </span><span class="sc12">+</span><span class="sc24"> </span><span class="sc3">9</span><span class="sc24">   </span><span class="sc2">// parenthesis first
+   </span><span class="sc3">15</span><span class="sc24">
+   </embed>
