@@ -10,10 +10,10 @@ Terms: https://ant.apache.org/manual/using.html
 Projects, Targets, Tasks, ...
 
 Dependency:
-1. java 8 (https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get)
-2. antlr3 `sudo apt-get install antlr3`
-3. Open `Natlab/build.xml`, right click to configure `Ant` (select `build, jar`)
-4. Find generated `bin-ant` (folder) and `McLabCore.jar`
+- java 8 (https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get)
+- antlr3 `sudo apt-get install antlr3`
+- Open `Natlab/build.xml`, right click to configure `Ant` (select `build, jar`)
+- Find generated `bin-ant` (folder) and `McLabCore.jar`
 
 ### Natlab/build.xml
 ```
