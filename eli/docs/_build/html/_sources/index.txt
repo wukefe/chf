@@ -19,6 +19,13 @@ Contents:
    Eli-v0.3
    DemoScript
    
+Document:
+
+.. toctree::
+   :maxdepth: 1
+   
+   EliReference
+   
 .. Links:
    - Website:  http://fastarray.appspot.com/
    - Download: http://fastarray.appspot.com/download.html

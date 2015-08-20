@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Types &mdash; ELI 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ELI 0.3 documentation" href="../index.html"/>
+        <link rel="up" title="ELI - Reference" href="../EliReference.html"/>
+        <link rel="next" title="Semantics" href="seman.html"/>
+        <link rel="prev" title="Introduction" href="intro.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> ELI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Install.html">Install ELI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Install.html#getting-start">Getting Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Install.html#folder-structure">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Install.html#try-eli">Try ELI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Eli-v0.3.html">Release Note (v0.3)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#version-0-3">Version <sup>0.3</sup></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#prior-version-0-2a">Prior Version <sup>0.2a</sup></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#highlights">Highlights</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#eli-studio">ELI Studio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#like">Like</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#match">Match</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#printing-precision-control">Printing Precision Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#performance-measurement">Performance Measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#standard-input">Standard Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#date-time-attributes">Date-Time Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#file-handle">File Handle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#semi-colon">Semi Colon (<code class="docutils literal"><span class="pre">;</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#more-data-types">More Data types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#improvement">Improvement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#id1">ELI Studio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#main-window">Main Window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#code-editor">Code Editor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DemoScript.html">Demo Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DemoScript.html#arithmetic-computation">Arithmetic Computation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DemoScript.html#matrix-and-array">Matrix and Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DemoScript.html#workspace-and-scripts">Workspace and Scripts</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../EliReference.html">ELI - Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#eli-website">ELI Website</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#reserved-words">Reserved words</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-types">Basic Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#type-inference">Type Inference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seman.html">Semantics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seman.html#basic-built-in-functions">Basic built-in functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seman.html#user-defined-functions">User defined functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seman.html#short-functions">Short functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">ELI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../EliReference.html">ELI - Reference</a> &raquo;</li>
+      
+    <li>Types</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/ref/types.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="types">
+<h1>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-types">
+<h2>Basic Types<a class="headerlink" href="#basic-types" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="13%" />
+<col width="14%" />
+<col width="12%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Value</th>
+<th class="head">Symbol</th>
+<th class="head">Null*</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Boolean</td>
+<td>0</td>
+<td>B</td>
+<td>0n</td>
+<td>0,1</td>
+</tr>
+<tr class="row-odd"><td>Integer</td>
+<td>1</td>
+<td>I</td>
+<td>0n</td>
+<td>123</td>
+</tr>
+<tr class="row-even"><td>Float</td>
+<td>2</td>
+<td>E</td>
+<td>0nf</td>
+<td>2.5</td>
+</tr>
+<tr class="row-odd"><td>Char</td>
+<td>3</td>
+<td>C</td>
+<td>&#8220;</td>
+<td>&#8216;abc&#8217;</td>
+</tr>
+<tr class="row-even"><td>Complex</td>
+<td>4</td>
+<td>X</td>
+<td>0nx</td>
+<td>1.5j2</td>
+</tr>
+<tr class="row-odd"><td>Symbol</td>
+<td>5</td>
+<td>S</td>
+<td>`</td>
+<td>`ibm</td>
+</tr>
+<tr class="row-even"><td>List</td>
+<td>6</td>
+<td>L</td>
+<td>()</td>
+<td>(`chen`wu;10 20)</td>
+</tr>
+<tr class="row-odd"><td>Month</td>
+<td>7</td>
+<td>M</td>
+<td>0nm</td>
+<td>2012.08m</td>
+</tr>
+<tr class="row-even"><td>Date</td>
+<td>8</td>
+<td>D</td>
+<td>0nd</td>
+<td>2012.08.15</td>
+</tr>
+<tr class="row-odd"><td>Datetime</td>
+<td>9</td>
+<td>Z</td>
+<td>0nz</td>
+<td>2012.08.15T13:25:17.357</td>
+</tr>
+<tr class="row-even"><td>Minute</td>
+<td>10</td>
+<td>U</td>
+<td>0nu</td>
+<td>13:25</td>
+</tr>
+<tr class="row-odd"><td>Second</td>
+<td>11</td>
+<td>V</td>
+<td>0nv</td>
+<td>13:25:17</td>
+</tr>
+<tr class="row-even"><td>Time</td>
+<td>12</td>
+<td>T</td>
+<td>0nt</td>
+<td>13:25:17.357</td>
+</tr>
+<tr class="row-odd"><td>Enumeration</td>
+<td>13</td>
+<td>N</td>
+<td>0ne</td>
+<td>...</td>
+</tr>
+<tr class="row-even"><td>Dictionary</td>
+<td>14</td>
+<td>Y</td>
+<td>0ny</td>
+<td>...</td>
+</tr>
+<tr class="row-odd"><td>Keyed Table</td>
+<td>15</td>
+<td>K</td>
+<td>0nk</td>
+<td>...</td>
+</tr>
+<tr class="row-even"><td>Table</td>
+<td>16</td>
+<td>A</td>
+<td>0na</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<p>* Note: Currently, null value is only available in <em>Boolean</em>, <em>Integer</em>, <em>Float</em>,
+<em>Char</em>, <em>Symbol</em> and <em>List</em>.</p>
+</div>
+<div class="section" id="type-inference">
+<h2>Type Inference<a class="headerlink" href="#type-inference" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="seman.html" class="btn btn-neutral float-right" title="Semantics" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Hanfeng Chen.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
