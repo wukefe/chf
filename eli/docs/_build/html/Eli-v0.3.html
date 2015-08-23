@@ -112,6 +112,37 @@
 </ul>
 </li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EliReference.html">ELI - Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/intro.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/intro.html#eli-website">ELI Website</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/intro.html#reserved-words">Reserved words</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/types.html">Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/types.html#basic-types">Basic Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/types.html#type-inference">Type Inference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/seman.html">Semantics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/seman.html#basic-built-in-functions">Basic built-in functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/seman.html#user-defined-functions">User defined functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/seman.html#short-functions">Short functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/primt.html">Primitive Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/primt.html#rho-reshape">#  (Rho,Reshape)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/sysfv.html">System Functions and Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/sysfv.html#open-and-close"><code class="docutils literal"><span class="pre">[]open</span></code> and <code class="docutils literal"><span class="pre">[]close</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/sysfv.html#rl-random-link"><code class="docutils literal"><span class="pre">[]RL</span></code> Random Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/sysfv.html#pp-printing-precision"><code class="docutils literal"><span class="pre">[]PP</span></code> Printing Precision</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
           
         
@@ -429,46 +460,46 @@ order: <em>from right to left</em>.</p>
 </div>
 <div class="section" id="id1">
 <h2>ELI Studio<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>The main reason we introduce ELI studio is to offer a
-consist release for cross-platform ELI system. Because prior versions
+<p>The main reason we introduce ELI studio is to offer a consistent
+release for cross-platform ELI system. Because in prior versions we
 only support GUI on Windows, people with Linux and Mac OS have to use
-command line. In fact, popular Linux versions (i.e. Ubuntu) and Mac OS
+command line input In fact, popular Linux versions (i.e. Ubuntu) and Mac OS
 have an excellent GUI interface for users. With an integrated
 development environment (IDE), newbies have less stress to learn a new
 programming language.</p>
 <p>The ELI Studio has two parts: main window and code editor. The main
 window is a terminal window which enables developers to test their code
-easily. Since ELI provides script facilities (eli script file, called
-<code class="docutils literal"><span class="pre">esf</span></code>), a code editor is a well addition for developers to build and
+easily. Since ELI provides scripting facilities (eli script file, called
+<code class="docutils literal"><span class="pre">esf</span></code>), a code editor is a good addition for developers to build and
 test scripts efficiently.</p>
 <div class="section" id="main-window">
 <h3>Main Window<a class="headerlink" href="#main-window" title="Permalink to this headline">¶</a></h3>
-<p>Inherited from previous ELI on Windows, the main window accepts the
-basic layouts with normal six spaces ahead of the input line to clear
-the difference in the following lines. Also, the multiple line editing
-(see example 1) is enabled.</p>
+<p>Inherited from previous ELI version on Windows, the main window accepts the
+basic layouts with normal six spaces ahead of an input line to clearly
+differentiate with the following line of system response. Also, the multiple
+line editing (see example 1) is enabled.</p>
 <p>There are some new features as follows.</p>
 <ul class="simple">
-<li>Paste with multiple lines can be handled as execute line by line
+<li>Paste with multiple lines can be handled just like executing line by line
 except the last line</li>
 <li>Three widgets monitor functions and variables in the workspace, ELI
-scripts in the current directory and command history</li>
+scripts in the current directory and command history respectively</li>
 <li>Click on the ELI script widget, then the selected script will be
 automatically loaded into the workspace</li>
-<li>Click on command history, then the selected command will be copied to
-main window and executed</li>
-<li>Additional functions can be found on menus are workspace load and
-save, workspace path setting and offline documentation support.</li>
+<li>Click on a line in the command history widget, then the selected command
+will be copied into the main window and executed</li>
+<li>Additional functionalities that can be found on menus are workspace load and
+save, workspace path setting and offline documentation support</li>
 </ul>
 </div>
 <div class="section" id="code-editor">
 <h3>Code Editor<a class="headerlink" href="#code-editor" title="Permalink to this headline">¶</a></h3>
 <p>Code Editor is an option for users to easily write and test code in ELI
-interpreter environment. It is designed for fast loading scripts and line-by-line
+interpreter environment. It is designed for fast loading of scripts and line-by-line
 execution. Other than basic operations such as editing (i.e. load, save,
 undo and redo), it provides the following additional features for ELI developers.</p>
 <ul class="simple">
-<li>A symbol table (CTRL+T) helps newbies to easily remember and
+<li>A symbol table (CTRL+T) that helps newbies to easily remember and
 understand primitive symbols.</li>
 <li><img alt="fload" src="http://fastarray.appspot.com/releasenote/image/load-script.png" /> Loading scripts into workspace. The scripts should be in esf
 format which has been saved somewhere on your computer. It has the

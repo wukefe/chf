@@ -31,8 +31,9 @@
 
   
     <link rel="top" title="ELI 0.3 documentation" href="../index.html"/>
-        <link rel="up" title="ELI - Reference" href="../EliReference.html"/>
-        <link rel="prev" title="ELI - Reference" href="../EliReference.html"/> 
+        <link rel="up" title="ELI - Language Reference" href="../EliReference.html"/>
+        <link rel="next" title="Types" href="types.html"/>
+        <link rel="prev" title="ELI - Language Reference" href="../EliReference.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -113,10 +114,55 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../EliReference.html">ELI - Reference</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../EliReference.html">ELI - Language Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">Introduction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#eli-website">ELI Website</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reserved-words">Reserved words</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="types.html">Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="types.html#basic-types">Basic Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#type-inference">Type Inference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="seman.html">Semantics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="seman.html#basic-built-in-functions">Basic built-in functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seman.html#user-defined-functions">User defined functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seman.html#short-functions">Short functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="primt.html">Primitive Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="primt.html#rho-reshape">#  (Rho,Reshape)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sysfv.html">System Functions and Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sysfv.html#open-and-close"><code class="docutils literal"><span class="pre">[]open</span></code> and <code class="docutils literal"><span class="pre">[]close</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="sysfv.html#rl-random-link"><code class="docutils literal"><span class="pre">[]RL</span></code> Random Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sysfv.html#pp-printing-precision"><code class="docutils literal"><span class="pre">[]PP</span></code> Printing Precision</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="syscd.html">System Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#off-close-all">)off Close All</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fns-list-functions">)fns List Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#vars-list-variables">)vars List Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#lib-list-libraries">)lib List Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#si-print-error-stack">)si Print Error Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#clear-clear-workspace">)clear Clear Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#wsid-rename-workspace">)wsid Rename workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#save-save-workspace">)save Save workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#load-load-workspace">)load Load Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fload-load-script">)fload Load script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fcopy-copy-script">)fcopy Copy script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="guigd.html">GUI Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guigd.html#main-window">Main window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guigd.html#code-editor">Code editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guigd.html#debug-mode-developing">Debug mode (Developing)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="acknw.html">Acknowledge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acknw.html#funds">Funds</a></li>
 </ul>
 </li>
 </ul>
@@ -145,7 +191,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../EliReference.html">ELI - Reference</a> &raquo;</li>
+          <li><a href="../EliReference.html">ELI - Language Reference</a> &raquo;</li>
       
     <li>Introduction</li>
       <li class="wy-breadcrumbs-aside">
@@ -164,16 +210,25 @@
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="eli-website">
 <h2>ELI Website<a class="headerlink" href="#eli-website" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>2010 to 2012 (~Deprecated~)
-Zhejiang Normal University
-<a class="reference external" href="http://mpi.zjnu.edu.cn/eli/">http://mpi.zjnu.edu.cn/eli/</a></li>
-<li>2012 to present
-Google App Engine
-<a class="reference external" href="http://fastarray.appspot.com">http://fastarray.appspot.com</a></li>
-<li>2014 to 2015 (Mirror site)
-The school of computing at Queen&#8217;s University
-<a class="reference external" href="http://cs.queensu.ca/~chenh/eli/">http://cs.queensu.ca/~chenh/eli/</a></li>
+<ul>
+<li><div class="first line-block">
+<div class="line">2010 to 2012 (<cite>Deprecated</cite>)</div>
+<div class="line">Zhejiang Normal University</div>
+<div class="line"><a class="reference external" href="http://mpi.zjnu.edu.cn/eli/">http://mpi.zjnu.edu.cn/eli/</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">2012 to present</div>
+<div class="line">Google App Engine</div>
+<div class="line"><a class="reference external" href="http://fastarray.appspot.com">http://fastarray.appspot.com</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">2014 to 2015 (Mirror site)</div>
+<div class="line">The school of computing at Queen&#8217;s University</div>
+<div class="line"><a class="reference external" href="http://cs.queensu.ca/~chenh/eli/">http://cs.queensu.ca/~chenh/eli/</a></div>
+</div>
+</li>
 </ul>
 </div>
 <div class="section" id="reserved-words">
@@ -187,8 +242,10 @@ The school of computing at Queen&#8217;s University
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="types.html" class="btn btn-neutral float-right" title="Types" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="../EliReference.html" class="btn btn-neutral" title="ELI - Reference" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="../EliReference.html" class="btn btn-neutral" title="ELI - Language Reference" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

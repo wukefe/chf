@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Primitive Functions &mdash; ELI 0.3 documentation</title>
+  <title>Acknowledge &mdash; ELI 0.3 documentation</title>
   
 
   
@@ -32,8 +32,7 @@
   
     <link rel="top" title="ELI 0.3 documentation" href="../index.html"/>
         <link rel="up" title="ELI - Reference" href="../EliReference.html"/>
-        <link rel="next" title="System Functions and Variables" href="sysfv.html"/>
-        <link rel="prev" title="Semantics" href="seman.html"/> 
+        <link rel="prev" title="System Functions and Variables" href="sysfv.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -131,14 +130,18 @@
 <li class="toctree-l3"><a class="reference internal" href="seman.html#short-functions">Short functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Primitive Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#rho-reshape">#  (Rho,Reshape)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primt.html">Primitive Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="primt.html#rho-reshape">#  (Rho,Reshape)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="sysfv.html">System Functions and Variables</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sysfv.html#open-and-close"><code class="docutils literal"><span class="pre">[]open</span></code> and <code class="docutils literal"><span class="pre">[]close</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="sysfv.html#rl-random-link"><code class="docutils literal"><span class="pre">[]RL</span></code> Random Link</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sysfv.html#pp-printing-precision"><code class="docutils literal"><span class="pre">[]PP</span></code> Printing Precision</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Acknowledge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#funds">Funds</a></li>
 </ul>
 </li>
 </ul>
@@ -169,11 +172,11 @@
       
           <li><a href="../EliReference.html">ELI - Reference</a> &raquo;</li>
       
-    <li>Primitive Functions</li>
+    <li>Acknowledge</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/ref/primt.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/ref/acknw.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,49 +185,21 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="primitive-functions">
-<h1>Primitive Functions<a class="headerlink" href="#primitive-functions" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="26%" />
-<col width="62%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head"><code class="docutils literal"><span class="pre">Description</span></code></th>
-<th class="head"><code class="docutils literal"><span class="pre">Explanation</span></code></th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>L</td>
-<td>Left argument</td>
-<td>Any type of data (optional)</td>
-</tr>
-<tr class="row-odd"><td>R</td>
-<td>Right argument</td>
-<td>Any type of data (mandatory)</td>
-</tr>
-<tr class="row-even"><td>Z</td>
-<td>Return value</td>
-<td>Always available even it is a nil value</td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="rho-reshape">
-<h2>#  (Rho,Reshape)<a class="headerlink" href="#rho-reshape" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">#</span> <span class="pre">R</span></code>)</li>
-</ul>
-<p>Examples:</p>
-<div class="highlight-none"><div class="highlight"><pre>      #1 2 3
-3
-      #(1 2 3;&#39;life&#39;;`symbol;2j3)
-4
-</pre></div>
+  <div class="section" id="acknowledge">
+<h1>Acknowledge<a class="headerlink" href="#acknowledge" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="funds">
+<h2>Funds<a class="headerlink" href="#funds" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><div class="first line-block">
+<div class="line">2012.06 to 2013.06</div>
+<div class="line">Received research funding from Dr. Wai-Mee Ching and Dr. Farong Zhong.</div>
 </div>
-<ul class="simple">
-<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L</span> <span class="pre">#</span> <span class="pre">R</span></code>)</li>
+</li>
+<li><div class="first line-block">
+<div class="line">Summer 2013 and 2015</div>
+<div class="line">Received funding packages from Mr. Techien Chen.</div>
+</div>
+</li>
 </ul>
 </div>
 </div>
@@ -235,10 +210,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sysfv.html" class="btn btn-neutral float-right" title="System Functions and Variables" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="seman.html" class="btn btn-neutral" title="Semantics" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="sysfv.html" class="btn btn-neutral" title="System Functions and Variables" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

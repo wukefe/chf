@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Primitive Functions &mdash; ELI 0.3 documentation</title>
+  <title>GUI Interface &mdash; ELI 0.3 documentation</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="ELI 0.3 documentation" href="../index.html"/>
-        <link rel="up" title="ELI - Reference" href="../EliReference.html"/>
-        <link rel="next" title="System Functions and Variables" href="sysfv.html"/>
-        <link rel="prev" title="Semantics" href="seman.html"/> 
+        <link rel="up" title="ELI - Language Reference" href="../EliReference.html"/>
+        <link rel="next" title="Acknowledge" href="acknw.html"/>
+        <link rel="prev" title="System Commands" href="syscd.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -114,7 +114,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../EliReference.html">ELI - Reference</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../EliReference.html">ELI - Language Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="intro.html#eli-website">ELI Website</a></li>
 <li class="toctree-l3"><a class="reference internal" href="intro.html#reserved-words">Reserved words</a></li>
@@ -131,14 +131,38 @@
 <li class="toctree-l3"><a class="reference internal" href="seman.html#short-functions">Short functions</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Primitive Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#rho-reshape">#  (Rho,Reshape)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primt.html">Primitive Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="primt.html#rho-reshape">#  (Rho,Reshape)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="sysfv.html">System Functions and Variables</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sysfv.html#open-and-close"><code class="docutils literal"><span class="pre">[]open</span></code> and <code class="docutils literal"><span class="pre">[]close</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="sysfv.html#rl-random-link"><code class="docutils literal"><span class="pre">[]RL</span></code> Random Link</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sysfv.html#pp-printing-precision"><code class="docutils literal"><span class="pre">[]PP</span></code> Printing Precision</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="syscd.html">System Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#off-close-all">)off Close All</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fns-list-functions">)fns List Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#vars-list-variables">)vars List Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#lib-list-libraries">)lib List Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#si-print-error-stack">)si Print Error Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#clear-clear-workspace">)clear Clear Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#wsid-rename-workspace">)wsid Rename workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#save-save-workspace">)save Save workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#load-load-workspace">)load Load Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fload-load-script">)fload Load script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fcopy-copy-script">)fcopy Copy script</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">GUI Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-window">Main window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-editor">Code editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debug-mode-developing">Debug mode (Developing)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="acknw.html">Acknowledge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acknw.html#funds">Funds</a></li>
 </ul>
 </li>
 </ul>
@@ -167,13 +191,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../EliReference.html">ELI - Reference</a> &raquo;</li>
+          <li><a href="../EliReference.html">ELI - Language Reference</a> &raquo;</li>
       
-    <li>Primitive Functions</li>
+    <li>GUI Interface</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/ref/primt.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/ref/guigd.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,49 +206,62 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="primitive-functions">
-<h1>Primitive Functions<a class="headerlink" href="#primitive-functions" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="26%" />
-<col width="62%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head"><code class="docutils literal"><span class="pre">Description</span></code></th>
-<th class="head"><code class="docutils literal"><span class="pre">Explanation</span></code></th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>L</td>
-<td>Left argument</td>
-<td>Any type of data (optional)</td>
-</tr>
-<tr class="row-odd"><td>R</td>
-<td>Right argument</td>
-<td>Any type of data (mandatory)</td>
-</tr>
-<tr class="row-even"><td>Z</td>
-<td>Return value</td>
-<td>Always available even it is a nil value</td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="rho-reshape">
-<h2>#  (Rho,Reshape)<a class="headerlink" href="#rho-reshape" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="gui-interface">
+<h1>GUI Interface<a class="headerlink" href="#gui-interface" title="Permalink to this headline">¶</a></h1>
+<p>When back to the early 2000, ELI was designed with GUI interface and
+developed with Microsoft MFC. It provided interactive user input and
+allowed programmers to write up ELI scripts within the integrated
+environment. At that time, ELI could not process scripts written in ELI
+while it maintained ELI workspace which contained variables, functions,
+run-time stacks and system configurations. And ELI only runs on Windows.</p>
+<p>From 2011 to 2013, we extended ELI to support more features. It was more
+flexible for programmers to quickly test their code. Some of the new
+features are highlighted on Windows as follows.</p>
 <ul class="simple">
-<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">#</span> <span class="pre">R</span></code>)</li>
+<li>multi-line editions</li>
+<li>short function</li>
+<li>interactively input function</li>
 </ul>
-<p>Examples:</p>
-<div class="highlight-none"><div class="highlight"><pre>      #1 2 3
-3
-      #(1 2 3;&#39;life&#39;;`symbol;2j3)
-4
-</pre></div>
-</div>
+<p>With the expansion from Windows to Linux and MacOS, we provided terminal
+versions for both platforms. Without GUI interface, it seemed hard for
+beginners to start ELI in a friendly environment. Especially, when
+Wai-Mee was writing <a class="reference external" href="http://fastarray.appspot.com/document.html">ELI for kids</a>, we realized that a good integrated
+development environment (IDE) can attract more attention from beginners.</p>
+<p>At present, we redesign and implement the GUI part of ELI based on <a class="reference external" href="https://en.wikipedia.org/wiki/Qt_(software)">Qt
+development</a>. Except those existing features, we introduce some
+intuitive design to ease the pain of the invisibility of the ELI
+interpreter, such as variables, functions and libraries.</p>
 <ul class="simple">
-<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L</span> <span class="pre">#</span> <span class="pre">R</span></code>)</li>
+<li>monitors for variables, functions, libraries and history commands</li>
+<li>fast typing to copy/delete variable and functions</li>
+<li>a well-designed code editor for learning to write ELI code easily</li>
+</ul>
+<p>Because Qt is a cross-platform development tool, it can be an effortless
+work to port the GUI part to popular platforms, including Windows, Linux
+and MacOS.</p>
+<div class="section" id="main-window">
+<h2>Main window<a class="headerlink" href="#main-window" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>store three dock widgets (or more) location for next login</li>
+<li>complete functions in the tool bar</li>
+<li>setup wizard for automatically installing software on Windows</li>
+</ul>
+</div>
+<div class="section" id="code-editor">
+<h2>Code editor<a class="headerlink" href="#code-editor" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>line display</li>
+<li>syntax highlight</li>
+<li>semantics help</li>
+<li>a look-up table for ELI-APL table</li>
+</ul>
+</div>
+<div class="section" id="debug-mode-developing">
+<h2>Debug mode (Developing)<a class="headerlink" href="#debug-mode-developing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>set/cancel break points (manageable)</li>
+<li>while debugging, no edit is allowed</li>
+<li>check temp variables and the run-time stack</li>
 </ul>
 </div>
 </div>
@@ -235,10 +272,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sysfv.html" class="btn btn-neutral float-right" title="System Functions and Variables" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="acknw.html" class="btn btn-neutral float-right" title="Acknowledge" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="seman.html" class="btn btn-neutral" title="Semantics" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="syscd.html" class="btn btn-neutral" title="System Commands" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

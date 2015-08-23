@@ -2,5 +2,5 @@
 cls
 call make html
 :: _build\html\index.html
-_build\html\ref\primt.html
+_build\html\ref\guigd.html
 echo :)

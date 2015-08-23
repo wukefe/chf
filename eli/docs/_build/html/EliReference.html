@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ELI - Reference &mdash; ELI 0.3 documentation</title>
+  <title>ELI - Language Reference &mdash; ELI 0.3 documentation</title>
   
 
   
@@ -113,7 +113,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">ELI - Reference</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">ELI - Language Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ref/intro.html">Introduction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ref/intro.html#eli-website">ELI Website</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ref/intro.html#reserved-words">Reserved words</a></li>
@@ -132,6 +132,36 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ref/primt.html">Primitive Functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ref/primt.html#rho-reshape">#  (Rho,Reshape)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/sysfv.html">System Functions and Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/sysfv.html#open-and-close"><code class="docutils literal"><span class="pre">[]open</span></code> and <code class="docutils literal"><span class="pre">[]close</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/sysfv.html#rl-random-link"><code class="docutils literal"><span class="pre">[]RL</span></code> Random Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/sysfv.html#pp-printing-precision"><code class="docutils literal"><span class="pre">[]PP</span></code> Printing Precision</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html">System Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#off-close-all">)off Close All</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#fns-list-functions">)fns List Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#vars-list-variables">)vars List Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#lib-list-libraries">)lib List Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#si-print-error-stack">)si Print Error Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#clear-clear-workspace">)clear Clear Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#wsid-rename-workspace">)wsid Rename workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#save-save-workspace">)save Save workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#load-load-workspace">)load Load Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#fload-load-script">)fload Load script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/syscd.html#fcopy-copy-script">)fcopy Copy script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/guigd.html">GUI Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/guigd.html#main-window">Main window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/guigd.html#code-editor">Code editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/guigd.html#debug-mode-developing">Debug mode (Developing)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/acknw.html">Acknowledge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/acknw.html#funds">Funds</a></li>
 </ul>
 </li>
 </ul>
@@ -160,7 +190,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>ELI - Reference</li>
+    <li>ELI - Language Reference</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -173,8 +203,8 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="eli-reference">
-<h1>ELI - Reference<a class="headerlink" href="#eli-reference" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="eli-language-reference">
+<h1>ELI - Language Reference<a class="headerlink" href="#eli-language-reference" title="Permalink to this headline">¶</a></h1>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -208,6 +238,36 @@ Hanfeng Chen</td>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ref/primt.html">Primitive Functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ref/primt.html#rho-reshape">#  (Rho,Reshape)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/sysfv.html">System Functions and Variables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/sysfv.html#open-and-close"><code class="docutils literal"><span class="pre">[]open</span></code> and <code class="docutils literal"><span class="pre">[]close</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/sysfv.html#rl-random-link"><code class="docutils literal"><span class="pre">[]RL</span></code> Random Link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/sysfv.html#pp-printing-precision"><code class="docutils literal"><span class="pre">[]PP</span></code> Printing Precision</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/syscd.html">System Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#off-close-all">)off Close All</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#fns-list-functions">)fns List Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#vars-list-variables">)vars List Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#lib-list-libraries">)lib List Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#si-print-error-stack">)si Print Error Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#clear-clear-workspace">)clear Clear Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#wsid-rename-workspace">)wsid Rename workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#save-save-workspace">)save Save workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#load-load-workspace">)load Load Workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#fload-load-script">)fload Load script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html#fcopy-copy-script">)fcopy Copy script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/guigd.html">GUI Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/guigd.html#main-window">Main window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/guigd.html#code-editor">Code editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/guigd.html#debug-mode-developing">Debug mode (Developing)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/acknw.html">Acknowledge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/acknw.html#funds">Funds</a></li>
 </ul>
 </li>
 </ul>

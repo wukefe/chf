@@ -1,6 +1,6 @@
-===============
-ELI - Reference
-===============
+========================
+ELI - Language Reference
+========================
 
 :Authors:
    Wai-Mee Ching,
@@ -18,6 +18,7 @@ ELI - Reference
    ref/seman.rst
    ref/primt.rst
    ref/sysfv.rst
+   ref/syscd.rst
    ref/iofun.rst
    ref/esqld.rst
    ref/guigd.rst
