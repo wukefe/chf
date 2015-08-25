@@ -66,7 +66,7 @@ Debug mode (Developing)
 
 -  while debugging, no edit is allowed
 
--  check temp variables and the run-time stack
+-  check temp variables and run-time stack
 
 .. _ELI for kids: http://fastarray.appspot.com/document.html
 .. _Qt development: https://en.wikipedia.org/wiki/Qt_(software)

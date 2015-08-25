@@ -2,5 +2,5 @@
 cls
 call make html
 :: _build\html\index.html
-_build\html\ref\guigd.html
+_build\html\ref\syscd.html
 echo :)

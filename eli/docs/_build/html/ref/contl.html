@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>System Commands &mdash; ELI 0.3 documentation</title>
+  <title>Control Structures &mdash; ELI 0.3 documentation</title>
   
 
   
@@ -32,8 +32,8 @@
   
     <link rel="top" title="ELI 0.3 documentation" href="../index.html"/>
         <link rel="up" title="ELI - Language Reference" href="../EliReference.html"/>
-        <link rel="next" title="Control Structures" href="contl.html"/>
-        <link rel="prev" title="System Functions and Variables" href="sysfv.html"/> 
+        <link rel="next" title="GUI Interface" href="guigd.html"/>
+        <link rel="prev" title="System Commands" href="syscd.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -142,25 +142,25 @@
 <li class="toctree-l3"><a class="reference internal" href="sysfv.html#pp-printing-precision"><code class="docutils literal"><span class="pre">[]PP</span></code> Printing Precision</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">System Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#off-close-all"><code class="docutils literal"><span class="pre">)off</span></code> Close All</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fns-list-functions"><code class="docutils literal"><span class="pre">)fns</span></code> List Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vars-list-variables"><code class="docutils literal"><span class="pre">)vars</span></code> List Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#lib-list-libraries"><code class="docutils literal"><span class="pre">)lib</span></code> List Libraries</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#si-print-error-stack"><code class="docutils literal"><span class="pre">)si</span></code> Print Error Stack</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#clear-clear-workspace"><code class="docutils literal"><span class="pre">)clear</span></code> Clear Workspace</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wsid-rename-workspace"><code class="docutils literal"><span class="pre">)wsid</span></code> Rename workspace</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#save-save-workspace"><code class="docutils literal"><span class="pre">)save</span></code> Save workspace</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#load-load-workspace"><code class="docutils literal"><span class="pre">)load</span></code> Load Workspace</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fload-load-script"><code class="docutils literal"><span class="pre">)fload</span></code> Load script</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fcopy-copy-script"><code class="docutils literal"><span class="pre">)fcopy</span></code> Copy script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syscd.html">System Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#off-close-all">)off Close All</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fns-list-functions">)fns List Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#vars-list-variables">)vars List Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#lib-list-libraries">)lib List Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#si-print-error-stack">)si Print Error Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#clear-clear-workspace">)clear Clear Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#wsid-rename-workspace">)wsid Rename workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#save-save-workspace">)save Save workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#load-load-workspace">)load Load Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fload-load-script">)fload Load script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syscd.html#fcopy-copy-script">)fcopy Copy script</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="contl.html">Control Structures</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="contl.html#for">for</a></li>
-<li class="toctree-l3"><a class="reference internal" href="contl.html#if-else">if-else</a></li>
-<li class="toctree-l3"><a class="reference internal" href="contl.html#while">while</a></li>
-<li class="toctree-l3"><a class="reference internal" href="contl.html#case">case</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Control Structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for">for</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#if-else">if-else</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#while">while</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case">case</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="guigd.html">GUI Interface</a><ul>
@@ -201,11 +201,11 @@
       
           <li><a href="../EliReference.html">ELI - Language Reference</a> &raquo;</li>
       
-    <li>System Commands</li>
+    <li>Control Structures</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/ref/syscd.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/ref/contl.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -214,183 +214,103 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="system-commands">
-<h1>System Commands<a class="headerlink" href="#system-commands" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="off-close-all">
-<h2><code class="docutils literal"><span class="pre">)off</span></code> Close All<a class="headerlink" href="#off-close-all" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>&#8212;</td>
-<td>Close and exit Eli interpreter</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="fns-list-functions">
-<h2><code class="docutils literal"><span class="pre">)fns</span></code> List Functions<a class="headerlink" href="#fns-list-functions" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>&#8212;</td>
-<td>List all functions in the current workspace</td>
-</tr>
-<tr class="row-odd"><td>Name</td>
-<td>List the functions match the provided name as prefix in the current workspace</td>
-</tr>
-</tbody>
-</table>
-<p>Example:</p>
-<div class="highlight-python"><div class="highlight"><pre>      )fload rprime
-      rprime 120
-2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113
-saved 2012.03.26 22:21:14 (gmt-4)
-      )fns
-rprime
-      )fns r
-rprime
+  <div class="section" id="control-structures">
+<h1>Control Structures<a class="headerlink" href="#control-structures" title="Permalink to this headline">¶</a></h1>
+<p>ELI supports control structures with seven researved words</p>
+<p><code class="docutils literal"><span class="pre">if</span></code> , <code class="docutils literal"><span class="pre">else</span></code> , <code class="docutils literal"><span class="pre">case</span></code> , <code class="docutils literal"><span class="pre">for</span></code> , <code class="docutils literal"><span class="pre">while</span></code> , <code class="docutils literal"><span class="pre">break</span></code> , <code class="docutils literal"><span class="pre">continue</span></code></p>
+<div class="section" id="for">
+<h2>for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>@.test_for n
+for(i:1;n){
+  []&lt;-i
+}
+@.
+
+      test_for 5
+1
+2
+3
+4
+5
 </pre></div>
 </div>
 </div>
-<div class="section" id="vars-list-variables">
-<h2><code class="docutils literal"><span class="pre">)vars</span></code> List Variables<a class="headerlink" href="#vars-list-variables" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>&#8212;</td>
-<td>List all variables in the current workspace</td>
-</tr>
-<tr class="row-odd"><td>Name</td>
-<td>List the variables match the provided name as prefix in the current workspace</td>
-</tr>
-</tbody>
-</table>
-<p>Example:</p>
-<div class="highlight-python"><div class="highlight"><pre>      day1&lt;-2011.11.22
-      day2&lt;-day1+1
-      year1&lt;-2012
-      year2&lt;-2=year1+1
-      )vars
-day1   day2   year1   year2
-      )vars d
-day1   day2
-      )vars y
-year1   year2
+<div class="section" id="if-else">
+<h2>if-else<a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>@.p&lt;-rprime n;i
+p&lt;-2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+if (n&lt;=100) p&lt;-(n&gt;=p)/p
+else {pl&lt;-#p&lt;-rprime _.n*.0.5
+  b&lt;-n#0
+  for (i:1;pl) b&lt;-b&amp;n#(-p[i])^.1
+  p&lt;-p,1!.(~b)/!n
+}
+@.
+
+      rprime 300
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113 127 131 137 139 149 151
+157 163 167 173 179 181 191 193 197 199 211 223 227 229 233 239 241 251 257 263 269 271 277 281 283 293
 </pre></div>
 </div>
 </div>
-<div class="section" id="lib-list-libraries">
-<h2><code class="docutils literal"><span class="pre">)lib</span></code> List Libraries<a class="headerlink" href="#lib-list-libraries" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>&#8212;</td>
-<td>List all script files in the current workspace</td>
-</tr>
-<tr class="row-odd"><td>Name</td>
-<td>List the script files match the provided name as prefix in the current workspace</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="si-print-error-stack">
-<h2><code class="docutils literal"><span class="pre">)si</span></code> Print Error Stack<a class="headerlink" href="#si-print-error-stack" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="clear-clear-workspace">
-<h2><code class="docutils literal"><span class="pre">)clear</span></code> Clear Workspace<a class="headerlink" href="#clear-clear-workspace" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>&#8212;</td>
-<td>Clear workspace as the beginning of interpreter starts</td>
-</tr>
-</tbody>
-</table>
-<p><cite>Note:</cite> All functions and variables are wiped out from the current workspace.
-Moreover, all system variables are reset.</p>
-</div>
-<div class="section" id="wsid-rename-workspace">
-<h2><code class="docutils literal"><span class="pre">)wsid</span></code> Rename workspace<a class="headerlink" href="#wsid-rename-workspace" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>&#8212;</td>
-<td>Returns the current name of workspace if it has been set up. Otherwise, <code class="docutils literal"><span class="pre">CLEAR</span> <span class="pre">WS</span></code> is returned.</td>
-</tr>
-<tr class="row-odd"><td>Name</td>
-<td>Set the name of the current workspace</td>
-</tr>
-</tbody>
-</table>
-<p>Example:</p>
-<div class="highlight-python"><div class="highlight"><pre>      )wsid
-CLEAR WS
-      )wsid earth
-was CLEAR WS
-      )wsid
-earth
+<div class="section" id="while">
+<h2>while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>@.L&lt;-TSORT G;N;ML
+L&lt;-!0
+S&lt;-(0=+/.G)/GL&lt;-!1^.#G
+while (0&lt;#S) {
+L&lt;-L,N&lt;-S[1]
+S&lt;-1!.S
+ML&lt;-G[N;]/GL
+G[N;ML]&lt;- 0
+S&lt;-S,(0=+/.G[;ML])/ML
+}
+if (0&lt;+/+/G) []&lt;-&#39;Graph G is not acyclic.&#39;
+@.
+
+      G
+0 1 0 1 0 1 0 0
+0 0 0 0 0 0 0 0
+0 0 0 1 0 0 0 1
+0 0 0 0 0 0 0 0
+1 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+1 0 0 0 0 0 0 1
+0 0 0 0 0 1 0 0
+
+      TSORT G
+3 5 7 1 8 2 4 6
 </pre></div>
 </div>
 </div>
-<div class="section" id="save-save-workspace">
-<h2><code class="docutils literal"><span class="pre">)save</span></code> Save workspace<a class="headerlink" href="#save-save-workspace" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="case">
+<h2>case<a class="headerlink" href="#case" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>@.z&lt;-tst_cas x
+case (:x) {
+ 0,1:z&lt;-x+10
+ 2:z&lt;-x*10
+ 3:z&lt;-x
+ 5:case (x) {
+ `select:z&lt;-&#39;SELECT&#39;
+ `exec:z&lt;-&#39;EXEC&#39;
+ else z&lt;-&#39;***&#39;
+ }
+ else z&lt;-x+100
+}
+@.
+// execute
+      tst_cas 9
+19
+      tst_cas 1.2
+12
+      tst_cas &#39;ABC&#39;
+ABC
+      tst_cas `ABC
+***
+      tst_cas 20:55
+22:35
+</pre></div>
 </div>
-<div class="section" id="load-load-workspace">
-<h2><code class="docutils literal"><span class="pre">)load</span></code> Load Workspace<a class="headerlink" href="#load-load-workspace" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="fload-load-script">
-<h2><code class="docutils literal"><span class="pre">)fload</span></code> Load script<a class="headerlink" href="#fload-load-script" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="fcopy-copy-script">
-<h2><code class="docutils literal"><span class="pre">)fcopy</span></code> Copy script<a class="headerlink" href="#fcopy-copy-script" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -400,10 +320,10 @@ earth
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="contl.html" class="btn btn-neutral float-right" title="Control Structures" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="guigd.html" class="btn btn-neutral float-right" title="GUI Interface" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="sysfv.html" class="btn btn-neutral" title="System Functions and Variables" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="syscd.html" class="btn btn-neutral" title="System Commands" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

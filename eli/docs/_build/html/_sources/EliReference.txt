@@ -20,6 +20,7 @@ ELI - Language Reference
    ref/sysfv.rst
    ref/syscd.rst
    ref/iofun.rst
+   ref/contl.rst
    ref/esqld.rst
    ref/guigd.rst
    ref/acknw.rst
