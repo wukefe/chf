@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Types &mdash; ELI 0.3 documentation</title>
+  <title>Type and Shape &mdash; ELI 0.3 documentation</title>
   
 
   
   
 
   
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -31,12 +31,12 @@
 
   
     <link rel="top" title="ELI 0.3 documentation" href="../index.html"/>
-        <link rel="up" title="ELI - Reference" href="../EliReference.html"/>
+        <link rel="up" title="ELI - Language Reference" href="../EliReference.html"/>
         <link rel="next" title="Semantics" href="seman.html"/>
         <link rel="prev" title="Introduction" href="intro.html"/> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
 </head>
 
@@ -48,14 +48,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         
-
+          <a href="../index.html" class="fa fa-home"> ELI</a>
         
-          <a href="../index.html" class="icon icon-home"> ELI
-        
-
-        
-        </a>
-
         
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -64,8 +58,6 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-        
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
@@ -80,30 +72,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Eli-v0.3.html">Release Note (v0.3)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#overview">Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#version-0-3">Version <sup>0.3</sup></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#prior-version-0-2a">Prior Version <sup>0.2a</sup></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#highlights">Highlights</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#eli-studio">ELI Studio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#like">Like</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#match">Match</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#printing-precision-control">Printing Precision Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#performance-measurement">Performance Measurement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#standard-input">Standard Input</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#date-time-attributes">Date-Time Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#file-handle">File Handle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#semi-colon">Semi Colon (<code class="docutils literal"><span class="pre">;</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#more-data-types">More Data types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#improvement">Improvement</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#id1">ELI Studio</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#main-window">Main Window</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Eli-v0.3.html#code-editor">Code Editor</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#highlights">Highlights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eli-v0.3.html#id1">ELI Studio</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../DemoScript.html">Demo Code</a><ul>
@@ -114,33 +85,16 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../EliReference.html">ELI - Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="intro.html#eli-website">ELI Website</a></li>
-<li class="toctree-l3"><a class="reference internal" href="intro.html#reserved-words">Reserved words</a></li>
-</ul>
-</li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Types</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#basic-types">Basic Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#type-inference">Type Inference</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="seman.html">Semantics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="seman.html#basic-built-in-functions">Basic built-in functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="seman.html#user-defined-functions">User defined functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="seman.html#short-functions">Short functions</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="primt.html">Primitive Functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="primt.html#rho-reshape">#  (Rho,Reshape)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="sysfv.html">System Functions and Variables</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="sysfv.html#open-and-close"><code class="docutils literal"><span class="pre">[]open</span></code> and <code class="docutils literal"><span class="pre">[]close</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="sysfv.html#rl-random-link"><code class="docutils literal"><span class="pre">[]RL</span></code> Random Link</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sysfv.html#pp-printing-precision"><code class="docutils literal"><span class="pre">[]PP</span></code> Printing Precision</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../EliReference.html">ELI - Language Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Type and Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seman.html">Semantics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primt.html">Primitive Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sysfv.html">System Functions and Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syscd.html">System Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contl.html">Control Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guigd.html">GUI Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acknw.html">Acknowledge</a></li>
 </ul>
 </li>
 </ul>
@@ -167,14 +121,12 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../EliReference.html">ELI - Reference</a> &raquo;</li>
+          <li><a href="../EliReference.html">ELI - Language Reference</a> &raquo;</li>
       
-    <li>Types</li>
+    <li>Type and Shape</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/ref/types.txt" rel="nofollow"> View page source</a>
-          
+          <a href="../_sources/ref/types.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -182,8 +134,13 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="types">
-<h1>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="type-and-shape">
+<h1>Type and Shape<a class="headerlink" href="#type-and-shape" title="Permalink to this headline">¶</a></h1>
+<p>Even though ELI does not require explicit type in front of variables, it needs
+types for every computation as well.  A variable with a specific type at one time
+also has a shape.  Since ELI is designed for array based computation, it is
+necessary to remember the shape of an array that can be a scalar, a vector or
+an array.</p>
 <div class="section" id="basic-types">
 <h2>Basic Types<a class="headerlink" href="#basic-types" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -309,9 +266,78 @@
 </table>
 <p>* Note: Currently, null value is only available in <em>Boolean</em>, <em>Integer</em>, <em>Float</em>,
 <em>Char</em>, <em>Symbol</em> and <em>List</em>.</p>
+<p>The types can be classified into the following two groups.</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Basic types:</dt>
+<dd><p class="first last">boolean, integer, float, char, complex, symbol, month, date,datetime, minute
+second, time</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Advanced types:</dt>
+<dd><p class="first last">list, enumeration, dictionary, keyed table and table</p>
+</dd>
+</dl>
+</li>
+</ol>
 </div>
 <div class="section" id="type-inference">
 <h2>Type Inference<a class="headerlink" href="#type-inference" title="Permalink to this headline">¶</a></h2>
+<p>ELI follows some conventional type rules while new type rules because of
+new advanced types.  ELI does not implicitly do casting for the result
+after one computation.  Instead, ELI leaves it to developers that makes
+the system more consistant.</p>
+<ul class="simple">
+<li>The arithmatic operations between boolean, int and double are the same as
+common languages such as C and Java.</li>
+<li>Primitive functions like circle can generate complex numbers even input
+data is not a complex number.  For example, <code class="docutils literal"><span class="pre">_1*.0.5</span></code> (equivalent
+to sqrt(-1)) is 0j1 in ELI.</li>
+<li>Table and dictionary can be transformed from each other if conditions are
+satisfied. (Check the primitive function <code class="docutils literal"><span class="pre">transpose</span> <span class="pre">&amp;.</span></code>)</li>
+</ul>
+</div>
+<div class="section" id="shape">
+<h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<p>There are 7 basic shapes for basic types.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Shape</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>scalar</td>
+<td>x &lt;- 2</td>
+</tr>
+<tr class="row-odd"><td>one-item vector</td>
+<td>x &lt;- ,2</td>
+</tr>
+<tr class="row-even"><td>vector</td>
+<td>x &lt;- 1 2 3</td>
+</tr>
+<tr class="row-odd"><td>matrix</td>
+<td>x &lt;- 2 2#1 2 3 4</td>
+</tr>
+<tr class="row-even"><td>high-dimension</td>
+<td>x &lt;- 2 2 2#!8</td>
+</tr>
+<tr class="row-odd"><td>list</td>
+<td>x &lt;- (1 2; 2.5 9; &#8216;hello&#8217;)</td>
+</tr>
+<tr class="row-even"><td>table</td>
+<td>x &lt;- ([]int&lt;-1 2;flt&lt;-2.3 5)</td>
+</tr>
+</tbody>
+</table>
+<p>* Note: For advanced types, they are formed by list and table shapes.
+And the two shapes are based on other basic types.</p>
 </div>
 </div>
 
@@ -321,10 +347,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="seman.html" class="btn btn-neutral float-right" title="Semantics" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="seman.html" class="btn btn-neutral float-right" title="Semantics">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="intro.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="intro.html" class="btn btn-neutral" title="Introduction"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -336,10 +362,10 @@
         &copy; Copyright 2015, Hanfeng Chen.
     </p>
   </div>
+
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-
+  
 </footer>
-
         </div>
       </div>
 

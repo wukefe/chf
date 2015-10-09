@@ -1,5 +1,11 @@
-Types
------
+Type and Shape
+--------------
+
+Even though ELI does not require explicit type in front of variables, it needs
+types for every computation as well.  A variable with a specific type at one time
+also has a shape.  Since ELI is designed for array based computation, it is
+necessary to remember the shape of an array that can be a scalar, a vector or
+an array.
 
 Basic Types
 ~~~~~~~~~~~
@@ -45,8 +51,58 @@ Basic Types
 \* Note: Currently, null value is only available in *Boolean*, *Integer*, *Float*,
 *Char*, *Symbol* and *List*.
    
+The types can be classified into the following two groups.
+
+1. Basic types:
+    boolean, integer, float, char, complex, symbol, month, date,datetime, minute
+    second, time
+2. Advanced types:
+    list, enumeration, dictionary, keyed table and table
+
 
 Type Inference
 ~~~~~~~~~~~~~~
+
+ELI follows some conventional type rules while new type rules because of
+new advanced types.  ELI does not implicitly do casting for the result
+after one computation.  Instead, ELI leaves it to developers that makes
+the system more consistant.
+
+- The arithmatic operations between boolean, int and double are the same as 
+  common languages such as C and Java.
+- Primitive functions like circle can generate complex numbers even input
+  data is not a complex number.  For example, ``_1*.0.5`` (equivalent
+  to sqrt(-1)) is 0j1 in ELI.
+- Table and dictionary can be transformed from each other if conditions are
+  satisfied. (Check the primitive function ``transpose &.``)
+
+
+Shape
+~~~~~
+
+There are 7 basic shapes for basic types.
+
++-----------------+------------------------------+
+| Shape           | Example                      |
++=================+==============================+
+| scalar          | x <- 2                       |
++-----------------+------------------------------+
+| one-item vector | x <- ,2                      |
++-----------------+------------------------------+
+| vector          | x <- 1 2 3                   |
++-----------------+------------------------------+
+| matrix          | x <- 2 2#1 2 3 4             |
++-----------------+------------------------------+
+| high-dimension  | x <- 2 2 2#!8                |
++-----------------+------------------------------+
+| list            | x <- (1 2; 2.5 9; 'hello')   |
++-----------------+------------------------------+
+| table           | x <- ([]int<-1 2;flt<-2.3 5) |
++-----------------+------------------------------+
+
+\* Note: For advanced types, they are formed by list and table shapes.
+And the two shapes are based on other basic types.
+
+
 
 
