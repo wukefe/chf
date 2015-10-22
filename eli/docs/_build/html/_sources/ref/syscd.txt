@@ -2,7 +2,7 @@ System Commands
 ---------------
 
 ``)off`` Close All
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 5 20
@@ -16,7 +16,7 @@ System Commands
 
 
 ``)fns`` List Functions
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 5 20
@@ -45,7 +45,7 @@ Example:
 
 
 ``)vars`` List Variables
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 5 20
@@ -77,7 +77,7 @@ Example:
 
 	
 ``)lib`` List Libraries
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 5 20
@@ -94,10 +94,10 @@ Example:
 .. (pending function)
 
 ``)si`` Print Error Stack
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``)clear`` Clear Workspace
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 5 20
@@ -112,7 +112,7 @@ Example:
 Moreover, all system variables are reset.
 	 
 ``)wsid`` Rename workspace
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :widths: 5 20
@@ -137,13 +137,13 @@ Example:
    earth
 	 
 ``)save`` Save workspace
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``)load`` Load Workspace
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``)fload`` Load script
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 ``)fcopy`` Copy script
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
