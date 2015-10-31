@@ -1,0 +1,3 @@
+# Save as ~/.bashrc
+
+PS1='HF:\w\$ '

@@ -1,0 +1,11 @@
+site_name: My Docs
+
+site_name: Hanfeng Chen's Homepage
+theme: spacelab
+# flatly
+# readable
+# spacelab
+
+pages:
+- 'Homepage': 'index.md'
+- 'Linkpage': 'index-default.md'

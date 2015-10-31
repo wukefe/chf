@@ -1,0 +1,14 @@
+site_name: Eli Primer
+site_author: Hanfeng Chen
+
+theme: flatly
+# flatly
+# readable
+# spacelab
+
+pages:
+- Homepage: index.md
+- Introduction:
+    - Preface : preface.md
+- Getting Started:
+    - Basic operators : chapter1.md
