@@ -27,6 +27,7 @@ ELI - Language Reference
    ref/iofun.rst
    ref/contl.rst
    ref/esqld.rst
+   ref/debug.rst
    ref/guigd.rst
    ref/acknw.rst
 
