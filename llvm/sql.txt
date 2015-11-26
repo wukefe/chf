@@ -1,0 +1,54 @@
+/*
+ Learn from
+   1) http://matt.might.net/articles/grammars-bnf-ebnf/
+   2) H2 grammer, http://www.h2database.com/html/grammar.html
+
+ Rules
+   option    : []
+   repetition: *  (0 or more)
+               +  (1 or more)
+   	           ?  (0 or 1)
+   repetition: {} (0 or more)
+   literals  : ""
+   group     : ()
+*/
+
+SQLang      ::= CreateTable | UpdateTable | DeleteTable | SelectTable
+
+CreateTable ::=
+
+UpdateTable ::=
+
+SelectTable ::= KeySelect [KeyTop Number] ( "*" | ColumnNames) KeyFrom TableNames [TableCond] ";"
+TableCond   ::= KeyWhere ExprLogic {(KeyAnd | KeyOr) ExprLogic}
+
+DeleteTable ::= 
+
+
+// compare in H2, more
+ExprLogic ::= Expr OpLogic Expr
+OpLogic   ::= "<" | ">" | "<=" | ">=" | "="
+Expr      ::= Name  //temporary
+
+//
+TableNames ::= TableName {"," TableName}
+ColumnNames::= ColumnName {"," ColumnName}
+
+TableName   ::= Name
+ColumnName  ::= Name | NameDot
+NameDot     ::= Name "." Name
+
+Name     ::= Alpha {AllName} RegName {RegName}
+AllName  ::= RegName | KeyUnder
+RegName  ::= Digit   | Alpha
+Digit    ::= [-0-9]
+Alpha    ::= [-A-Z]  | [-a-z]
+KeyUnder ::= "_"
+
+// key words
+KeySelect ::= "select" | "SELECT"
+KeyFrom   ::= "from"   | "FROM"
+KeyWhere  ::= "where"  | "WHERE"
+KeyAnd    ::= "and"    | "AND"
+KeyOr     ::= "or"     | "OR"
+KeyTop    ::= "top"    | "TOP"
