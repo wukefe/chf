@@ -43,7 +43,10 @@ AllName  ::= RegName | KeyUnder
 RegName  ::= Digit   | Alpha
 Digit    ::= [-0-9]
 Alpha    ::= [-A-Z]  | [-a-z]
-KeyUnder ::= "_"
+
+// special keys
+KeyUnder ::= _
+KeySkip  ::= [\r\t\n]
 
 // key words
 KeySelect ::= "select" | "SELECT"
