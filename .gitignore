@@ -1,3 +1,4 @@
 
 llvm/*.h
 llvm/*.c
+llvm/*.o

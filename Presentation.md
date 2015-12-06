@@ -15,6 +15,7 @@ Follow the instructions in sequence, we can clearly explain a function to audien
 - It is important to introduce the background
 - Give a sample before present abstract concepts
 - Avoid error English variable names in code
+- Arithmetic mean should be replaced with geometry mean
 
 Diagram issues
 
