@@ -45,3 +45,8 @@ complex := (int|float) 'j' (int|float)
 letter := ([a-z] | [A-Z])
 digit := [0-9]
 
+// note
++ int, double
+
+- float, complex are not there
+

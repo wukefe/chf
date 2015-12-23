@@ -9,3 +9,7 @@ all: main.c token.o common.h
 
 token.o: token.c common.h
 	$(CC) -c token.c common.h -std=c99
+
+
+r: all
+	./token

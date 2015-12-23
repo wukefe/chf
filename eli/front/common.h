@@ -17,6 +17,7 @@ typedef char C, *S;
 #define P printf
 
 #define DOI(n,x)for(L i=0,i2=n;i<i2;i++){x;}
+#define PN() printf("\n")
 
 
 // struct
@@ -28,9 +29,10 @@ typedef struct T_token
         F v_flt;
         E v_dbv;
         S v_chr;
-        C v_op[5];
+        C v_op[6];
     };
     L type;
+    L row, col; //debug info
     struct T_token *nxt;
 }*TK, TK0;
 
