@@ -12,6 +12,7 @@ typedef int L;
 typedef float F;
 typedef double E;
 typedef char C, *S;
+typedef int Token;
 
 #define R return
 #define P printf
@@ -39,5 +40,6 @@ typedef struct T_token
 #define AL(t, n) (t*)malloc(sizeof(t) * (n))
 #define ALC(n) (S)malloc(n+1)
 
+extern TK headk;
 
 #endif

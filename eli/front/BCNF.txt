@@ -1,0 +1,95 @@
+/*
+BNF grammar for ELI
+src:
+1) http://matt.might.net/articles/grammars-bnf-ebnf/
+
+option    : []
+repetition: *  (0 or more)
+            +  (1 or more)
+            ?  (0 or 1)
+repetition: {} (0 or more)
+literals  : ""
+group     : ()
+*/
+
+DefinedFunc ::= FuncHead FuncLocal "{" {Statements} "}"
+FuncHead    ::= FuncNill | FuncMonadic | FuncDyadic
+FuncNill    ::= FuncName
+FuncMonadic ::= FuncName VarName
+FuncDyadic  ::= VarName FuncName VarName
+FuncName    ::= VarName
+FuncLocal   ::= {";" VarName}
+
+Statements  ::= IfStmt | WhileStmt | Stmt
+Stmt        ::= Expr
+
+ExprBlock   ::= "("" Expr ")" StmtBlock
+StmtBlock   ::= "{" {Statements} "}"
+ForBlock    ::= "(" VarName "=" Expr ":" Expr ")" StmtBlock
+
+// If-else
+IfStmt      ::= IfBlock (IfElseBlock)* [ElseBlock]
+IfBlock     ::= "if" ExprBlock
+IfElseBlock ::= "else if" ExprBlock
+ElseBlock   ::= StmtBlock
+
+// While
+WhileStmt   ::= "while" ExprBlock
+
+// For
+ForStmt     ::= "for" ForBlock
+
+// lower structures
+Expr        ::= SubExpr | "(" SubExpr ")"
+SubExpr     ::= Assign  | Function
+Operand     ::= AllType | VarName | ArrayIndex  
+
+Function    ::= Primitive | DefinedFunc | SystemFunc
+Primitive   ::= Dyadic | Monadic
+Dyadic      ::= Operand PFDyadic Expr
+Monadic     ::= PFMonadic Expr
+SystemFunc  ::= "[]"Name [Argument] | [Argument] "[]"Name Argument
+DefinedFunc ::= FuncName [Argument] | [Argument] FuncName Argument
+FuncName    ::= VarName
+Argument    ::= Expr
+
+Assign      ::= Assignable "<-" Expr
+Assignable  ::= VarName | ArrayIndex | VarList | Output
+ArrayIndex  ::= VarName "[" ItemSub {";" ItemSub} "]"
+VarList     ::= {VarName}
+Output      ::= "[]" | "[)"
+
+AllType     ::= {Number} | String | {Symbol} | DateTime | Dictionary | Table | ListItem
+
+ListItem    ::= "(" ItemSub {";" ItemSub} ")"
+ItemSub     ::= "" | Expr
+
+Enumeration ::= (VarName | SymbolOne) ":" Expr
+SymbolOne   ::= Symbol {Symbol}
+
+Number := Int | Float | Double | Complex
+
+Table       ::= Dictionary | NonKeyTable | KeyTable
+Dictionary  ::= SymbolOne ":" Expr
+NonKeyTable ::= "([]" Assign {";" Assign} ")"
+KeyTable    ::= "([" Assign {";" Assign} "]" Assign {";" Assign} ")"
+
+// primitives
+PFDyadic    ::= PFCommon | "<" | "<=" | ">" | ">=" | "~=" | "^." | "&." | "?"
+PFMonadic   ::= PFCommon | PFReduct | PFReduct | "?."
+PFCommon    ::= "+" | "-" | "*" | "%" | "=" | "$" | "$." | "!" | "!." | "+." | 
+PFReduct    ::= Reductable "/" [Axis]
+PFScan      ::= Scannable "\" [Axis]
+Scannable   ::= Reductable
+Reductable  ::= "+" | "-" | "*" | "%"
+Axis        ::= "[" Expr "]"
+
+// datetime
+DateTime ::= (DateTimeStamp)+ | (Month)+ | (Date)+ | (Minute)+ | (Second)+ | (MilliSecond)+
+
+// pre-defined (tokens)
+Symbol ::= "`" (VarName | String)
+
+
+
+

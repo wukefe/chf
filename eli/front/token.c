@@ -154,6 +154,7 @@ void mainworker(S s, L ln){
 }
 
 L tokenizer(S s){
+    P("processing ... %s\n",s);
     initTable();
     headk = AL(TK0, 1);
     headt = headk;
