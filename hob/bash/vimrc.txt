@@ -1,0 +1,1 @@
+wget -O ~/.vimrc http://github.com/lucasoman/Conf/raw/master/.vimrc
