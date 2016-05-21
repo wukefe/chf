@@ -25,7 +25,7 @@ a runtime error occurs.
 An example
 ~~~~~~~~~~
 
-Add a break line ``->'stop after while'`` into script ``TSORT.esf``
+Add a break line ``->'stop after while'`` into the script ``TSORT.esf``
 under the ``ws`` folder.
 
 ::
@@ -46,7 +46,7 @@ under the ``ws`` folder.
 	@.
 
 
-After the script is saved, we can execute it in interpreter environment.
+After the script is saved, it can be executed in interpreter environment.
 
 - ``TSORT G`` triggers an error, then the program is terminated.
 - ``)TRACE`` prints the error messages as follows.
