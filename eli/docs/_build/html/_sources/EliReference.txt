@@ -2,9 +2,8 @@
 ELI - Language Reference
 ========================
 
-.. Note :: The Eli reference is under construction.  If you find
-   any problem or you have any suggestion, please leave your comment
-   on our `website`__ or contact us via `email`__.
+.. Note ::
+   The Eli reference is under construction.  If you find any problem or you have any suggestion, please leave your comment on our `website`__ or contact us via `email`__.
 
 :Authors:
    Wai-Mee Ching,
