@@ -141,6 +141,31 @@
 <p class="first admonition-title">Note</p>
 <p class="last">This section introduces the basics of primitive functions.</p>
 </div>
+<div class="section" id="eli-table">
+<h2>ELI Table<a class="headerlink" href="#eli-table" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="26%" />
+<col width="24%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Symbol</th>
+<th class="head">Name</th>
+<th class="head">Symbol</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>iota,find</td>
+<td><a class="reference internal" href="#iota">!</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="convensions">
 <h2>Convensions<a class="headerlink" href="#convensions" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -183,9 +208,8 @@
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
 <div class="section" id="iota-find">
-<h2>! (iota,find)<a class="headerlink" href="#iota-find" title="Permalink to this headline">¶</a></h2>
+<span id="iota"></span><h2>! (iota,find)<a class="headerlink" href="#iota-find" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">!</span> <span class="pre">R</span></code>)</li>
 </ul>
@@ -302,7 +326,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="or">
-<h2>&amp; (-,Or)<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h2>
+<h2>&amp; (&#8211;,Or)<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Monadic (N/A)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L&amp;R</span></code>)</li>
@@ -311,8 +335,10 @@ Error: domain error
 1 1 1
 </pre></div>
 </div>
+</div>
 <hr class="docutils" />
-<p>!. (Execute,Drop)</p>
+<div class="section" id="execute-drop">
+<h2>!. (Execute,Drop)<a class="headerlink" href="#execute-drop" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">!.R</span></code>)</li>
 </ul>
@@ -327,7 +353,66 @@ Error: domain error
 2 3
 </pre></div>
 </div>
+</div>
 <hr class="docutils" />
+<div class="section" id="take1-take">
+<h2>^. (Take1,Take)<a class="headerlink" href="#take1-take" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">^.R</span></code>)</li>
+<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L^.R</span></code>)</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="ravel-concatenate">
+<h2>, (Ravel,Concatenate)<a class="headerlink" href="#ravel-concatenate" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">,R</span></code>)</li>
+<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L,R</span></code>)</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="sign-plus">
+<h2>+ (Sign,Plus)<a class="headerlink" href="#sign-plus" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">+R</span></code>)</li>
+<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L+R</span></code>)</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="negative-minus">
+<h2>- (Negative,Minus)<a class="headerlink" href="#negative-minus" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">-R</span></code>)</li>
+<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L-R</span></code>)</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="xxxx-mutiply">
+<h2>* (xxxx,Mutiply)<a class="headerlink" href="#xxxx-mutiply" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">*R</span></code>)</li>
+<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L*R</span></code>)</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="single-divide-divide">
+<h2>% (Single divide,Divide)<a class="headerlink" href="#single-divide-divide" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">%R</span></code>)</li>
+<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L%R</span></code>)</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="rotate">
+<h2>$ (Rotate)<a class="headerlink" href="#rotate" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">$R</span></code>)</li>
+<li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L$R</span></code>)</li>
+</ul>
+<hr class="docutils" />
+<p>&amp;. (transpose)</p>
+<hr class="docutils" />
+<p>*.</p>
 </div>
 </div>
 
