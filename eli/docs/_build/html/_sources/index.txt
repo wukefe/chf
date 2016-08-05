@@ -1,5 +1,5 @@
-ELI documentation
-=====================
+ELI Documentation
+=================
 
 :Authors:
    Wai-Mee Ching,
