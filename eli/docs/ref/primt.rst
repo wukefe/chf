@@ -2,20 +2,21 @@
 Primitive Functions
 -------------------
 
-.. Note::
-  This section introduces the basics of primitive functions.
+.. .. Note::
+..   This section introduces the basics of primitive functions.
 
-ELI Table
-~~~~~~~~~
+.. role::strike
 
-+-----------------------+------------------------+-----------------------+------------------------+
-| Name                  | Symbol                 | Name                  | Symbol                 |
-+=======================+========================+=======================+========================+
-|iota,find              | `\! <iota_>`_          |                       |                        |
-+-----------------------+------------------------+-----------------------+------------------------+
+Testing :strike:`what`.
+
+
+.. include:: primt/bigtable.txt
+.. include:: primt/monadic.txt
+.. include:: primt/dyadic.txt
+.. include:: primt/mixed.txt
 
 Convensions
-~~~~~~~~~~~
+===========
 
 +--------+------------------+------------------------------------------+
 | Name   |     Description  |   Explanation                            |
@@ -33,7 +34,6 @@ Convensions
 | TYPE   | Return type      | The type of a variable                   |
 +--------+------------------+------------------------------------------+
 
-.. _iota:
 
 \! (iota,find)
 ~~~~~~~~~~~~~~
@@ -264,4 +264,5 @@ Examples:
 -----
 
 \*.
+
 

@@ -3,6 +3,6 @@
 clear
 make html
 #_build\html\index.html
-#open _build/html/ref/primt.html
-open _build/html/ref/types.html
+open _build/html/ref/primt.html
+# open _build/html/ref/types.html
 #echo :)

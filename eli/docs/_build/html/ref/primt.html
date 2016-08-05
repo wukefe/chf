@@ -28,6 +28,8 @@
   
 
   
+    <link rel="stylesheet" href="../_static/_mycss/custom_css.css" type="text/css" />
+  
 
   
     <link rel="top" title="ELI 0.3 documentation" href="../index.html"/>
@@ -137,18 +139,23 @@
             
   <div class="section" id="primitive-functions">
 <h1>Primitive Functions<a class="headerlink" href="#primitive-functions" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This section introduces the basics of primitive functions.</p>
-</div>
+<p><a href="#id1"><span class="problematic" id="id2">:strike:`what`</span></a>.</p>
+<dl class="class">
+<dt id="strike">
+<em class="property">class </em><code class="descname">strike</code><a class="headerlink" href="#strike" title="Permalink to this definition">¶</a></dt>
+<dt id="what">
+<em class="property">class </em><code class="descname">what</code><a class="headerlink" href="#what" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>What are you doing</p>
 <div class="section" id="eli-table">
-<h2>ELI Table<a class="headerlink" href="#eli-table" title="Permalink to this headline">¶</a></h2>
+<span id="elitable"></span><h2>ELI Table<a class="headerlink" href="#eli-table" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="24%" />
-<col width="26%" />
-<col width="24%" />
-<col width="26%" />
+<col width="44%" />
+<col width="8%" />
+<col width="41%" />
+<col width="8%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Name</th>
@@ -158,13 +165,171 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>iota,find</td>
-<td><a class="reference internal" href="#iota">!</a></td>
+<tr class="row-even"><td><a class="reference internal" href="#jot">jot</a></td>
+<td>.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#dot">dot</a></td>
+<td>:</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#each">each</a></td>
+<td>&#8220;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#uniq">unique</a>/<a class="reference internal" href="#eq">equal</a></td>
+<td>=</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>minus(<a class="reference internal" href="#neg">negate</a>/<a class="reference internal" href="#sub">substract</a>)</td>
+<td>-</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>at(<a class="reference internal" href="#pi">pi</a>/<a class="reference internal" href="#circle">circle</a>)</td>
+<td>&#64;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>epsilon(<a class="reference internal" href="#mem">member</a>)</td>
+<td>?</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>star(<a class="reference internal" href="#sig">signum</a>/<a class="reference internal" href="#mult">multiply</a>)</td>
+<td>*</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>percent(<a class="reference internal" href="#rec">reciprocal</a>/<a class="reference internal" href="#div">div</a>)</td>
+<td>%</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>bar(<a class="reference internal" href="#abs">absolute</a>/<a class="reference internal" href="#res">residue</a>)</td>
+<td>|</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>rho(<a class="reference internal" href="#shape">shape</a>/<a class="reference internal" href="#reshape">reshape</a>)</td>
+<td>#</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>turn(<a class="reference internal" href="#rev">reverse</a>/<a class="reference internal" href="#rotate">rotate</a>)</td>
+<td>$</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>left(<a class="reference internal" href="#gup">grade_up</a>/<a class="reference internal" href="#less">less</a>)</td>
+<td>&lt;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>right(<a class="reference internal" href="#gdw">grade_down</a>/<a class="reference internal" href="#gt">greater</a>)</td>
+<td>&gt;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>iota(<a class="reference internal" href="#itv">interval</a>/<a class="reference internal" href="#indof">index_of</a>)</td>
+<td>!</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cnt">count</a>/<a class="reference internal" href="#and">and</a></td>
+<td>^</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#or">or</a></td>
+<td>&amp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>plus(<a class="reference internal" href="#conj">conjugate</a>/<a class="reference internal" href="#add">add</a>)</td>
+<td>+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#hmin">high_minus</a></td>
+<td>_</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#not">not</a></td>
+<td>~</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>slash(<a class="reference internal" href="#reduce">reduce</a>/<a class="reference internal" href="#comp">compress</a>)</td>
+<td>/</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>back slash(<a class="reference internal" href="#scan">scan</a>/<a class="reference internal" href="#exp">expand</a>)</td>
+<td>\</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#catenate">catenate</a></td>
+<td>,</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="monadic">
+<h2>Monadic<a class="headerlink" href="#monadic" title="Permalink to this headline">¶</a></h2>
+<p id="each">1.1 Each (&#8221;)</p>
+<p><a class="reference internal" href="#elitable">Go back to table</a></p>
+<p id="uniq">1.2 Unique (=)</p>
+<p id="neg">1.3 Negate (-)</p>
+<p id="pi">1.4 Pi (&#64;)</p>
+<p id="sig">1.5 Signum (*)</p>
+<p id="rec">1.6 Reciprocal (%)</p>
+<p id="abs">1.7 Absolute (|)</p>
+<p id="shape">1.8 Shape (#)</p>
+<p id="rev">1.9 Reverse ($)</p>
+<p id="gup">1.10 Grade Up (&lt;)</p>
+<p id="gdw">1.11 Grade Down (&gt;)</p>
+<p id="itv">1.12 Interval (!)</p>
+<p id="cnt">1.13 Count (^)</p>
+<p id="or">1.14 Or (&amp;)</p>
+<p id="conj">1.15 Conjugate (+)</p>
+<p id="hmin">1.16 High_minus (_)</p>
+<p id="not">1.17 Not (~)</p>
+</div>
+<div class="section" id="dyadic">
+<h2>Dyadic<a class="headerlink" href="#dyadic" title="Permalink to this headline">¶</a></h2>
+<p id="eq">2.1 Equal (=)</p>
+<p id="sub">2.2 Substract (-)</p>
+<p id="circle">2.2 Circle (&#64;)</p>
+<p id="mem">2.3 Member (?)</p>
+<p id="mult">2.4 Multiply (*)</p>
+<p id="div">2.5 Division (%)</p>
+<p id="res">2.6 Residue (|)</p>
+<p id="reshape">2.7 Reshape (#)</p>
+<p id="rotate">2.8 Rotate ($)</p>
+<p id="less">2.9 Less (&lt;)</p>
+<p id="gt">2.10 Greater (&gt;)</p>
+<p id="indof">2.11 Index Of (!)</p>
+<p id="and">2.12 And (^)</p>
+<p id="add">2.13 Add (+)</p>
+<p id="comp">2.14 Compress (/)</p>
+<p id="exp">2.15 Expand (\)</p>
+<p id="catenate">2.16 Catenate (,)</p>
+</div>
+<div class="section" id="mixed">
+<h2>Mixed<a class="headerlink" href="#mixed" title="Permalink to this headline">¶</a></h2>
+<p id="jot">3.1 Jot (.)</p>
+<p id="dot">3.2 Dot (:)</p>
+<p id="reduce">3.3 Reduce (/)</p>
+<p id="scan">3.4 Scan ()</p>
 </div>
 <div class="section" id="convensions">
 <h2>Convensions<a class="headerlink" href="#convensions" title="Permalink to this headline">¶</a></h2>
@@ -207,9 +372,8 @@
 </tr>
 </tbody>
 </table>
-</div>
 <div class="section" id="iota-find">
-<span id="iota"></span><h2>! (iota,find)<a class="headerlink" href="#iota-find" title="Permalink to this headline">¶</a></h2>
+<h3>! (iota,find)<a class="headerlink" href="#iota-find" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">!</span> <span class="pre">R</span></code>)</li>
 </ul>
@@ -243,7 +407,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="rho-reshape">
-<h2>#  (Rho,Reshape)<a class="headerlink" href="#rho-reshape" title="Permalink to this headline">¶</a></h2>
+<h3>#  (Rho,Reshape)<a class="headerlink" href="#rho-reshape" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">#</span> <span class="pre">R</span></code>)</li>
 </ul>
@@ -260,7 +424,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="great-up-less">
-<h2>&lt; &lt;=  (Great_up,Less)<a class="headerlink" href="#great-up-less" title="Permalink to this headline">¶</a></h2>
+<h3>&lt; &lt;=  (Great_up,Less)<a class="headerlink" href="#great-up-less" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">&lt;R</span></code>)</li>
 </ul>
@@ -284,7 +448,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="great-down-greater">
-<h2>&gt; &gt;= (Great_down,Greater)<a class="headerlink" href="#great-down-greater" title="Permalink to this headline">¶</a></h2>
+<h3>&gt; &gt;= (Great_down,Greater)<a class="headerlink" href="#great-down-greater" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">&gt;R</span></code>)</li>
 </ul>
@@ -308,7 +472,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="count-and">
-<h2>^ (Count,And)<a class="headerlink" href="#count-and" title="Permalink to this headline">¶</a></h2>
+<h3>^ (Count,And)<a class="headerlink" href="#count-and" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">^R</span></code>)</li>
 </ul>
@@ -325,8 +489,8 @@ Error: domain error
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="or">
-<h2>&amp; (&#8211;,Or)<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>&amp; (&#8211;,Or)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (N/A)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L&amp;R</span></code>)</li>
@@ -338,7 +502,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="execute-drop">
-<h2>!. (Execute,Drop)<a class="headerlink" href="#execute-drop" title="Permalink to this headline">¶</a></h2>
+<h3>!. (Execute,Drop)<a class="headerlink" href="#execute-drop" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">!.R</span></code>)</li>
 </ul>
@@ -356,7 +520,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="take1-take">
-<h2>^. (Take1,Take)<a class="headerlink" href="#take1-take" title="Permalink to this headline">¶</a></h2>
+<h3>^. (Take1,Take)<a class="headerlink" href="#take1-take" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">^.R</span></code>)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L^.R</span></code>)</li>
@@ -364,7 +528,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="ravel-concatenate">
-<h2>, (Ravel,Concatenate)<a class="headerlink" href="#ravel-concatenate" title="Permalink to this headline">¶</a></h2>
+<h3>, (Ravel,Concatenate)<a class="headerlink" href="#ravel-concatenate" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">,R</span></code>)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L,R</span></code>)</li>
@@ -372,7 +536,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="sign-plus">
-<h2>+ (Sign,Plus)<a class="headerlink" href="#sign-plus" title="Permalink to this headline">¶</a></h2>
+<h3>+ (Sign,Plus)<a class="headerlink" href="#sign-plus" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">+R</span></code>)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L+R</span></code>)</li>
@@ -380,7 +544,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="negative-minus">
-<h2>- (Negative,Minus)<a class="headerlink" href="#negative-minus" title="Permalink to this headline">¶</a></h2>
+<h3>- (Negative,Minus)<a class="headerlink" href="#negative-minus" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">-R</span></code>)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L-R</span></code>)</li>
@@ -388,7 +552,7 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="xxxx-mutiply">
-<h2>* (xxxx,Mutiply)<a class="headerlink" href="#xxxx-mutiply" title="Permalink to this headline">¶</a></h2>
+<h3>* (xxxx,Mutiply)<a class="headerlink" href="#xxxx-mutiply" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">*R</span></code>)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L*R</span></code>)</li>
@@ -396,15 +560,15 @@ Error: domain error
 </div>
 <hr class="docutils" />
 <div class="section" id="single-divide-divide">
-<h2>% (Single divide,Divide)<a class="headerlink" href="#single-divide-divide" title="Permalink to this headline">¶</a></h2>
+<h3>% (Single divide,Divide)<a class="headerlink" href="#single-divide-divide" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">%R</span></code>)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L%R</span></code>)</li>
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="rotate">
-<h2>$ (Rotate)<a class="headerlink" href="#rotate" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>$ (Rotate)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Monadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">$R</span></code>)</li>
 <li>Dyadic (<code class="docutils literal"><span class="pre">Z</span> <span class="pre">&lt;-</span> <span class="pre">L$R</span></code>)</li>
@@ -413,6 +577,7 @@ Error: domain error
 <p>&amp;. (transpose)</p>
 <hr class="docutils" />
 <p>*.</p>
+</div>
 </div>
 </div>
 

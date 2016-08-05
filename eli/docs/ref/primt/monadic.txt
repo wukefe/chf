@@ -1,0 +1,72 @@
+Monadic
+=======
+
+.. _each:
+
+1.1 Each (")
+
+.. include:: primt/goback.txt
+
+.. _uniq:
+
+1.2 Unique (=)
+
+.. _neg:
+
+1.3 Negate (-)
+
+.. _pi:
+
+1.4 Pi (@)
+
+.. _sig:
+
+1.5 Signum (*)
+
+.. _rec:
+
+1.6 Reciprocal (%)
+
+.. _abs:
+
+1.7 Absolute (|)
+
+.. _shape:
+
+1.8 Shape (#)
+
+.. _rev:
+
+1.9 Reverse ($)
+
+.. _gup:
+
+1.10 Grade Up (<)
+
+.. _gdw:
+
+1.11 Grade Down (>)
+
+.. _itv:
+
+1.12 Interval (\!)
+
+.. _cnt:
+
+1.13 Count (^)
+
+.. _or:
+
+1.14 Or (&)
+
+.. _conj:
+
+1.15 Conjugate (+)
+
+.. _hmin:
+
+1.16 High_minus (_)
+
+.. _not:
+
+1.17 Not (~)

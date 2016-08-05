@@ -1,0 +1,70 @@
+Dyadic
+======
+
+.. _eq:
+
+2.1 Equal (=)
+
+.. _sub:
+
+2.2 Substract (-)
+
+.. _circle:
+
+2.2 Circle (@)
+
+.. _mem:
+
+2.3 Member (?)
+
+.. _mult:
+
+2.4 Multiply (*)
+
+.. _div:
+
+2.5 Division (%)
+
+.. _res:
+
+2.6 Residue (|)
+
+.. _reshape:
+
+2.7 Reshape (#)
+
+.. _rotate:
+
+2.8 Rotate ($)
+
+.. _less:
+
+2.9 Less (<)
+
+.. _gt:
+
+2.10 Greater (>)
+
+.. _indof:
+
+2.11 Index Of (!)
+
+.. _and:
+
+2.12 And (^)
+
+.. _add:
+
+2.13 Add (+)
+
+.. _comp:
+
+2.14 Compress (/)
+
+.. _exp:
+
+2.15 Expand (\\)
+
+.. _catenate:
+
+2.16 Catenate (,)

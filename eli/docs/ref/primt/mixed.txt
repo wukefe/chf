@@ -1,0 +1,18 @@
+Mixed
+=====
+
+.. _jot:
+
+3.1 Jot (.)
+
+.. _dot:
+
+3.2 Dot (:)
+
+.. _reduce:
+
+3.3 Reduce (/)
+
+.. _scan:
+
+3.4 Scan (\)
