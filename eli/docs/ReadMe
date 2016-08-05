@@ -10,3 +10,11 @@ command: pandoc --from=markdown --to=rst --output=demo.rst demo.md
 
    r.bat: works on Windows, compile and display homepage
 make.bat: be invoked by `r.bat`
+
+
+## Try to add a CSS file
+
+- Add a function `setup` in conf.py (on the bottom)
+- Add the CSS file into `_static/_mycss/custom_css.css`
+- Add ".. role::strike" in a file
+- Run with `sh r.sh`, but not succeed yet

@@ -3,16 +3,250 @@ Mixed
 
 .. _jot:
 
-3.1 Jot (.)
+Jot (.)
+~~~~~~~
+
+.. include:: primt/end.txt
+
+
 
 .. _dot:
 
-3.2 Dot (:)
+Dot (:)
+~~~~~~~
+
+.. include:: primt/end.txt
+
+
 
 .. _reduce:
 
-3.3 Reduce (/)
+Reduce (/)
+~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
 
 .. _scan:
 
-3.4 Scan (\)
+Scan (\)
+~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _comp:
+
+Compress (/)
+~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _exp:
+
+Expand (\\)
+~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _del:
+
+Del (@.)
+~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _rand:
+
+Random (\?.)
+~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _log:
+
+Log (%.)
+~~~~~~~~
+
+.. code-block:: none
+
+          10%. 1 10 100 1000 10000
+    0 1 2 2 3 4
+          10%. 1 10 100 1000 10000 100000
+    0 1 2 3 4 5
+          2%. 0.5 1 2 4 8 16
+    _1 0 1 2 3 4
+          2 3 10%. 4 9 100
+    2 2 2
+          e<-*.1
+          e
+    2.718282
+          %.1 10 100 1000 10000 100000 
+    0 2.302585 4.60517 6.907755 9.21034 11.512925
+          e%.1 10 100 1000 10000 100000 
+    0 2.302585 4.60517 6.907755 9.21034 11.512925
+
+.. include:: primt/end.txt
+
+
+
+.. _trans:
+
+Transpose
+~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _format:
+
+Format (\+.)
+~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _red1:
+
+Reduct on 1st axis (/.)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _cpr1:
+
+Compre on 1st axis (/.)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _scan1:
+
+Scan on 1st axis (\\.)
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _exp1:
+
+Expand on 1st axis (\\.)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+.. _assign:
+
+Assign (<-)
+~~~~~~~~~~~
+
+.. code-block:: none
+
+          A<-'BC'
+          ch<-'abcde''1234'
+          ch
+    abcde'1234
+          A
+    BC
+
+.. include:: primt/end.txt
+
+
+
+.. _branch:
+
+Branch (->)
+~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _nand:
+
+Nand (~^)
+~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _nor:
+
+Nor (~&)
+~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _neq:
+
+Not equal (~=)
+~~~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _leq:
+
+Less than equal (<=)
+~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _geq:
+
+Greater than equal (>=)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _comment:
+
+Comment (//)
+~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _quad:
+
+Quad ([])
+~~~~~~~~~
+
+.. include:: primt/end.txt
+
+
+
+.. _bquad:
+
+Bare quad ([)
+~~~~~~~~~~~~~
+
+.. include:: primt/end.txt
+
