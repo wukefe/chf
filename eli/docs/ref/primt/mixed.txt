@@ -250,3 +250,5 @@ Bare quad ([)
 
 .. include:: primt/end.txt
 
+The End.
+

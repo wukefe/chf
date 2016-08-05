@@ -9,4 +9,3 @@ Primitive Functions
 .. include:: primt/monadic.txt
 .. include:: primt/dyadic.txt
 .. include:: primt/mixed.txt
-

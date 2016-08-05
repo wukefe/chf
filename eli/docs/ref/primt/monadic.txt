@@ -6,7 +6,7 @@ Monadic
 Each (")
 ~~~~~~~~
 
-.. include:: primt/goback.txt
+.. include:: primt/end.txt
 
 .. _uniq:
 
