@@ -143,6 +143,679 @@
 <p class="first admonition-title">Note</p>
 <p class="last">The examples of primitives come from the ELI Primer which is available at <a class="reference external" href="http://fastarray.appspot.com/document.html">ELI Document</a></p>
 </div>
+<div class="section" id="symbol-table">
+<span id="elitable"></span><h2>Symbol Table<a class="headerlink" href="#symbol-table" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="7%" />
+<col width="44%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Symbol</th>
+<th class="head">Name</th>
+<th class="head">Symbol</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#jot">jot</a></td>
+<td>.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#dot">dot</a></td>
+<td>:</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#each">each</a></td>
+<td>&#8220;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#uniq">unique</a>/<a class="reference internal" href="#eq">equal</a></td>
+<td>=</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>minus(<a class="reference internal" href="#neg">negate</a>/<a class="reference internal" href="#sub">substract</a>)</td>
+<td>-</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>at(<a class="reference internal" href="#pi">pi</a>/<a class="reference internal" href="#circle">circle</a>)</td>
+<td>&#64;</td>
+<td><a class="reference internal" href="#del">del</a></td>
+<td>&#64;.</td>
+</tr>
+<tr class="row-even"><td>epsilon(<a class="reference internal" href="#mem">member</a>)</td>
+<td>?</td>
+<td><a class="reference internal" href="#rand">random</a></td>
+<td>?.</td>
+</tr>
+<tr class="row-odd"><td>star(<a class="reference internal" href="#sig">signum</a>/<a class="reference internal" href="#mult">multiply</a>)</td>
+<td>*</td>
+<td><a class="reference internal" href="#nlog">natural log</a>/<a class="reference internal" href="#power">power</a></td>
+<td>*.</td>
+</tr>
+<tr class="row-even"><td>percent(<a class="reference internal" href="#rec">reciprocal</a>/<a class="reference internal" href="#div">div</a>)</td>
+<td>%</td>
+<td><a class="reference internal" href="#log">log</a></td>
+<td>%.</td>
+</tr>
+<tr class="row-odd"><td>bar(<a class="reference internal" href="#abs">absolute</a>/<a class="reference internal" href="#res">residue</a>)</td>
+<td>|</td>
+<td>gamma(<a class="reference internal" href="#fact">factorial</a>/<a class="reference internal" href="#bim">binom</a>)</td>
+<td>|.</td>
+</tr>
+<tr class="row-even"><td>rho(<a class="reference internal" href="#shape">shape</a>/<a class="reference internal" href="#reshape">reshape</a>)</td>
+<td>#</td>
+<td><a class="reference internal" href="#domino">domino</a></td>
+<td>#.</td>
+</tr>
+<tr class="row-odd"><td>turn(<a class="reference internal" href="#rev">reverse</a>/<a class="reference internal" href="#rotate">rotate</a>)</td>
+<td>$</td>
+<td><a class="reference internal" href="#rv1">reverse</a>/<a class="reference internal" href="#rt1">roate(1st axis)</a></td>
+<td>$.</td>
+</tr>
+<tr class="row-even"><td>left(<a class="reference internal" href="#gup">grade_up</a>/<a class="reference internal" href="#less">less</a>)</td>
+<td>&lt;</td>
+<td>pack(<a class="reference internal" href="#encs">enclose</a>/<a class="reference internal" href="#encd">encode</a>)</td>
+<td>&lt;.</td>
+</tr>
+<tr class="row-odd"><td>right(<a class="reference internal" href="#gdw">grade_down</a>/<a class="reference internal" href="#gt">greater</a>)</td>
+<td>&gt;</td>
+<td>unpack(<a class="reference internal" href="#gp">grouping</a>/<a class="reference external" href="decd">decode</a>)</td>
+<td>&gt;.</td>
+</tr>
+<tr class="row-even"><td>iota(<a class="reference internal" href="#itv">interval</a>/<a class="reference internal" href="#indof">index_of</a>)</td>
+<td>!</td>
+<td><a class="reference internal" href="#exe">execute</a>/<a class="reference internal" href="#drop">drop</a></td>
+<td>!.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#cnt">count</a>/<a class="reference internal" href="#and">and</a></td>
+<td>^</td>
+<td><a class="reference internal" href="#first">first</a>/<a class="reference internal" href="#take">take</a></td>
+<td>^.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#or">or</a></td>
+<td>&amp;</td>
+<td>flip(<a class="reference internal" href="#trans">transpose</a>)</td>
+<td>&amp;.</td>
+</tr>
+<tr class="row-odd"><td>plus(<a class="reference internal" href="#conj">conjugate</a>/<a class="reference internal" href="#add">add</a>)</td>
+<td>+</td>
+<td><a class="reference internal" href="#format">format</a></td>
+<td>+.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#hmin">high_minus</a></td>
+<td>_</td>
+<td>lower(<a class="reference internal" href="#floor">floor</a>/<a class="reference internal" href="#min">minimum</a>)</td>
+<td>_.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#not">not</a></td>
+<td>~</td>
+<td>upper(<a class="reference internal" href="#ceil">ceiling</a>/<a class="reference internal" href="#max">maximum</a>)</td>
+<td>~.</td>
+</tr>
+<tr class="row-even"><td>slash(<a class="reference internal" href="#reduce">reduce</a>/<a class="reference internal" href="#comp">compress</a>)</td>
+<td>/</td>
+<td>slashdot(<a class="reference internal" href="#red1">reduct1</a>/<a class="reference internal" href="#cpr1">compre1</a>)</td>
+<td>/.</td>
+</tr>
+<tr class="row-odd"><td>back slash(<a class="reference internal" href="#scan">scan</a>/<a class="reference internal" href="#exp">expand</a>)</td>
+<td>\</td>
+<td>back slash(<a class="reference internal" href="#scan1">scan1</a>/<a class="reference internal" href="#exp1">expand1</a>)</td>
+<td>\.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#catenate">catenate</a></td>
+<td>,</td>
+<td><a class="reference internal" href="#raze">raze</a>/<a class="reference internal" href="#cat1">catenate(1st axis)</a></td>
+<td>,</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#assign">assign</a></td>
+<td>&lt;-</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#branch">branch</a></td>
+<td>-&gt;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#nand">nand</a></td>
+<td>~^</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#nor">nor</a></td>
+<td>~&amp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#neq">not equal</a></td>
+<td>~=</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#leq">less or equal</a></td>
+<td>&lt;=</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#geq">greater or equal</a></td>
+<td>&gt;=</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#comment">comment</a></td>
+<td>//</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#quad">quad</a></td>
+<td>[]</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference internal" href="#bquad">bare quad</a></td>
+<td>[)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="monadic">
+<h2>Monadic<a class="headerlink" href="#monadic" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="each">
+<span id="id1"></span><h3>Each (&#8221;)<a class="headerlink" href="#each" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="unique">
+<span id="uniq"></span><h3>Unique (=)<a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="negate">
+<span id="neg"></span><h3>Negate (-)<a class="headerlink" href="#negate" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="pi">
+<span id="id2"></span><h3>Pi (&#64;)<a class="headerlink" href="#pi" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="signum">
+<span id="sig"></span><h3>Signum (*)<a class="headerlink" href="#signum" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>    V
+86 25 55 48 78 95 36 36 14 65
+    P
+17.3 22.3 24.3 17.5 21.4 18.4 17.2 15 20.8 21.8
+    *P-P0&lt;-20
+_1 1 1 _1 1 _1 _1 _1 1 1
+    V**P-P0
+_86 25 55 _48 78 _95 _36 _36 14 65
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="reciprocal">
+<span id="rec"></span><h3>Reciprocal (%)<a class="headerlink" href="#reciprocal" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="absolute">
+<span id="abs"></span><h3>Absolute (|)<a class="headerlink" href="#absolute" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      | _1 2 _3.2 5 0 _10
+1 2 3.2 5 0 10
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="shape">
+<span id="id3"></span><h3>Shape (#)<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      a&lt;-2 3#9 2 3 4 5 6
+      a
+9 2 3
+4 5 6
+      #a
+2 3
+    #empv&lt;-0#a
+0
+    #empm&lt;-0 10#&#39;A&#39;
+0 10
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="reverse">
+<span id="rev"></span><h3>Reverse ($)<a class="headerlink" href="#reverse" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="grade-up">
+<span id="gup"></span><h3>Grade Up (&lt;)<a class="headerlink" href="#grade-up" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="grade-down">
+<span id="gdw"></span><h3>Grade Down (&gt;)<a class="headerlink" href="#grade-down" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="interval">
+<span id="itv"></span><h3>Interval (!)<a class="headerlink" href="#interval" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>    !5
+1 2 3 4 5
+    !2.3
+Error: domain error
+    !2.3
+    ^
+</pre></div>
+</div>
+<p>The generated interval is influenced by the system variable <cite>[]IO</cite>.</p>
+<div class="highlight-none"><div class="highlight"><pre>      []IO&lt;-0
+0
+      !12
+0 1 2 3 4 5 6 7 8 9 10 11
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="count">
+<span id="cnt"></span><h3>Count (^)<a class="headerlink" href="#count" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>    ^`abc
+1
+    s3&lt;-`abc `ddl `comp
+    ^s3
+4
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="conjugate">
+<span id="conj"></span><h3>Conjugate (+)<a class="headerlink" href="#conjugate" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="high-minus">
+<span id="hmin"></span><h3>High_minus (_)<a class="headerlink" href="#high-minus" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="not">
+<span id="id4"></span><h3>Not (~)<a class="headerlink" href="#not" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="natural-logarithm">
+<span id="nlog"></span><h3>Natural logarithm (*.)<a class="headerlink" href="#natural-logarithm" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      e&lt;-*.1
+      e
+2.7182818
+      *. _1 0 1 2 3
+0.36787944 1 2.7182818 7.3890561 20.085537
+      e*. _1 0 1 2 3
+0.36787944 1 2.7182818 7.3890561 20.085537
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="factorial">
+<span id="fact"></span><h3>Factorial (|.)<a class="headerlink" href="#factorial" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="domino">
+<span id="id5"></span><h3>Domino (#.)<a class="headerlink" href="#domino" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="reverse-on-1st-axis">
+<span id="rv1"></span><h3>Reverse on 1st axis ($.)<a class="headerlink" href="#reverse-on-1st-axis" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="enclose">
+<span id="encs"></span><h3>Enclose (&lt;.)<a class="headerlink" href="#enclose" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="grouping">
+<span id="gp"></span><h3>Grouping (&gt;.)<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="execute">
+<span id="exe"></span><h3>Execute (!.)<a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="first">
+<span id="id6"></span><h3>First (^.)<a class="headerlink" href="#first" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="floor">
+<span id="id7"></span><h3>Floor (_.)<a class="headerlink" href="#floor" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="ceiling">
+<span id="ceil"></span><h3>Ceiling (~.)<a class="headerlink" href="#ceiling" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="raze">
+<span id="id8"></span><h3>Raze (,)<a class="headerlink" href="#raze" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="dyadic">
+<h2>Dyadic<a class="headerlink" href="#dyadic" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="equal">
+<span id="eq"></span><h3>Equal (=)<a class="headerlink" href="#equal" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="substract">
+<span id="sub"></span><h3>Substract (-)<a class="headerlink" href="#substract" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="circle">
+<span id="id9"></span><h3>Circle (&#64;)<a class="headerlink" href="#circle" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="member">
+<span id="mem"></span><h3>Member (?)<a class="headerlink" href="#member" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="multiply">
+<span id="mult"></span><h3>Multiply (*)<a class="headerlink" href="#multiply" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      2j5 * 3j2.5
+_6.5j20
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="divide">
+<span id="div"></span><h3>Divide (%)<a class="headerlink" href="#divide" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      (!6)%2
+0.5 1 1.5 2 2.5 3
+      24%!6
+24 12 8 6 4.8 4
+</pre></div>
+</div>
+<p>A special monadic form:</p>
+<div class="highlight-none"><div class="highlight"><pre>      %!6
+1 0.5 0.33333333 0.25 0.2 0.16666667
+</pre></div>
+</div>
+<p>Now to take the cubic root of numbers or various roots of a number, we do</p>
+<div class="highlight-none"><div class="highlight"><pre>      1 2 8 1000 81 125 *.%3
+1 1.259921 2 10 4.3267487 5
+      1024*.%1 2 3 5 10
+1024 32 10.079368 4 2
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="residue">
+<span id="res"></span><h3>Residue (|)<a class="headerlink" href="#residue" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      2|!12
+1 0 1 0 1 0 1 0 1 0 1 0
+      2 3 4.5|9
+1 0 0
+      3.2|3 6.4 7
+3 0 0.6
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="reshape">
+<span id="id10"></span><h3>Reshape (#)<a class="headerlink" href="#reshape" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      a&lt;-2 3#9 2 3 4 5 6
+      a
+9 2 3
+4 5 6
+      #a
+2 3
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="rotate">
+<span id="id11"></span><h3>Rotate ($)<a class="headerlink" href="#rotate" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="less">
+<span id="id12"></span><h3>Less (&lt;)<a class="headerlink" href="#less" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="greater">
+<span id="gt"></span><h3>Greater (&gt;)<a class="headerlink" href="#greater" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="index-of">
+<span id="indof"></span><h3>Index Of (!)<a class="headerlink" href="#index-of" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>    5 1 7 9 3 7 ! 5
+1
+    5 1 7 9 3 7 ! 7
+3
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="and">
+<span id="id13"></span><h3>And (^)<a class="headerlink" href="#and" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      1 1 0 1 0 0 ^ 0 1 0 0 1 0
+0 1 0 0 0 0
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="or">
+<span id="id14"></span><h3>Or (&amp;)<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      1 1 0 1 0 0 &amp; 0 1 0 0 1 0
+1 1 0 1 1 0
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="add">
+<span id="id15"></span><h3>Add (+)<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      1+A&lt;-10
+11
+      n+1
+Error: value error
+      n+1
+       ^
+      2j5+3j2.5
+5j7.5
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="power">
+<span id="id18"></span><h3>Power (<a href="#id16"><span class="problematic" id="id17">*</span></a>.)<a class="headerlink" href="#power" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      2 _3 10 0.5 25 *. 2
+4 9 100 0.25 625
+      10 *. _1 0 1 2 3
+0.1 1 10 100 1000
+      2*.!10
+2 4 8 16 32 64 128 256 512 1024
+      4 9 100 0.25 625 *.0.5
+2 3 10 0.5 25
+      _1 *. 0.5
+0j1
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="catenate">
+<span id="id19"></span><h3>Catenate (,)<a class="headerlink" href="#catenate" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      0,!10
+0 1 2 3 4 5 6 7 8 9 10
+       (!10),_1
+1 2 3 4 5 6 7 8 9 10 _1
+      &#39;WATCH OUT&#39;,&#39;!&#39;
+WATCH OUT!
+      &#39;WATCH OUT&#39;,&#39; GUYS!&#39;
+WATCH OUT GUYS!
+      100 200,2 3 5
+100 200 2 3 5
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="binom">
+<span id="bim"></span><h3>Binom (|.)<a class="headerlink" href="#binom" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p id="rt1">Rotate on 1st axis ($.)</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="encode">
+<span id="encd"></span><h3>Encode (&lt;.)<a class="headerlink" href="#encode" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="decd">
+<span id="id20"></span><h3>Decode (&gt;.)<a class="headerlink" href="#decd" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="drop">
+<span id="id21"></span><h3>Drop (!.)<a class="headerlink" href="#drop" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="take">
+<span id="id22"></span><h3>Take (^.)<a class="headerlink" href="#take" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="minimum">
+<span id="min"></span><h3>Minimum (_.)<a class="headerlink" href="#minimum" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="maximum">
+<span id="max"></span><h3>Maximum (~.)<a class="headerlink" href="#maximum" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="cat1">
+<span id="id23"></span><h3>Catenate (,)<a class="headerlink" href="#cat1" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="mixed">
+<h2>Mixed<a class="headerlink" href="#mixed" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="jot">
+<span id="id24"></span><h3>Jot (.)<a class="headerlink" href="#jot" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="dot">
+<span id="id25"></span><h3>Dot (:)<a class="headerlink" href="#dot" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="reduce">
+<span id="id26"></span><h3>Reduce (/)<a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="scan">
+<span id="id27"></span><h3>Scan ()<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="compress">
+<span id="comp"></span><h3>Compress (/)<a class="headerlink" href="#compress" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="expand">
+<span id="exp"></span><h3>Expand (\)<a class="headerlink" href="#expand" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="del">
+<span id="id28"></span><h3>Del (&#64;.)<a class="headerlink" href="#del" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="random">
+<span id="rand"></span><h3>Random (?.)<a class="headerlink" href="#random" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="log">
+<span id="id29"></span><h3>Log (%.)<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      10%. 1 10 100 1000 10000
+0 1 2 2 3 4
+      10%. 1 10 100 1000 10000 100000
+0 1 2 3 4 5
+      2%. 0.5 1 2 4 8 16
+_1 0 1 2 3 4
+      2 3 10%. 4 9 100
+2 2 2
+      e&lt;-*.1
+      e
+2.718282
+      %.1 10 100 1000 10000 100000
+0 2.302585 4.60517 6.907755 9.21034 11.512925
+      e%.1 10 100 1000 10000 100000
+0 2.302585 4.60517 6.907755 9.21034 11.512925
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="transpose">
+<span id="trans"></span><h3>Transpose<a class="headerlink" href="#transpose" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="format">
+<span id="id30"></span><h3>Format (+.)<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="reduct-on-1st-axis">
+<span id="red1"></span><h3>Reduct on 1st axis (/.)<a class="headerlink" href="#reduct-on-1st-axis" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="compre-on-1st-axis">
+<span id="cpr1"></span><h3>Compre on 1st axis (/.)<a class="headerlink" href="#compre-on-1st-axis" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="scan-on-1st-axis">
+<span id="scan1"></span><h3>Scan on 1st axis (\.)<a class="headerlink" href="#scan-on-1st-axis" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="expand-on-1st-axis">
+<span id="exp1"></span><h3>Expand on 1st axis (\.)<a class="headerlink" href="#expand-on-1st-axis" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="assign">
+<span id="id31"></span><h3>Assign (&lt;-)<a class="headerlink" href="#assign" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none"><div class="highlight"><pre>      A&lt;-&#39;BC&#39;
+      ch&lt;-&#39;abcde&#39;&#39;1234&#39;
+      ch
+abcde&#39;1234
+      A
+BC
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="branch">
+<span id="id32"></span><h3>Branch (-&gt;)<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="nand">
+<span id="id33"></span><h3>Nand (~^)<a class="headerlink" href="#nand" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="nor">
+<span id="id34"></span><h3>Nor (~&amp;)<a class="headerlink" href="#nor" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="not-equal">
+<span id="neq"></span><h3>Not equal (~=)<a class="headerlink" href="#not-equal" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="less-than-equal">
+<span id="leq"></span><h3>Less than equal (&lt;=)<a class="headerlink" href="#less-than-equal" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="greater-than-equal">
+<span id="geq"></span><h3>Greater than equal (&gt;=)<a class="headerlink" href="#greater-than-equal" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="comment">
+<span id="id35"></span><h3>Comment (//)<a class="headerlink" href="#comment" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="quad">
+<span id="id36"></span><h3>Quad ([])<a class="headerlink" href="#quad" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+</div>
+<div class="section" id="bare-quad">
+<span id="bquad"></span><h3>Bare quad ([)<a class="headerlink" href="#bare-quad" title="Permalink to this headline">¶</a></h3>
+<hr class="docutils" />
+<p>The End.</p>
+</div>
+</div>
 </div>
 
 
