@@ -18,3 +18,11 @@ make.bat: be invoked by `r.bat`
 - Add the CSS file into `_static/_mycss/custom_css.css`
 - Add ".. role::strike" in a file
 - Run with `sh r.sh`, but not succeed yet
+
+
+## Create html files
+
+- r.sh     : generate html and debug
+- copy.sh  : copy files to a designated folder for update
+- homepage : http://fastarray.appspot.com/docs/index.html
+
