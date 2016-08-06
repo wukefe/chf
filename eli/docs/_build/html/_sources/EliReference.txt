@@ -6,12 +6,12 @@ ELI - Language Reference
    The Eli reference is under construction.  If you find any problem or you have any suggestion, please leave your comment on our `website`__ or contact us via `email`__.
 
 :Authors:
-   Wai-Mee Ching,
+   Wai-Mee Ching, 
    Hanfeng Chen
    
-:Contact: wukefe@gmail.com
+:Contact:  wukefe@gmail.com
 :Released: August, 2015
-:Updated: October, 2015
+:Updated:  August, 2016
 
 
 .. toctree::
@@ -28,7 +28,7 @@ ELI - Language Reference
    ref/esqld.rst
    ref/debug.rst
    ref/guigd.rst
-   ref/acknw.rst
+.. ref/acknw.rst
 
 
 __ http://fastarray.appspot.com/report.html

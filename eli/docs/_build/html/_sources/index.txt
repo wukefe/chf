@@ -5,8 +5,8 @@ ELI Documentation
    Wai-Mee Ching,
    Hanfeng Chen
    
-:Version: 0.3 (2015.08.10)
-:Contact: wukefe@gmail.com
+:Version:  0.3 (2015.08.10)
+:Contact:  wukefe@gmail.com
 :Download: http://fastarray.appspot.com/download.html
 :Forum:    https://groups.google.com/d/forum/fastarray?hl=en
 
@@ -26,16 +26,3 @@ Document:
    
    EliReference
    
-.. Links:
-   - Website:  http://fastarray.appspot.com/
-   - Download: http://fastarray.appspot.com/download.html
-   - Forum:    https://groups.google.com/d/forum/fastarray?hl=en
-
-   
-.. Indices and tables
-   ==================
-
-   * :ref:`genindex`
-   * :ref:`modindex`
-   * :ref:`search`
-
