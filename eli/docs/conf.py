@@ -136,7 +136,7 @@ html_theme = 'bizstyle'
 # html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # html_theme_path = [alabaster.get_path()]
 # html_theme_path = [better_theme_path]
-html_theme_path = ['']
+html_theme_path = ''
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -313,6 +313,5 @@ texinfo_documents = [
 #texinfo_no_detailmenu = False
 
 # -- add css
-
-def setup(app):
-    app.add_stylesheet('_mycss/custom_css.css')
+# def setup(app):
+#     app.add_stylesheet('_mycss/custom_css.css')
