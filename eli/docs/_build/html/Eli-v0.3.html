@@ -1,55 +1,136 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Release Note (v0.3) &mdash; ELI 0.3 documentation</title>
-    
-    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.3',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="ELI 0.3 documentation" href="index.html" />
-    <link rel="next" title="Demo Code" href="DemoScript.html" />
-    <link rel="prev" title="Install ELI" href="Install.html" /> 
-  </head>
-  <body role="document">
-    <div class="header-wrapper" role="banner">
-      <div class="header">
-        <div class="headertitle"><a
-          href="index.html">ELI 0.3 documentation</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
-          <a href="Install.html" title="Install ELI"
-             accesskey="P">previous</a> |
-          <a href="DemoScript.html" title="Demo Code"
-             accesskey="N">next</a> |
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a>
-        </div>
-       </div>
-    </div>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Release Note (v0.3) &mdash; ELI 0.3 documentation</title>
+  
 
-    <div class="content-wrapper">
-      <div class="content">
-        <div class="document">
-            
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ELI 0.3 documentation" href="index.html"/>
+        <link rel="next" title="Demo Code" href="DemoScript.html"/>
+        <link rel="prev" title="Install ELI" href="Install.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> ELI</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Install.html">Install ELI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Install.html#getting-start">Getting Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Install.html#folder-structure">Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Install.html#try-eli">Try ELI</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Release Note (v0.3)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#highlights">Highlights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">ELI Studio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DemoScript.html">Demo Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="DemoScript.html#arithmetic-computation">Arithmetic Computation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DemoScript.html#matrix-and-array">Matrix and Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DemoScript.html#workspace-and-scripts">Workspace and Scripts</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="EliReference.html">ELI - Language Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/types.html">Type and Shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/seman.html">Semantics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/primt.html">Primitive Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/sysfv.html">System Functions and Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/syscd.html">System Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/contl.html">Control Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/debug.html">Debug Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/guigd.html">GUI Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref/acknw.html">Acknowledge</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ELI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Release Note (v0.3)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/Eli-v0.3.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
             
   <div class="section" id="release-note-v0-3">
 <h1>Release Note (v0.3)<a class="headerlink" href="#release-note-v0-3" title="Permalink to this headline">¶</a></h1>
@@ -398,65 +479,68 @@ test code one by one line.</li>
 
 
           </div>
-        </div>
-      </div>
-        </div>
-        <div class="sidebar">
-          <h3>Table Of Contents</h3>
-          <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Install.html">Install ELI</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Release Note (v0.3)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DemoScript.html">Demo Code</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="EliReference.html">ELI - Language Reference</a></li>
-</ul>
-
-          <div role="search">
-            <h3 style="margin-top: 1.5em;">Search</h3>
-            <form class="search" action="search.html" method="get">
-                <input type="text" name="q" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-            </form>
-            <p class="searchtip" style="font-size: 90%">
-                Enter search terms or a module, class or function name.
-            </p>
-          </div>
-        </div>
-        <div class="clearer"></div>
-      </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="DemoScript.html" class="btn btn-neutral float-right" title="Demo Code">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Install.html" class="btn btn-neutral" title="Install ELI"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
-    <div class="footer-wrapper">
-      <div class="footer">
-        <div class="left">
-          <div role="navigation" aria-label="related navigaton">
-            <a href="Install.html" title="Install ELI"
-              >previous</a> |
-            <a href="DemoScript.html" title="Demo Code"
-              >next</a> |
-            <a href="genindex.html" title="General Index"
-              >index</a>
-          </div>
-          <div role="note" aria-label="source link">
-              <br/>
-              <a href="_sources/Eli-v0.3.txt"
-                rel="nofollow">Show Source</a>
-          </div>
-        </div>
+  <hr/>
 
-        <div class="right">
-          
-    <div class="footer" role="contentinfo">
+  <div role="contentinfo">
+    <p>
         &copy; Copyright 2015, Hanfeng Chen.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
-    </div>
-        </div>
-        <div class="clearer"></div>
-      </div>
-    </div>
+    </p>
+  </div>
 
-  </body>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>
