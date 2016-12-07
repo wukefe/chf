@@ -4,3 +4,4 @@ llvm/*.c
 llvm/*.o
 
 eli/trunk/*.*
+eli/docs/*.rst

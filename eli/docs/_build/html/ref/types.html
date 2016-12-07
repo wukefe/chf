@@ -56,9 +56,8 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Type and Shape</a><ul>
-<li><a class="reference internal" href="#basic-types">Basic Types</a></li>
-<li><a class="reference internal" href="#type-inference">Type Inference</a></li>
-<li><a class="reference internal" href="#shape">Shape</a></li>
+<li><a class="reference internal" href="#eli-types">ELI Types</a></li>
+<li><a class="reference internal" href="#eli-shapes">ELI Shapes</a></li>
 </ul>
 </li>
 </ul>
@@ -99,13 +98,11 @@
             
   <div class="section" id="type-and-shape">
 <h1>Type and Shape<a class="headerlink" href="#type-and-shape" title="Permalink to this headline">¶</a></h1>
-<p>Even though ELI does not require explicit type in front of variables, it needs
-types for every computation as well.  A variable with a specific type at one time
-also has a shape.  Since ELI is designed for array based computation, it is
-necessary to remember the shape of an array that can be a scalar, a vector or
-an array.</p>
-<div class="section" id="basic-types">
-<h2>Basic Types<a class="headerlink" href="#basic-types" title="Permalink to this headline">¶</a></h2>
+<p>Even though ELI does not require explicit type for declaring a variable, it needs
+types for every computation internally.  Moreover, a variable with a specific type
+at one time is assigned with a shape as well.</p>
+<div class="section" id="eli-types">
+<h2>ELI Types<a class="headerlink" href="#eli-types" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="22%" />
@@ -245,57 +242,63 @@ second, time</p>
 </dl>
 </li>
 </ol>
-</div>
-<div class="section" id="type-inference">
-<h2>Type Inference<a class="headerlink" href="#type-inference" title="Permalink to this headline">¶</a></h2>
 <p>ELI follows some conventional type rules while new type rules because of
 new advanced types.  ELI does not implicitly do casting for the result
 after one computation.  Instead, ELI leaves it to developers that makes
-the system more consistant.</p>
+the system more consistent.</p>
 <ul class="simple">
-<li>The arithmatic operations between boolean, int and double are the same as
+<li>The arithmetic operations between boolean, int and double are the same as
 common languages such as C and Java.</li>
 <li>Primitive functions like circle can generate complex numbers even input
 data is not a complex number.  For example, <code class="docutils literal"><span class="pre">_1*.0.5</span></code> (equivalent
-to sqrt(-1)) is 0j1 in ELI.</li>
+to sqrt(-1)) is <code class="docutils literal"><span class="pre">0j1</span></code> in ELI.</li>
 <li>Table and dictionary can be transformed from each other if conditions are
 satisfied. (Check the primitive function <code class="docutils literal"><span class="pre">transpose</span> <span class="pre">&amp;.</span></code>)</li>
 </ul>
 </div>
-<div class="section" id="shape">
-<h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eli-shapes">
+<h2>ELI Shapes<a class="headerlink" href="#eli-shapes" title="Permalink to this headline">¶</a></h2>
 <p>There are 7 basic shapes for basic types.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="36%" />
-<col width="64%" />
+<col width="20%" />
+<col width="35%" />
+<col width="45%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Shape</th>
 <th class="head">Example</th>
+<th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>scalar</td>
 <td>x &lt;- 2</td>
+<td>shape(x) =&gt; empty</td>
 </tr>
 <tr class="row-odd"><td>one-item vector</td>
 <td>x &lt;- ,2</td>
+<td>shape(x) =&gt; 1 (1-dim)</td>
 </tr>
 <tr class="row-even"><td>vector</td>
 <td>x &lt;- 1 2 3</td>
+<td>shape(x) =&gt; 3 (1-dim)</td>
 </tr>
 <tr class="row-odd"><td>matrix</td>
 <td>x &lt;- 2 2#1 2 3 4</td>
+<td>shape(x) =&gt; 2 2 (2-dim)</td>
 </tr>
 <tr class="row-even"><td>high-dimension</td>
 <td>x &lt;- 2 2 2#!8</td>
+<td>shape(x) =&gt; 2 2 2 (3-dim)</td>
 </tr>
 <tr class="row-odd"><td>list</td>
 <td>x &lt;- (1 2; 2.5 9; &#8216;hello&#8217;)</td>
+<td>shape(x) =&gt; 3 (the length of the list)</td>
 </tr>
 <tr class="row-even"><td>table</td>
 <td>x &lt;- ([]int&lt;-1 2;flt&lt;-2.3 5)</td>
+<td>shape(x) =&gt; 2 (row of the table)</td>
 </tr>
 </tbody>
 </table>

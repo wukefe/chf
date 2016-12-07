@@ -2,21 +2,47 @@
 Introduction
 ------------
 
-ELI Website
-~~~~~~~~~~~
+ELI Websites
+~~~~~~~~~~~~
 
-- | 2015 - Mirror site
+Active
+
+- | Since 2015 (Mirror site)
   | School of computer science at McGill University
   | http://www.sable.mcgill.ca/~hanfeng.c/eli/
-- | 2014 to 2015 (`Deprecated`)
-  | School of computing at Queen's University
-  | http://cs.queensu.ca/~chenh/eli/
-- | 2012 to present (official)
+- | Since 2012 (Official)
   | Google App Engine
   | http://fastarray.appspot.com
-- | 2010 to 2012 (`Deprecated`)
+
+Deprecated
+
+- | 2014 to 2015
+  | School of computing at Queen's University
+  | http://cs.queensu.ca/~chenh/eli/
+- | 2010 to 2012
   | Zhejiang Normal University
   | http://mpi.zjnu.edu.cn/eli/
 
-Reserved words
-~~~~~~~~~~~~~~
+Website Map
+~~~~~~~~~~~
+
+- | `Home`__
+  | Highlight the features of ELI and EliStudio;
+  | A well-defined table for the comparison between ELI and APL
+- | `Compiler`__
+  | Introduction to the ECC compiler for ELI to C;
+  | Available benchmarks
+- | `Download`__
+  | EliStudio packages for Windows, Linux and MacOS
+- | `Documents`__
+  | Include ELIPrimer, ELI4kids and etc.
+- | `Contact us`__
+  | Leave your comments about the website and ELI;
+  | Contact us for any other questions
+
+__ http://fastarray.appspot.com/default.html
+__ http://fastarray.appspot.com/compile.html
+__ http://fastarray.appspot.com/download.html
+__ http://fastarray.appspot.com/document.html
+__ http://fastarray.appspot.com/report.html
+

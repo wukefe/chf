@@ -24,5 +24,6 @@ Document:
 .. toctree::
    :maxdepth: 1
    
+   EliTutorial
    EliReference
    

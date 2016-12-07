@@ -26,3 +26,8 @@ make.bat: be invoked by `r.bat`
 - copy.sh  : copy files to a designated folder for update
 - homepage : http://fastarray.appspot.com/docs/index.html
 
+## Special signs
+
+- Correct tick :  https://en.wikipedia.org/wiki/Check_mark
+- Wrong   tick :  https://en.wikipedia.org/wiki/X_mark
+

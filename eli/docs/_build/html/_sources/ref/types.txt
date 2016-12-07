@@ -1,14 +1,12 @@
 Type and Shape
 --------------
 
-Even though ELI does not require explicit type in front of variables, it needs
-types for every computation as well.  A variable with a specific type at one time
-also has a shape.  Since ELI is designed for array based computation, it is
-necessary to remember the shape of an array that can be a scalar, a vector or
-an array.
+Even though ELI does not require explicit type for declaring a variable, it needs
+types for every computation internally.  Moreover, a variable with a specific type
+at one time is assigned with a shape as well.
 
-Basic Types
-~~~~~~~~~~~
+ELI Types
+~~~~~~~~~
 
 +---------------+---------+----------+--------+---------------------------+
 | Type          | Value   | Symbol   | Null*  | Example                   |
@@ -60,45 +58,45 @@ The types can be classified into the following two groups.
     list, enumeration, dictionary, keyed table and table
 
 
-Type Inference
-~~~~~~~~~~~~~~
+.. Type Inference
+.. ~~~~~~~~~~~~~~
 
 ELI follows some conventional type rules while new type rules because of
 new advanced types.  ELI does not implicitly do casting for the result
 after one computation.  Instead, ELI leaves it to developers that makes
-the system more consistant.
+the system more consistent.
 
-- The arithmatic operations between boolean, int and double are the same as 
+- The arithmetic operations between boolean, int and double are the same as 
   common languages such as C and Java.
 - Primitive functions like circle can generate complex numbers even input
   data is not a complex number.  For example, ``_1*.0.5`` (equivalent
-  to sqrt(-1)) is 0j1 in ELI.
+  to sqrt(-1)) is ``0j1`` in ELI.
 - Table and dictionary can be transformed from each other if conditions are
   satisfied. (Check the primitive function ``transpose &.``)
 
 
-Shape
-~~~~~
+ELI Shapes
+~~~~~~~~~~
 
 There are 7 basic shapes for basic types.
 
-+-----------------+------------------------------+
-| Shape           | Example                      |
-+=================+==============================+
-| scalar          | x <- 2                       |
-+-----------------+------------------------------+
-| one-item vector | x <- ,2                      |
-+-----------------+------------------------------+
-| vector          | x <- 1 2 3                   |
-+-----------------+------------------------------+
-| matrix          | x <- 2 2#1 2 3 4             |
-+-----------------+------------------------------+
-| high-dimension  | x <- 2 2 2#!8                |
-+-----------------+------------------------------+
-| list            | x <- (1 2; 2.5 9; 'hello')   |
-+-----------------+------------------------------+
-| table           | x <- ([]int<-1 2;flt<-2.3 5) |
-+-----------------+------------------------------+
++-----------------+------------------------------+---------------------------------------+
+| Shape           | Example                      | Description                           |
++=================+==============================+=======================================+
+| scalar          | x <- 2                       | shape(x) => empty                     |
++-----------------+------------------------------+---------------------------------------+
+| one-item vector | x <- ,2                      | shape(x) => 1 (1-dim)                 |
++-----------------+------------------------------+---------------------------------------+
+| vector          | x <- 1 2 3                   | shape(x) => 3 (1-dim)                 |
++-----------------+------------------------------+---------------------------------------+
+| matrix          | x <- 2 2#1 2 3 4             | shape(x) => 2 2 (2-dim)               |
++-----------------+------------------------------+---------------------------------------+
+| high-dimension  | x <- 2 2 2#!8                | shape(x) => 2 2 2 (3-dim)             |
++-----------------+------------------------------+---------------------------------------+
+| list            | x <- (1 2; 2.5 9; 'hello')   | shape(x) => 3 (the length of the list)|
++-----------------+------------------------------+---------------------------------------+
+| table           | x <- ([]int<-1 2;flt<-2.3 5) | shape(x) => 2 (row of the table)      |
++-----------------+------------------------------+---------------------------------------+
 
 \* Note: For advanced types, they are formed by list and table shapes.
 And the two shapes are based on other basic types.

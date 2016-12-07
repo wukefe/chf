@@ -3,15 +3,15 @@ ELI - Language Reference
 ========================
 
 .. Note ::
-   The Eli reference is under construction.  If you find any problem or you have any suggestion, please leave your comment on our `website`__ or contact us via `email`__.
+   The Eli reference is under construction.  If you find any problem or you have any suggestion, please leave your comments on our `website`__ or contact us via `email`__.
 
-:Authors:
-   Wai-Mee Ching, 
-   Hanfeng Chen
+.. :Authors:
+..    Wai-Mee Ching, 
+..    Hanfeng Chen
    
 :Contact:  wukefe@gmail.com
-:Released: August, 2015
-:Updated:  August, 2016
+:Released: August 2015
+:Updated:  December 2016
 
 
 .. toctree::
@@ -28,6 +28,7 @@ ELI - Language Reference
    ref/esqld.rst
    ref/debug.rst
    ref/guigd.rst
+   ref/see.md
 .. ref/acknw.rst
 
 

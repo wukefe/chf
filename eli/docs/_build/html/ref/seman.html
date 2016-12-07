@@ -56,7 +56,7 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Semantics</a><ul>
-<li><a class="reference internal" href="#basic-built-in-functions">Basic built-in functions</a></li>
+<li><a class="reference internal" href="#primitive-functions">Primitive functions</a></li>
 <li><a class="reference internal" href="#user-defined-functions">User defined functions</a></li>
 <li><a class="reference internal" href="#short-functions">Short functions</a></li>
 </ul>
@@ -99,11 +99,36 @@
             
   <div class="section" id="semantics">
 <h1>Semantics<a class="headerlink" href="#semantics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="basic-built-in-functions">
-<h2>Basic built-in functions<a class="headerlink" href="#basic-built-in-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="primitive-functions">
+<h2>Primitive functions<a class="headerlink" href="#primitive-functions" title="Permalink to this headline">¶</a></h2>
+<p>A primitive is a built-in function for fundamental operations.  There are various kinds of primitives in ELI.</p>
+<ul class="simple">
+<li>Basic arithmetic functions. <code class="docutils literal"><span class="pre">+</span> <span class="pre">-</span> <span class="pre">*</span> <span class="pre">%</span></code></li>
+<li>Functions for array manipulation.</li>
+<li>Object related functions.  These function is eligible to operate on objects, such as lists and tables.</li>
+</ul>
 </div>
 <div class="section" id="user-defined-functions">
 <h2>User defined functions<a class="headerlink" href="#user-defined-functions" title="Permalink to this headline">¶</a></h2>
+<p>This (UDF) allows programmers to define a function and use it afterwards.  ELI inherits the design from APL which takes parameters from both left and right sides.  A basic UDF is shown as follows.</p>
+<div class="highlight-python"><div class="highlight"><pre>@.z&lt;-foo x
+z&lt;-x+1
+@.
+</pre></div>
+</div>
+<p>The method <code class="docutils literal"><span class="pre">foo</span></code> takes one parameter <code class="docutils literal"><span class="pre">x</span></code> and saves <code class="docutils literal"><span class="pre">x+1</span></code> to <code class="docutils literal"><span class="pre">z</span></code> as returned value.</p>
+<ul class="simple">
+<li>If pass one parameter <code class="docutils literal"><span class="pre">x</span></code>, the function is <code class="docutils literal"><span class="pre">foo</span> <span class="pre">x</span></code></li>
+<li>If pass two parameters <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code>, the function is <code class="docutils literal"><span class="pre">y</span> <span class="pre">foo</span> <span class="pre">x</span></code></li>
+<li>If pass zero parameter, the function is as simply as <code class="docutils literal"><span class="pre">foo</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The method <code class="docutils literal"><span class="pre">foo</span></code> should be declared in the script mood.  Otherwise, the interpreter can&#8217;t recognize the method</li>
+<li>The execution order is always from right-to-left.  So the argument on the right-hand side is evaluated first and the left-hand side follows</li>
+</ul>
+</div>
 </div>
 <div class="section" id="short-functions">
 <h2>Short functions<a class="headerlink" href="#short-functions" title="Permalink to this headline">¶</a></h2>
@@ -113,11 +138,11 @@
 <code class="docutils literal"><span class="pre">{line0;...;lineN}</span></code> is the body of the function. There
 are some implicit rules defined as follows.</p>
 <ul class="simple">
-<li>If <code class="docutils literal"><span class="pre">x</span></code> appears, it is the right argument of the
+<li>If the literal <code class="docutils literal"><span class="pre">x</span></code> appears, it is the right argument of the
 function</li>
-<li>If <code class="docutils literal"><span class="pre">y</span></code> appears, it is the left argument of the
+<li>If the literal <code class="docutils literal"><span class="pre">y</span></code> appears, it is the left argument of the
 function</li>
-<li>If <code class="docutils literal"><span class="pre">z</span></code> appears, it is the return value of the
+<li>If the literal <code class="docutils literal"><span class="pre">z</span></code> appears, it is the return value of the
 function</li>
 <li>Other names appear other than functions are localized as variables</li>
 <li>If the last line (lineN) is not empty, the result of the line is

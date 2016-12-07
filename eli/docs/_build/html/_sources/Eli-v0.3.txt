@@ -5,7 +5,7 @@ Overview
 --------
 
 Version :sup:`0.3`
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 ELI version 0.3 |ELI New| has been released on August 10, 2015. In this new
 version, ELI system has been greatly improved by adding several useful
@@ -15,7 +15,7 @@ beginners. Moreover, ELI Studio is a cross-platform version for Windows,
 Linux and MacOS.
 
 Prior Version :sup:`0.2a`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The last stable ELI interpreter was released on November 30, 2013. At
 the time, it supported most of the functionality of the ISO APL
