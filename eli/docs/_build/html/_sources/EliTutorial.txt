@@ -1,0 +1,20 @@
+==============
+ELI - Tutorial
+==============
+
+:Contact:  wukefe@gmail.com
+:Released: September, 2016
+
+.. toctree::
+   :maxdepth: 1
+
+   tr/intro.rst
+   tr/output.rst
+   tr/syntax.rst
+   tr/func.rst
+
+Why study ELI?
+
+---
+
+Learn by examples.

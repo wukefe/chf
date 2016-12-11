@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Debug Code &mdash; ELI 0.3 documentation</title>
+    <title>Debug Code &#8212; ELI 0.3 documentation</title>
     
     <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,6 +25,8 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="ELI 0.3 documentation" href="../index.html" />
     <link rel="up" title="ELI - Language Reference" href="../EliReference.html" />
     <link rel="next" title="GUI Interface" href="guigd.html" />
@@ -47,8 +49,8 @@
         <li class="right" >
           <a href="contl.html" title="Control Structures"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../EliReference.html" accesskey="U">ELI - Language Reference</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../EliReference.html" accesskey="U">ELI - Language Reference</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -79,14 +81,11 @@
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -101,7 +100,7 @@
 <h1>Debug Code<a class="headerlink" href="#debug-code" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="insert-breaks">
 <h2>Insert breaks<a class="headerlink" href="#insert-breaks" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>-&gt;&#39;break line&#39;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-&gt;</span><span class="s1">&#39;break line&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -109,10 +108,10 @@
 <h2>Trace errors<a class="headerlink" href="#trace-errors" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal"><span class="pre">)trace</span></code> or <code class="docutils literal"><span class="pre">)TRACE</span></code> is designed for printing error messages after
 a runtime error occurs.</p>
-<div class="highlight-python"><div class="highlight"><pre>//after an error occurs
-)trace
-//if more lines should be printed
-)trace 50
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">after</span> <span class="n">an</span> <span class="n">error</span> <span class="n">occurs</span>
+<span class="p">)</span><span class="n">trace</span>
+<span class="o">//</span><span class="k">if</span> <span class="n">more</span> <span class="n">lines</span> <span class="n">should</span> <span class="n">be</span> <span class="n">printed</span>
+<span class="p">)</span><span class="n">trace</span> <span class="mi">50</span>
 </pre></div>
 </div>
 </div>
@@ -120,7 +119,7 @@ a runtime error occurs.</p>
 <h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
 <p>Add a break line <code class="docutils literal"><span class="pre">-&gt;'stop</span> <span class="pre">after</span> <span class="pre">while'</span></code> into the script <code class="docutils literal"><span class="pre">TSORT.esf</span></code>
 under the <code class="docutils literal"><span class="pre">ws</span></code> folder.</p>
-<div class="highlight-python"><div class="highlight"><pre>@.Z&lt;-TSORT G;N;ML
+<div class="highlight-default"><div class="highlight"><pre><span></span>@.Z&lt;-TSORT G;N;ML
 L&lt;-!0
 S&lt;-(0=+/.G)/GL&lt;-!1^.#G
 while(0&lt;#S){
@@ -141,7 +140,7 @@ else Z&lt;-L
 <li><code class="docutils literal"><span class="pre">TSORT</span> <span class="pre">G</span></code> triggers an error, then the program is terminated.</li>
 <li><code class="docutils literal"><span class="pre">)TRACE</span></code> prints the error messages as follows.</li>
 </ul>
-<div class="highlight-python"><div class="highlight"><pre>          )fload tsort
+<div class="highlight-default"><div class="highlight"><pre><span></span>          )fload tsort
 saved 2015.11.19 00:32:06 (gmt-5)
           TSORT G
 stop after while
@@ -192,13 +191,13 @@ total lines:  18 step    line  content
         <li class="right" >
           <a href="contl.html" title="Control Structures"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../EliReference.html" >ELI - Language Reference</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../EliReference.html" >ELI - Language Reference</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2015, Hanfeng Chen.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+        &#169; Copyright 2015, Hanfeng Chen.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
     </div>
   </body>
 </html>

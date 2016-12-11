@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Control Structures &mdash; ELI 0.3 documentation</title>
+    <title>Control Structures &#8212; ELI 0.3 documentation</title>
     
     <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,6 +25,8 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="ELI 0.3 documentation" href="../index.html" />
     <link rel="up" title="ELI - Language Reference" href="../EliReference.html" />
     <link rel="next" title="Debug Code" href="debug.html" />
@@ -47,8 +49,8 @@
         <li class="right" >
           <a href="syscd.html" title="System Commands"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../EliReference.html" accesskey="U">ELI - Language Reference</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../EliReference.html" accesskey="U">ELI - Language Reference</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -80,14 +82,11 @@
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -104,24 +103,24 @@
 <p><code class="docutils literal"><span class="pre">if</span></code> , <code class="docutils literal"><span class="pre">else</span></code> , <code class="docutils literal"><span class="pre">case</span></code> , <code class="docutils literal"><span class="pre">for</span></code> , <code class="docutils literal"><span class="pre">while</span></code> , <code class="docutils literal"><span class="pre">break</span></code> , <code class="docutils literal"><span class="pre">continue</span></code></p>
 <div class="section" id="for">
 <h2>for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>@.test_for n
-for(i:1;n){
-  []&lt;-i
-}
-@.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">@.</span><span class="n">test_for</span> <span class="n">n</span>
+<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span><span class="n">n</span><span class="p">){</span>
+  <span class="p">[]</span><span class="o">&lt;-</span><span class="n">i</span>
+<span class="p">}</span>
+<span class="o">@.</span>
 
-      test_for 5
-1
-2
-3
-4
-5
+      <span class="n">test_for</span> <span class="mi">5</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="if-else">
 <h2>if-else<a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>@.p&lt;-rprime n;i
+<div class="highlight-default"><div class="highlight"><pre><span></span>@.p&lt;-rprime n;i
 p&lt;-2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
 if (n&lt;=100) p&lt;-(n&gt;=p)/p
 else {pl&lt;-#p&lt;-rprime _.n*.0.5
@@ -139,7 +138,7 @@ else {pl&lt;-#p&lt;-rprime _.n*.0.5
 </div>
 <div class="section" id="while">
 <h2>while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>@.L&lt;-TSORT G;N;ML
+<div class="highlight-default"><div class="highlight"><pre><span></span>@.L&lt;-TSORT G;N;ML
 L&lt;-!0
 S&lt;-(0=+/.G)/GL&lt;-!1^.#G
 while (0&lt;#S) {
@@ -169,7 +168,7 @@ if (0&lt;+/+/G) []&lt;-&#39;Graph G is not acyclic.&#39;
 </div>
 <div class="section" id="case">
 <h2>case<a class="headerlink" href="#case" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>@.z&lt;-tst_cas x
+<div class="highlight-default"><div class="highlight"><pre><span></span>@.z&lt;-tst_cas x
 case (:x) {
  0,1:z&lt;-x+10
  2:z&lt;-x*10
@@ -216,13 +215,13 @@ ABC
         <li class="right" >
           <a href="syscd.html" title="System Commands"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../EliReference.html" >ELI - Language Reference</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../EliReference.html" >ELI - Language Reference</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2015, Hanfeng Chen.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+        &#169; Copyright 2015, Hanfeng Chen.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
     </div>
   </body>
 </html>

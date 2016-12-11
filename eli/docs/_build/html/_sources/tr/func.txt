@@ -1,0 +1,13 @@
+ELI Functions
+-------------
+
+A primitive function refers to a built-in function which is supported directly in ELI.  It may be either monadic (1-arity) or dyadic (2-arity) functions.
+
+Monadic
+~~~~~~~
+
+Dyadic
+~~~~~~
+
+User-defined
+~~~~~~~~~~~~

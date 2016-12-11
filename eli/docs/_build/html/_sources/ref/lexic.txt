@@ -1,0 +1,125 @@
+.. This document is designed for recording basic elements
+.. Refer to https://golang.org/ref/spec
+
+Lexical elements
+----------------
+
+Comments
+~~~~~~~~
+
+A single line comment can be achieved by using '//'.
+
+Encoding
+~~~~~~~~
+
+Currently, ELI only supports ASCII.
+
+Semicolons
+~~~~~~~~~~
+
+A semicolon may have two meanings
+
+- Array dimension delimit.  It is a separator used in array indexing.  For example, ``arr[x;y]``;
+- Multiple statement separator.  One line code with multiple statements is supported with semicolons.  The execution order of statements is from left to right, but within a statement, the execution order remains the same (from right to left).  For example, ``a<-!5;[]<-1+a``.
+
+Identifiers
+~~~~~~~~~~~
+
+- An identifier starts with a letter;
+- It can follow with arbitrary numbers and underscores('_');
+- But, the last character cannot be an underscore
+
+.. code-block:: none
+
+	identifier ::= letter { letternum | underscore }
+	underscore ::= {'_'} letternum
+	letternum  ::= letter | [0-9]
+	letter     ::= [a-zA-Z]
+
+Keywords
+~~~~~~~~
+
+System commands (`Details <syscd.html>`_)
+
++----------+----------+----------+----------+
+| )LOAD    | )SAVE    | )WSID    | )FNS     |
++----------+----------+----------+----------+
+| )FLOAD   | )OUT     | )OFF     | )VARS    |
++----------+----------+----------+----------+
+
+Operators
+~~~~~~~~~
+
+Please refer to the `primitive function <primt.html>`_ page.
+
+
+Integer literals
+~~~~~~~~~~~~~~~~
+
+Currently, only decimal integers are supported.
+
+.. code-block:: none
+
+	int      ::= ['+' | '_'] decimals
+	decimals ::= digit { digit }
+	digit    ::= [0-9]
+
+
+Floating-point literals
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+	float    ::= decimals '.' decimals [exponent] | decimals exponent
+	exponent ::= ('e' | 'E') ['+' | '_'] decimals
+
+Examples
+
+.. code-block:: none
+
+	0.    //syntax error
+	0.1
+	2.3e5
+	2.e5  //syntax error
+	.1e3  //syntax error
+
+
+Complex number literals
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+	complex ::= real 'j' real
+	real    ::= int | float
+
+Examples
+
+.. code-block:: none
+
+	2j3
+	2.3j4
+	2j3.4
+
+
+String literals
+~~~~~~~~~~~~~~~
+
+A string starts with a single quote(``'``).  The content can be any possible ASCII characters.  But if you want to include a single quote, you need to type two single quotes consecutively (i.e. ``''``).
+
+.. code-block:: none
+
+	string  ::= \' { content } \'
+	content ::= letters | \'\'
+	letters ::= all ASCII characters except \'
+
+Examples
+
+.. code-block:: none
+
+	'It is a nice string'
+	'It''s a nice string'
+
+.. To be continued
+.. - constants
+.. - variables
+.. - Types

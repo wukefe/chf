@@ -1,0 +1,37 @@
+ELI Output
+----------
+
+Direct variable output
+~~~~~~~~~~~~~~~~~~~~~~
+
+A variable or a constant can be displayed directly in both workspace and scripts.
+
+.. code-block:: none
+
+        x <- 1 2 3
+        x
+    1 2 3
+        'abc'
+    abc
+
+`[]` and `[)` functions
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- `[]` is used to display the content of a value and print a return at the end.
+- `[)` is the same as the function `[]` except that there is no a new line at the end.
+
+.. code-block:: none
+
+        []<-x
+    1 2 3
+
+
+~~~~~~~~~
+
+.. note::
+
+    The direct variable output can't display all values if screen limititation is reached.  Therefore, the function `[]` allows display all rows and columns, especially when you have a large table.
+
+.. Todo:
+.. 1. what's screen limitation
+.. 2. string formating

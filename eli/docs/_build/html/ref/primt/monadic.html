@@ -1,0 +1,853 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Monadic &#8212; ELI 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="ELI 0.3 documentation" href="../../index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ELI 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Monadic</a><ul>
+<li><a class="reference internal" href="#unique">Unique (=)</a></li>
+<li><a class="reference internal" href="#negate">Negate (-)</a></li>
+<li><a class="reference internal" href="#pi">Pi (&#64;)</a></li>
+<li><a class="reference internal" href="#signum">Signum (*)</a></li>
+<li><a class="reference internal" href="#reciprocal">Reciprocal (%)</a></li>
+<li><a class="reference internal" href="#absolute">Absolute (|)</a></li>
+<li><a class="reference internal" href="#shape">Shape (#)</a></li>
+<li><a class="reference internal" href="#reverse">Reverse ($)</a></li>
+<li><a class="reference internal" href="#grade-up">Grade Up (&lt;)</a></li>
+<li><a class="reference internal" href="#grade-down">Grade Down (&gt;)</a></li>
+<li><a class="reference internal" href="#interval">Interval (!)</a></li>
+<li><a class="reference internal" href="#count">Count (^)</a></li>
+<li><a class="reference internal" href="#conjugate">Conjugate (+)</a></li>
+<li><a class="reference internal" href="#high-minus">High_minus (_)</a></li>
+<li><a class="reference internal" href="#not">Not (~)</a></li>
+<li><a class="reference internal" href="#natural-logarithm">Natural logarithm (*.)</a></li>
+<li><a class="reference internal" href="#factorial">Factorial (|.)</a></li>
+<li><a class="reference internal" href="#domino">Domino (#.)</a></li>
+<li><a class="reference internal" href="#reverse-on-1st-axis">Reverse on 1st axis ($.)</a></li>
+<li><a class="reference internal" href="#enclose">Enclose (&lt;.)</a></li>
+<li><a class="reference internal" href="#grouping">Grouping (&gt;.)</a></li>
+<li><a class="reference internal" href="#execute">Execute (!.)</a></li>
+<li><a class="reference internal" href="#first">First (^.)</a></li>
+<li><a class="reference internal" href="#floor">Floor (_.)</a></li>
+<li><a class="reference internal" href="#ceiling">Ceiling (~.)</a></li>
+<li><a class="reference internal" href="#raze">Raze (,.)</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/ref/primt/monadic.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="monadic">
+<h1>Monadic<a class="headerlink" href="#monadic" title="Permalink to this headline">¶</a></h1>
+<p>A monadic function only takes one argument. For example, <code class="docutils literal"><span class="pre">f</span> <span class="pre">x</span></code> where <code class="docutils literal"><span class="pre">f</span></code> is the monadic function and <code class="docutils literal"><span class="pre">x</span></code> is the only argument the function takes.  Usually, the function <code class="docutils literal"><span class="pre">f</span></code> has different behaviors based on different types of input data.</p>
+<div class="section" id="unique">
+<span id="uniq"></span><h2>Unique (=)<a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Boolean</td>
+<td>✓</td>
+<td>Month</td>
+<td>✓</td>
+<td>List</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Integer</td>
+<td>✓</td>
+<td>Date</td>
+<td>✓</td>
+<td>Enumeration</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Float</td>
+<td>✓</td>
+<td>Datetime</td>
+<td>✓</td>
+<td>Dictionary</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Char</td>
+<td>✓</td>
+<td>Minute</td>
+<td>✓</td>
+<td>Keyed table</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Complex</td>
+<td>✓</td>
+<td>Second</td>
+<td>✓</td>
+<td>Table</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Symbol</td>
+<td>✓</td>
+<td>Time</td>
+<td>✓</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      V
+86 25 55 48 78 95 36 36 14 65
+      =V
+86 25 55 48 78 95 36 14 65
+      V=36
+0 0 0 0 0 0 1 1 0 0
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="negate">
+<span id="neg"></span><h2>Negate (-)<a class="headerlink" href="#negate" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Boolean</td>
+<td>✓</td>
+<td>Month</td>
+<td>✗</td>
+<td>List</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Integer</td>
+<td>✓</td>
+<td>Date</td>
+<td>✗</td>
+<td>Enumeration</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Float</td>
+<td>✓</td>
+<td>Datetime</td>
+<td>✗</td>
+<td>Dictionary</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Char</td>
+<td>✓</td>
+<td>Minute</td>
+<td>✗</td>
+<td>Keyed table</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Complex</td>
+<td>✓</td>
+<td>Second</td>
+<td>✗</td>
+<td>Table</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Symbol</td>
+<td>✗</td>
+<td>Time</td>
+<td>✗</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      V
+86 25 55 48 78 95 36 36 14 65
+      -V
+_86 _25 _55 _48 _78 _95 _36 _36 _14 _65
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="pi">
+<span id="id1"></span><h2>Pi (&#64;)<a class="headerlink" href="#pi" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      @0 1 2 3
+0 3.141592654 6.283185307 9.424777961
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="signum">
+<span id="sig"></span><h2>Signum (*)<a class="headerlink" href="#signum" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>    V
+86 25 55 48 78 95 36 36 14 65
+    P
+17.3 22.3 24.3 17.5 21.4 18.4 17.2 15 20.8 21.8
+    *P-P0&lt;-20
+_1 1 1 _1 1 _1 _1 _1 1 1
+    V**P-P0
+_86 25 55 _48 78 _95 _36 _36 14 65
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="reciprocal">
+<span id="rec"></span><h2>Reciprocal (%)<a class="headerlink" href="#reciprocal" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      %0
+Error: domain error
+      %0
+      ^
+      %1 2 4 8
+1 0.5 0.25 0.125
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="absolute">
+<span id="abs"></span><h2>Absolute (|)<a class="headerlink" href="#absolute" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      | _1 2 _3.2 5 0 _10
+1 2 3.2 5 0 10
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="shape">
+<span id="id2"></span><h2>Shape (#)<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Boolean</td>
+<td>✓</td>
+<td>Month</td>
+<td>✓</td>
+<td>List</td>
+<td>✓</td>
+</tr>
+<tr class="row-even"><td>Integer</td>
+<td>✓</td>
+<td>Date</td>
+<td>✓</td>
+<td>Enumeration</td>
+<td>✓</td>
+</tr>
+<tr class="row-odd"><td>Float</td>
+<td>✓</td>
+<td>Datetime</td>
+<td>✓</td>
+<td>Dictionary</td>
+<td>✓</td>
+</tr>
+<tr class="row-even"><td>Char</td>
+<td>✓</td>
+<td>Minute</td>
+<td>✓</td>
+<td>Keyed table</td>
+<td>✓</td>
+</tr>
+<tr class="row-odd"><td>Complex</td>
+<td>✓</td>
+<td>Second</td>
+<td>✓</td>
+<td>Table</td>
+<td>✓</td>
+</tr>
+<tr class="row-even"><td>Symbol</td>
+<td>✓</td>
+<td>Time</td>
+<td>✓</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      a&lt;-2 3#9 2 3 4 5 6
+      a
+9 2 3
+4 5 6
+      #a
+2 3
+      #empv&lt;-0#a
+0
+      #empm&lt;-0 10#&#39;A&#39;
+0 10
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="reverse">
+<span id="rev"></span><h2>Reverse ($)<a class="headerlink" href="#reverse" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Boolean</td>
+<td>✓</td>
+<td>Month</td>
+<td>✓</td>
+<td>List</td>
+<td>✓</td>
+</tr>
+<tr class="row-even"><td>Integer</td>
+<td>✓</td>
+<td>Date</td>
+<td>✓</td>
+<td>Enumeration</td>
+<td>✓</td>
+</tr>
+<tr class="row-odd"><td>Float</td>
+<td>✓</td>
+<td>Datetime</td>
+<td>✓</td>
+<td>Dictionary</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Char</td>
+<td>✓</td>
+<td>Minute</td>
+<td>✓</td>
+<td>Keyed table</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Complex</td>
+<td>✓</td>
+<td>Second</td>
+<td>✓</td>
+<td>Table</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Symbol</td>
+<td>✓</td>
+<td>Time</td>
+<td>✓</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      V
+86 25 55 48 78 95 36 36 14 65
+      $V
+65 14 36 36 95 78 48 55 25 86
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="grade-up">
+<span id="gup"></span><h2>Grade Up (&lt;)<a class="headerlink" href="#grade-up" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Boolean</td>
+<td>✓</td>
+<td>Month</td>
+<td>✓</td>
+<td>List</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Integer</td>
+<td>✓</td>
+<td>Date</td>
+<td>✓</td>
+<td>Enumeration</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Float</td>
+<td>✓</td>
+<td>Datetime</td>
+<td>✓</td>
+<td>Dictionary</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Char</td>
+<td>✓</td>
+<td>Minute</td>
+<td>✓</td>
+<td>Keyed table</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Complex</td>
+<td>✓</td>
+<td>Second</td>
+<td>✓</td>
+<td>Table</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Symbol</td>
+<td>✓</td>
+<td>Time</td>
+<td>✓</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      V
+86 25 55 48 78 95 36 36 14 65
+      &lt;V
+9 2 7 8 4 3 10 5 1 6
+      V[&lt;V]
+14 25 36 36 48 55 65 78 86 95
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="grade-down">
+<span id="gdw"></span><h2>Grade Down (&gt;)<a class="headerlink" href="#grade-down" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#gup">grade up</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      V
+86 25 55 48 78 95 36 36 14 65
+      &gt;V
+6 1 5 10 3 4 7 8 2 9
+      V[&gt;V]
+95 86 78 65 55 48 36 36 25 14
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="interval">
+<span id="itv"></span><h2>Interval (!)<a class="headerlink" href="#interval" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#not">not</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>    !5
+1 2 3 4 5
+    !2.3
+Error: domain error
+    !2.3
+    ^
+</pre></div>
+</div>
+<p>The generated interval is influenced by the system variable <cite>[]IO</cite>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      []IO&lt;-0
+0
+      !12
+0 1 2 3 4 5 6 7 8 9 10 11
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="count">
+<span id="cnt"></span><h2>Count (^)<a class="headerlink" href="#count" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#shape">shape</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>    ^`abc
+1
+    s3&lt;-`abc `ddl `comp
+    ^s3
+4
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="conjugate">
+<span id="conj"></span><h2>Conjugate (+)<a class="headerlink" href="#conjugate" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      +_1 2 _3.2 5 0 _10
+_1 2 _3.2 5 0 _10
+      +1j2 2.3j_3
+1j_2 2.3j3
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="high-minus">
+<span id="hmin"></span><h2>High_minus (_)<a class="headerlink" href="#high-minus" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      _1 2 3
+_1 2 3
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="not">
+<span id="id3"></span><h2>Not (~)<a class="headerlink" href="#not" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Boolean</td>
+<td>✓</td>
+<td>Month</td>
+<td>✗</td>
+<td>List</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Integer</td>
+<td>✓</td>
+<td>Date</td>
+<td>✗</td>
+<td>Enumeration</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Float</td>
+<td>✗</td>
+<td>Datetime</td>
+<td>✗</td>
+<td>Dictionary</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Char</td>
+<td>✗</td>
+<td>Minute</td>
+<td>✗</td>
+<td>Keyed table</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Complex</td>
+<td>✗</td>
+<td>Second</td>
+<td>✗</td>
+<td>Table</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Symbol</td>
+<td>✗</td>
+<td>Time</td>
+<td>✗</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      ~0 1 1 0
+1 0 0 1
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="natural-logarithm">
+<span id="nlog"></span><h2>Natural logarithm (*.)<a class="headerlink" href="#natural-logarithm" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      e&lt;-*.1
+      e
+2.7182818
+      *. _1 0 1 2 3
+0.36787944 1 2.7182818 7.3890561 20.085537
+      e*. _1 0 1 2 3
+0.36787944 1 2.7182818 7.3890561 20.085537
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="factorial">
+<span id="fact"></span><h2>Factorial (|.)<a class="headerlink" href="#factorial" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      |.1 2 3 4 5
+1 2 6 24 120
+</pre></div>
+</div>
+</li>
+<li><p class="first">Note: non-negative integer is required.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="domino">
+<span id="id4"></span><h2>Domino (#.)<a class="headerlink" href="#domino" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="reverse-on-1st-axis">
+<span id="rv1"></span><h2>Reverse on 1st axis ($.)<a class="headerlink" href="#reverse-on-1st-axis" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="enclose">
+<span id="encs"></span><h2>Enclose (&lt;.)<a class="headerlink" href="#enclose" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="grouping">
+<span id="gp"></span><h2>Grouping (&gt;.)<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="execute">
+<span id="exe"></span><h2>Execute (!.)<a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="first">
+<span id="id5"></span><h2>First (^.)<a class="headerlink" href="#first" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="floor">
+<span id="id6"></span><h2>Floor (_.)<a class="headerlink" href="#floor" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      _. 0.5 _1.2 0 3 _5
+0 _2 0 3 _5
+</pre></div>
+</div>
+</li>
+<li><p class="first">Note: similar to the function <code class="docutils literal"><span class="pre">floor</span></code> in C</p>
+</li>
+</ul>
+</div>
+<div class="section" id="ceiling">
+<span id="ceil"></span><h2>Ceiling (~.)<a class="headerlink" href="#ceiling" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code> (The same as <a class="reference internal" href="#neg">negate</a>)</p>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      ~. 0.5 _1.2 0 3 _5
+1 _1 0 3 _5
+</pre></div>
+</div>
+</li>
+<li><p class="first">Note: similar to the function <code class="docutils literal"><span class="pre">ceil</span></code> in C</p>
+</li>
+</ul>
+</div>
+<div class="section" id="raze">
+<span id="id7"></span><h2>Raze (,.)<a class="headerlink" href="#raze" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Domain of the parameter <code class="docutils literal"><span class="pre">x</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+<col width="24%" />
+<col width="10%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Boolean</td>
+<td>✓</td>
+<td>Month</td>
+<td>✓</td>
+<td>List</td>
+<td>✓</td>
+</tr>
+<tr class="row-even"><td>Integer</td>
+<td>✓</td>
+<td>Date</td>
+<td>✓</td>
+<td>Enumeration</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Float</td>
+<td>✓</td>
+<td>Datetime</td>
+<td>✓</td>
+<td>Dictionary</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Char</td>
+<td>✓</td>
+<td>Minute</td>
+<td>✓</td>
+<td>Keyed table</td>
+<td>✗</td>
+</tr>
+<tr class="row-odd"><td>Complex</td>
+<td>✓</td>
+<td>Second</td>
+<td>✓</td>
+<td>Table</td>
+<td>✗</td>
+</tr>
+<tr class="row-even"><td>Symbol</td>
+<td>✓</td>
+<td>Time</td>
+<td>✓</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">Code examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      ,(1 2;3 4)
+&lt;1 2
+&lt;3 4
+      ,.(1 2;3 4)
+1 2 3 4
+</pre></div>
+</div>
+</li>
+<li><p class="first">Note: currently designed for flattening lists</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ELI 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Hanfeng Chen.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

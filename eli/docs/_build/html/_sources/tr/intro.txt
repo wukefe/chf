@@ -1,0 +1,48 @@
+
+Introduction
+------------
+
+ELI supports vector form
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+ELI supports
+
+.. code-block:: none
+
+        12 + 7
+    19
+        1 2 3 + 4 5 6
+    5 7 9
+
+ELI executes from right to left
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The execution of ELI code starts from the most right side.  Every primitive has the equivalent priority.  No need to remember the order of primitives.  
+
+.. code-block:: none
+
+        2 * 3 + 5
+    16
+        2 + 3 - 1
+    4
+        3 - 1 + 2
+    0
+
+ELI computes complex numbers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A complex number can be represented as ``2j3``, where the *first* number is the real part and the *second* number is the imagine part.  The complex number is equivalent to ``2 + 3i``.
+
+.. code-block:: none
+
+        2j3 + 1
+    3j3
+
+
+ELI supports database components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: none
+
+    <TBA>
+

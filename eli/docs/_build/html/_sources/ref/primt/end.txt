@@ -1,0 +1,9 @@
+.. `Go back to table <elitable_>`_
+
+.. -----
+
+.. raw:: html
+
+	<div style="text-align:center"> 
+		<a href="#symbol-table">Back to Top</a>
+	</div>

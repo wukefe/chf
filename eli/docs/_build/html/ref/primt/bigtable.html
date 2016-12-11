@@ -1,0 +1,279 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Symbol Table &#8212; ELI 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="ELI 0.3 documentation" href="../../index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ELI 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/ref/primt/bigtable.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="symbol-table">
+<span id="elitable"></span><h1>Symbol Table<a class="headerlink" href="#symbol-table" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="7%" />
+<col width="44%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Symbol</th>
+<th class="head">Name</th>
+<th class="head">Symbol</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a href="#id1"><span class="problematic" id="id3">`jot &lt;jot_&gt;`_</span></a><a href="#id1"><span class="problematic" id="id2"> &lt;jot_&gt;</span></a></td>
+<td>.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id4"><span class="problematic" id="id6">`dot &lt;dot_&gt;`_</span></a><a href="#id4"><span class="problematic" id="id5"> &lt;dot_&gt;</span></a></td>
+<td>:</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a href="#id7"><span class="problematic" id="id9">`each &lt;each_&gt;`_</span></a><a href="#id7"><span class="problematic" id="id8"> &lt;each_&gt;</span></a></td>
+<td>&#8220;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id146"><span class="problematic" id="id147">`unique &lt;uniq_&gt;`_</span></a>/<a href="#id148"><span class="problematic" id="id149">`equal &lt;eq_&gt;`_</span></a></td>
+<td>=</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>minus(<a href="#id150"><span class="problematic" id="id151">`negate &lt;neg_&gt;`_</span></a>/<a href="#id152"><span class="problematic" id="id153">`substract &lt;sub_&gt;`_</span></a>)</td>
+<td>-</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>at(<a href="#id14"><span class="problematic" id="id16">`pi &lt;pi_&gt;`_</span></a><a href="#id14"><span class="problematic" id="id15"> &lt;pi_&gt;</span></a>/<a href="#id17"><span class="problematic" id="id19">`circle &lt;circle_&gt;`_</span></a><a href="#id17"><span class="problematic" id="id18"> &lt;circle_&gt;</span></a>)</td>
+<td>&#64;</td>
+<td><a href="#id20"><span class="problematic" id="id22">`del &lt;del_&gt;`_</span></a><a href="#id20"><span class="problematic" id="id21"> &lt;del_&gt;</span></a></td>
+<td>&#64;.</td>
+</tr>
+<tr class="row-even"><td>epsilon(<a href="#id154"><span class="problematic" id="id155">`member &lt;mem_&gt;`_</span></a>)</td>
+<td>?</td>
+<td><a href="#id156"><span class="problematic" id="id157">`random &lt;rand_&gt;`_</span></a></td>
+<td>?.</td>
+</tr>
+<tr class="row-odd"><td>star(<a href="#id158"><span class="problematic" id="id159">`signum &lt;sig_&gt;`_</span></a>/<a href="#id160"><span class="problematic" id="id161">`multiply &lt;mult_&gt;`_</span></a>)</td>
+<td>*</td>
+<td><a href="#id162"><span class="problematic" id="id163">`natural log &lt;nlog_&gt;`_</span></a>/<a href="#id28"><span class="problematic" id="id30">`power &lt;power_&gt;`_</span></a><a href="#id28"><span class="problematic" id="id29"> &lt;power_&gt;</span></a></td>
+<td>*.</td>
+</tr>
+<tr class="row-even"><td>percent(<a href="#id164"><span class="problematic" id="id165">`reciprocal &lt;rec_&gt;`_</span></a>/<a href="#id32"><span class="problematic" id="id34">`div &lt;div_&gt;`_</span></a><a href="#id32"><span class="problematic" id="id33"> &lt;div_&gt;</span></a>)</td>
+<td>%</td>
+<td><a href="#id35"><span class="problematic" id="id37">`log &lt;log_&gt;`_</span></a><a href="#id35"><span class="problematic" id="id36"> &lt;log_&gt;</span></a></td>
+<td>%.</td>
+</tr>
+<tr class="row-odd"><td>bar(<a href="#id166"><span class="problematic" id="id167">`absolute &lt;abs_&gt;`_</span></a>/<a href="#id168"><span class="problematic" id="id169">`residue &lt;res_&gt;`_</span></a>)</td>
+<td>|</td>
+<td>gamma(<a href="#id170"><span class="problematic" id="id171">`factorial &lt;fact_&gt;`_</span></a>/<a href="#id172"><span class="problematic" id="id173">`binom &lt;bim_&gt;`_</span></a>)</td>
+<td>|.</td>
+</tr>
+<tr class="row-even"><td>rho(<a href="#id42"><span class="problematic" id="id44">`shape &lt;shape_&gt;`_</span></a><a href="#id42"><span class="problematic" id="id43"> &lt;shape_&gt;</span></a>/<a href="#id45"><span class="problematic" id="id47">`reshape &lt;reshape_&gt;`_</span></a><a href="#id45"><span class="problematic" id="id46"> &lt;reshape_&gt;</span></a>)</td>
+<td>#</td>
+<td><a href="#id48"><span class="problematic" id="id50">`domino &lt;domino_&gt;`_</span></a><a href="#id48"><span class="problematic" id="id49"> &lt;domino_&gt;</span></a></td>
+<td>#.</td>
+</tr>
+<tr class="row-odd"><td>turn(<a href="#id174"><span class="problematic" id="id175">`reverse &lt;rev_&gt;`_</span></a>/<a href="#id52"><span class="problematic" id="id54">`rotate &lt;rotate_&gt;`_</span></a><a href="#id52"><span class="problematic" id="id53"> &lt;rotate_&gt;</span></a>)</td>
+<td>$</td>
+<td><a href="#id176"><span class="problematic" id="id177">`reverse &lt;rv1_&gt;`_</span></a>/<a href="#id178"><span class="problematic" id="id179">`roate(1st axis) &lt;rt1_&gt;`_</span></a></td>
+<td>$.</td>
+</tr>
+<tr class="row-even"><td>left(<a href="#id180"><span class="problematic" id="id181">`grade_up &lt;gup_&gt;`_</span></a>/<a href="#id58"><span class="problematic" id="id60">`less &lt;less_&gt;`_</span></a><a href="#id58"><span class="problematic" id="id59"> &lt;less_&gt;</span></a>)</td>
+<td>&lt;</td>
+<td>pack(<a href="#id182"><span class="problematic" id="id183">`enclose &lt;encs_&gt;`_</span></a>/<a href="#id184"><span class="problematic" id="id185">`encode &lt;encd_&gt;`_</span></a>)</td>
+<td>&lt;.</td>
+</tr>
+<tr class="row-odd"><td>right(<a href="#id186"><span class="problematic" id="id187">`grade_down &lt;gdw_&gt;`_</span></a>/<a href="#id188"><span class="problematic" id="id189">`greater &lt;gt_&gt;`_</span></a>)</td>
+<td>&gt;</td>
+<td>unpack(<a href="#id190"><span class="problematic" id="id191">`grouping &lt;gp_&gt;`_</span></a>/<a class="reference external" href="decd">decode</a>)</td>
+<td>&gt;.</td>
+</tr>
+<tr class="row-even"><td>iota(<a href="#id192"><span class="problematic" id="id193">`interval &lt;itv_&gt;`_</span></a>/<a href="#id194"><span class="problematic" id="id195">`index_of &lt;indof_&gt;`_</span></a>)</td>
+<td>!</td>
+<td><a href="#id196"><span class="problematic" id="id197">`execute &lt;exe_&gt;`_</span></a>/<a href="#id69"><span class="problematic" id="id71">`drop &lt;drop_&gt;`_</span></a><a href="#id69"><span class="problematic" id="id70"> &lt;drop_&gt;</span></a></td>
+<td>!.</td>
+</tr>
+<tr class="row-odd"><td><a href="#id198"><span class="problematic" id="id199">`count &lt;cnt_&gt;`_</span></a>/<a href="#id73"><span class="problematic" id="id75">`and &lt;and_&gt;`_</span></a><a href="#id73"><span class="problematic" id="id74"> &lt;and_&gt;</span></a></td>
+<td>^</td>
+<td><a href="#id76"><span class="problematic" id="id78">`first &lt;first_&gt;`_</span></a><a href="#id76"><span class="problematic" id="id77"> &lt;first_&gt;</span></a>/<a href="#id79"><span class="problematic" id="id81">`take &lt;take_&gt;`_</span></a><a href="#id79"><span class="problematic" id="id80"> &lt;take_&gt;</span></a></td>
+<td>^.</td>
+</tr>
+<tr class="row-even"><td><a href="#id82"><span class="problematic" id="id84">`or &lt;or_&gt;`_</span></a><a href="#id82"><span class="problematic" id="id83"> &lt;or_&gt;</span></a></td>
+<td>&amp;</td>
+<td>flip(<a href="#id200"><span class="problematic" id="id201">`transpose &lt;trans_&gt;`_</span></a>)</td>
+<td>&amp;.</td>
+</tr>
+<tr class="row-odd"><td>plus(<a href="#id202"><span class="problematic" id="id203">`conjugate &lt;conj_&gt;`_</span></a>/<a href="#id87"><span class="problematic" id="id89">`add &lt;add_&gt;`_</span></a><a href="#id87"><span class="problematic" id="id88"> &lt;add_&gt;</span></a>)</td>
+<td>+</td>
+<td><a href="#id90"><span class="problematic" id="id92">`format &lt;format_&gt;`_</span></a><a href="#id90"><span class="problematic" id="id91"> &lt;format_&gt;</span></a></td>
+<td>+.</td>
+</tr>
+<tr class="row-even"><td><a href="#id204"><span class="problematic" id="id205">`high_minus &lt;hmin_&gt;`_</span></a></td>
+<td>_</td>
+<td>lower(<a href="#id94"><span class="problematic" id="id96">`floor &lt;floor_&gt;`_</span></a><a href="#id94"><span class="problematic" id="id95"> &lt;floor_&gt;</span></a>/<a href="#id206"><span class="problematic" id="id207">`minimum &lt;min_&gt;`_</span></a>)</td>
+<td>_.</td>
+</tr>
+<tr class="row-odd"><td><a href="#id98"><span class="problematic" id="id100">`not &lt;not_&gt;`_</span></a><a href="#id98"><span class="problematic" id="id99"> &lt;not_&gt;</span></a></td>
+<td>~</td>
+<td>upper(<a href="#id208"><span class="problematic" id="id209">`ceiling &lt;ceil_&gt;`_</span></a>/<a href="#id210"><span class="problematic" id="id211">`maximum &lt;max_&gt;`_</span></a>)</td>
+<td>~.</td>
+</tr>
+<tr class="row-even"><td>slash(<a href="#id103"><span class="problematic" id="id105">`reduce &lt;reduce_&gt;`_</span></a><a href="#id103"><span class="problematic" id="id104"> &lt;reduce_&gt;</span></a>/<a href="#id212"><span class="problematic" id="id213">`compress &lt;comp_&gt;`_</span></a>)</td>
+<td>/</td>
+<td>slashdot(<a href="#id214"><span class="problematic" id="id215">`reduct1 &lt;red1_&gt;`_</span></a>/<a href="#id216"><span class="problematic" id="id217">`compre1 &lt;cpr1_&gt;`_</span></a>)</td>
+<td>/.</td>
+</tr>
+<tr class="row-odd"><td>back slash(<a href="#id109"><span class="problematic" id="id111">`scan &lt;scan_&gt;`_</span></a><a href="#id109"><span class="problematic" id="id110"> &lt;scan_&gt;</span></a>/<a href="#id218"><span class="problematic" id="id219">`expand &lt;exp_&gt;`_</span></a>)</td>
+<td>\</td>
+<td>back slash(<a href="#id113"><span class="problematic" id="id115">`scan1 &lt;scan1_&gt;`_</span></a><a href="#id113"><span class="problematic" id="id114"> &lt;scan1_&gt;</span></a>/<a href="#id220"><span class="problematic" id="id221">`expand1 &lt;exp1_&gt;`_</span></a>)</td>
+<td>\.</td>
+</tr>
+<tr class="row-even"><td><a href="#id117"><span class="problematic" id="id119">`catenate &lt;catenate_&gt;`_</span></a><a href="#id117"><span class="problematic" id="id118"> &lt;catenate_&gt;</span></a></td>
+<td>,</td>
+<td><a href="#id120"><span class="problematic" id="id122">`raze &lt;raze_&gt;`_</span></a><a href="#id120"><span class="problematic" id="id121"> &lt;raze_&gt;</span></a>/<a href="#id222"><span class="problematic" id="id223">`catenate(1st axis) &lt;cat1_&gt;`_</span></a></td>
+<td>,.</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id124"><span class="problematic" id="id126">`assign &lt;assign_&gt;`_</span></a><a href="#id124"><span class="problematic" id="id125"> &lt;assign_&gt;</span></a></td>
+<td>&lt;-</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id127"><span class="problematic" id="id129">`branch &lt;branch_&gt;`_</span></a><a href="#id127"><span class="problematic" id="id128"> &lt;branch_&gt;</span></a></td>
+<td>-&gt;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id130"><span class="problematic" id="id132">`nand &lt;nand_&gt;`_</span></a><a href="#id130"><span class="problematic" id="id131"> &lt;nand_&gt;</span></a></td>
+<td>~^</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id133"><span class="problematic" id="id135">`nor &lt;nor_&gt;`_</span></a><a href="#id133"><span class="problematic" id="id134"> &lt;nor_&gt;</span></a></td>
+<td>~&amp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id224"><span class="problematic" id="id225">`not equal &lt;neq_&gt;`_</span></a></td>
+<td>~=</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id226"><span class="problematic" id="id227">`less or equal &lt;leq_&gt;`_</span></a></td>
+<td>&lt;=</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id228"><span class="problematic" id="id229">`greater or equal &lt;geq_&gt;`_</span></a></td>
+<td>&gt;=</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id139"><span class="problematic" id="id141">`comment &lt;comment_&gt;`_</span></a><a href="#id139"><span class="problematic" id="id140"> &lt;comment_&gt;</span></a></td>
+<td>//</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id142"><span class="problematic" id="id144">`quad &lt;quad_&gt;`_</span></a><a href="#id142"><span class="problematic" id="id143"> &lt;quad_&gt;</span></a></td>
+<td>[]</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="#id230"><span class="problematic" id="id231">`bare quad &lt;bquad_&gt;`_</span></a></td>
+<td>[)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ELI 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Hanfeng Chen.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

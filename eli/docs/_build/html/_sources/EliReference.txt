@@ -18,6 +18,7 @@ ELI - Language Reference
    :maxdepth: 2
    
    ref/intro.rst
+   ref/lexic.rst
    ref/types.rst
    ref/seman.rst
    ref/primt.rst

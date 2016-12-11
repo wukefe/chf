@@ -1,0 +1,271 @@
+Mixed
+=====
+
+.. _each:
+
+Each (")
+~~~~~~~~
+
+.. Sec 2.3
+
+.. code-block:: none
+
+          *"(_2 3;4 _5 6)
+    <_1 1
+    <1 _1 1
+          *"_2 3
+    _1 1
+
+
+- Apply a monadic operator to a list or a simple array
+
+.. _jot:
+
+Jot (.)
+~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _dot:
+
+Dot (:)
+~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _reduce:
+
+Reduce (/)
+~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _scan:
+
+Scan (\)
+~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _comp:
+
+Compress (/)
+~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _exp:
+
+Expand (\\)
+~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _del:
+
+Del (@.)
+~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _rand:
+
+Random (\?.)
+~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _log:
+
+Log (%.)
+~~~~~~~~
+
+.. code-block:: none
+
+          10%. 1 10 100 1000 10000
+    0 1 2 2 3 4
+          10%. 1 10 100 1000 10000 100000
+    0 1 2 3 4 5
+          2%. 0.5 1 2 4 8 16
+    _1 0 1 2 3 4
+          2 3 10%. 4 9 100
+    2 2 2
+          e<-*.1
+          e
+    2.718282
+          %.1 10 100 1000 10000 100000 
+    0 2.302585 4.60517 6.907755 9.21034 11.512925
+          e%.1 10 100 1000 10000 100000 
+    0 2.302585 4.60517 6.907755 9.21034 11.512925
+
+.. include:: primt/end.rst
+
+
+
+.. _trans:
+
+Transpose (&.)
+~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _format:
+
+Format (\+.)
+~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _red1:
+
+Reduct on 1st axis (/.)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _cpr1:
+
+Compre on 1st axis (/.)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _scan1:
+
+Scan on 1st axis (\\.)
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _exp1:
+
+Expand on 1st axis (\\.)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+.. _assign:
+
+Assign (<-)
+~~~~~~~~~~~
+
+.. code-block:: none
+
+          A<-'BC'
+          ch<-'abcde''1234'
+          ch
+    abcde'1234
+          A
+    BC
+
+.. include:: primt/end.rst
+
+
+
+.. _branch:
+
+Branch (->)
+~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _nand:
+
+Nand (~^)
+~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _nor:
+
+Nor (~&)
+~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _neq:
+
+Not equal (~=)
+~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _leq:
+
+Less than equal (<=)
+~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _geq:
+
+Greater than equal (>=)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _comment:
+
+Comment (//)
+~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _quad:
+
+Quad ([])
+~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _bquad:
+
+Bare quad ([)
+~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+

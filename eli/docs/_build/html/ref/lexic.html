@@ -1,0 +1,246 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lexical elements &#8212; ELI 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="ELI 0.3 documentation" href="../index.html" />
+    <link rel="up" title="ELI - Language Reference" href="../EliReference.html" />
+    <link rel="next" title="Type and Shape" href="types.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="types.html" title="Type and Shape"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../EliReference.html" accesskey="U">ELI - Language Reference</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Lexical elements</a><ul>
+<li><a class="reference internal" href="#comments">Comments</a></li>
+<li><a class="reference internal" href="#encoding">Encoding</a></li>
+<li><a class="reference internal" href="#semicolons">Semicolons</a></li>
+<li><a class="reference internal" href="#identifiers">Identifiers</a></li>
+<li><a class="reference internal" href="#keywords">Keywords</a></li>
+<li><a class="reference internal" href="#operators">Operators</a></li>
+<li><a class="reference internal" href="#integer-literals">Integer literals</a></li>
+<li><a class="reference internal" href="#floating-point-literals">Floating-point literals</a></li>
+<li><a class="reference internal" href="#complex-number-literals">Complex number literals</a></li>
+<li><a class="reference internal" href="#string-literals">String literals</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="types.html"
+                        title="next chapter">Type and Shape</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/ref/lexic.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lexical-elements">
+<h1>Lexical elements<a class="headerlink" href="#lexical-elements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>A single line comment can be achieved by using &#8216;//&#8217;.</p>
+</div>
+<div class="section" id="encoding">
+<h2>Encoding<a class="headerlink" href="#encoding" title="Permalink to this headline">¶</a></h2>
+<p>Currently, ELI only supports ASCII.</p>
+</div>
+<div class="section" id="semicolons">
+<h2>Semicolons<a class="headerlink" href="#semicolons" title="Permalink to this headline">¶</a></h2>
+<p>A semicolon may have two meanings</p>
+<ul class="simple">
+<li>Array dimension delimit.  It is a separator used in array indexing.  For example, <code class="docutils literal"><span class="pre">arr[x;y]</span></code>;</li>
+<li>Multiple statement separator.  One line code with multiple statements is supported with semicolons.  The execution order of statements is from left to right, but within a statement, the execution order remains the same (from right to left).  For example, <code class="docutils literal"><span class="pre">a&lt;-!5;[]&lt;-1+a</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="identifiers">
+<h2>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>An identifier starts with a letter;</li>
+<li>It can follow with arbitrary numbers and underscores(&#8216;_&#8217;);</li>
+<li>But, the last character cannot be an underscore</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre><span></span>identifier ::= letter { letternum | underscore }
+underscore ::= {&#39;_&#39;} letternum
+letternum  ::= letter | [0-9]
+letter     ::= [a-zA-Z]
+</pre></div>
+</div>
+</div>
+<div class="section" id="keywords">
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>System commands (<a class="reference external" href="syscd.html">Details</a>)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>)LOAD</td>
+<td>)SAVE</td>
+<td>)WSID</td>
+<td>)FNS</td>
+</tr>
+<tr class="row-even"><td>)FLOAD</td>
+<td>)OUT</td>
+<td>)OFF</td>
+<td>)VARS</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="operators">
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<p>Please refer to the <a class="reference external" href="primt.html">primitive function</a> page.</p>
+</div>
+<div class="section" id="integer-literals">
+<h2>Integer literals<a class="headerlink" href="#integer-literals" title="Permalink to this headline">¶</a></h2>
+<p>Currently, only decimal integers are supported.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>int      ::= [&#39;+&#39; | &#39;_&#39;] decimals
+decimals ::= digit { digit }
+digit    ::= [0-9]
+</pre></div>
+</div>
+</div>
+<div class="section" id="floating-point-literals">
+<h2>Floating-point literals<a class="headerlink" href="#floating-point-literals" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none"><div class="highlight"><pre><span></span>float    ::= decimals &#39;.&#39; decimals [exponent] | decimals exponent
+exponent ::= (&#39;e&#39; | &#39;E&#39;) [&#39;+&#39; | &#39;_&#39;] decimals
+</pre></div>
+</div>
+<p>Examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>0.    //syntax error
+0.1
+2.3e5
+2.e5  //syntax error
+.1e3  //syntax error
+</pre></div>
+</div>
+</div>
+<div class="section" id="complex-number-literals">
+<h2>Complex number literals<a class="headerlink" href="#complex-number-literals" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none"><div class="highlight"><pre><span></span>complex ::= real &#39;j&#39; real
+real    ::= int | float
+</pre></div>
+</div>
+<p>Examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>2j3
+2.3j4
+2j3.4
+</pre></div>
+</div>
+</div>
+<div class="section" id="string-literals">
+<h2>String literals<a class="headerlink" href="#string-literals" title="Permalink to this headline">¶</a></h2>
+<p>A string starts with a single quote(<code class="docutils literal"><span class="pre">'</span></code>).  The content can be any possible ASCII characters.  But if you want to include a single quote, you need to type two single quotes consecutively (i.e. <code class="docutils literal"><span class="pre">''</span></code>).</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>string  ::= \&#39; { content } \&#39;
+content ::= letters | \&#39;\&#39;
+letters ::= all ASCII characters except \&#39;
+</pre></div>
+</div>
+<p>Examples</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>&#39;It is a nice string&#39;
+&#39;It&#39;&#39;s a nice string&#39;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="types.html" title="Type and Shape"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ELI 0.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../EliReference.html" >ELI - Language Reference</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Hanfeng Chen.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

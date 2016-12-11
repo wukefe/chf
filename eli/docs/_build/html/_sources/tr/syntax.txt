@@ -1,0 +1,38 @@
+ELI Syntax
+----------
+
+ELI Syntax, consists of a set of rules, constructs ELI programs.
+
+Programs
+~~~~~~~~
+
+Functions
+~~~~~~~~~
+
+Statements
+~~~~~~~~~~
+
+Variables
+~~~~~~~~~
+
+Operators
+~~~~~~~~~
+
+
+Expression
+~~~~~~~~~~
+
+System functions
+~~~~~~~~~~~~~~~~
+
+Comments
+~~~~~~~~
+
+Identifiers
+~~~~~~~~~~~
+
+Character Set
+~~~~~~~~~~~~~
+
+Currently, ELI only supports ASCII character set.
+

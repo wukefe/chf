@@ -2,10 +2,17 @@
 Introduction
 ------------
 
-ELI Websites
-~~~~~~~~~~~~
+This is a reference manual for ELI programming language. For more information about ELI, please visit `fastarray <http://fastarray.appspot.com/default.html>`_ and `wiki <https://en.wikipedia.org/wiki/ELI_(programming_language)>`_.
 
-Active
+Unlike APL, ELI uses ASCII characters.  ELI has one or two ASCII characters to denote one APL notation.  Normally, the second character is a dot(.) which extends a function to another similar function.  For example, in terms of dyadic functions, the Asterisk(``*``) is the *multiplication* and the ``*.`` is the *power*.  This design helps ELI programmers quickly grasp the language with rich primitives.
+
+ELI is a succinct and powerful array programming language.  You don't need to write loops for iterating every element in arrays. Instead, the set of well-designed primitives can take over the loops so that programmers are freed from tedious labor work and use ELI as a tool of thought.
+
+.. raw:: html
+
+  <h3>ELI On-line</h3>
+
+**Active**
 
 - | Since 2015 (Mirror site)
   | School of computer science at McGill University
@@ -24,7 +31,6 @@ Deprecated
   | http://mpi.zjnu.edu.cn/eli/
 
 Website Map
-~~~~~~~~~~~
 
 - | `Home`__
   | Highlight the features of ELI and EliStudio;

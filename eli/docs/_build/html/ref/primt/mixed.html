@@ -1,0 +1,243 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mixed &#8212; ELI 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="ELI 0.3 documentation" href="../../index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ELI 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mixed</a><ul>
+<li><a class="reference internal" href="#each">Each (&#8221;)</a></li>
+<li><a class="reference internal" href="#jot">Jot (.)</a></li>
+<li><a class="reference internal" href="#dot">Dot (:)</a></li>
+<li><a class="reference internal" href="#reduce">Reduce (/)</a></li>
+<li><a class="reference internal" href="#scan">Scan ()</a></li>
+<li><a class="reference internal" href="#compress">Compress (/)</a></li>
+<li><a class="reference internal" href="#expand">Expand (\)</a></li>
+<li><a class="reference internal" href="#del">Del (&#64;.)</a></li>
+<li><a class="reference internal" href="#random">Random (?.)</a></li>
+<li><a class="reference internal" href="#log">Log (%.)</a></li>
+<li><a class="reference internal" href="#transpose">Transpose (&amp;.)</a></li>
+<li><a class="reference internal" href="#format">Format (+.)</a></li>
+<li><a class="reference internal" href="#reduct-on-1st-axis">Reduct on 1st axis (/.)</a></li>
+<li><a class="reference internal" href="#compre-on-1st-axis">Compre on 1st axis (/.)</a></li>
+<li><a class="reference internal" href="#scan-on-1st-axis">Scan on 1st axis (\.)</a></li>
+<li><a class="reference internal" href="#expand-on-1st-axis">Expand on 1st axis (\.)</a></li>
+<li><a class="reference internal" href="#assign">Assign (&lt;-)</a></li>
+<li><a class="reference internal" href="#branch">Branch (-&gt;)</a></li>
+<li><a class="reference internal" href="#nand">Nand (~^)</a></li>
+<li><a class="reference internal" href="#nor">Nor (~&amp;)</a></li>
+<li><a class="reference internal" href="#not-equal">Not equal (~=)</a></li>
+<li><a class="reference internal" href="#less-than-equal">Less than equal (&lt;=)</a></li>
+<li><a class="reference internal" href="#greater-than-equal">Greater than equal (&gt;=)</a></li>
+<li><a class="reference internal" href="#comment">Comment (//)</a></li>
+<li><a class="reference internal" href="#quad">Quad ([])</a></li>
+<li><a class="reference internal" href="#bare-quad">Bare quad ([)</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/ref/primt/mixed.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mixed">
+<h1>Mixed<a class="headerlink" href="#mixed" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="each">
+<span id="id1"></span><h2>Each (&#8221;)<a class="headerlink" href="#each" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      *&quot;(_2 3;4 _5 6)
+&lt;_1 1
+&lt;1 _1 1
+      *&quot;_2 3
+_1 1
+</pre></div>
+</div>
+<ul class="simple">
+<li>Apply a monadic operator to a list or a simple array</li>
+</ul>
+</div>
+<div class="section" id="jot">
+<span id="id2"></span><h2>Jot (.)<a class="headerlink" href="#jot" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="dot">
+<span id="id3"></span><h2>Dot (:)<a class="headerlink" href="#dot" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="reduce">
+<span id="id4"></span><h2>Reduce (/)<a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="scan">
+<span id="id5"></span><h2>Scan ()<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="compress">
+<span id="comp"></span><h2>Compress (/)<a class="headerlink" href="#compress" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="expand">
+<span id="exp"></span><h2>Expand (\)<a class="headerlink" href="#expand" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="del">
+<span id="id6"></span><h2>Del (&#64;.)<a class="headerlink" href="#del" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="random">
+<span id="rand"></span><h2>Random (?.)<a class="headerlink" href="#random" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="log">
+<span id="id7"></span><h2>Log (%.)<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      10%. 1 10 100 1000 10000
+0 1 2 2 3 4
+      10%. 1 10 100 1000 10000 100000
+0 1 2 3 4 5
+      2%. 0.5 1 2 4 8 16
+_1 0 1 2 3 4
+      2 3 10%. 4 9 100
+2 2 2
+      e&lt;-*.1
+      e
+2.718282
+      %.1 10 100 1000 10000 100000
+0 2.302585 4.60517 6.907755 9.21034 11.512925
+      e%.1 10 100 1000 10000 100000
+0 2.302585 4.60517 6.907755 9.21034 11.512925
+</pre></div>
+</div>
+</div>
+<div class="section" id="transpose">
+<span id="trans"></span><h2>Transpose (&amp;.)<a class="headerlink" href="#transpose" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="format">
+<span id="id8"></span><h2>Format (+.)<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="reduct-on-1st-axis">
+<span id="red1"></span><h2>Reduct on 1st axis (/.)<a class="headerlink" href="#reduct-on-1st-axis" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="compre-on-1st-axis">
+<span id="cpr1"></span><h2>Compre on 1st axis (/.)<a class="headerlink" href="#compre-on-1st-axis" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="scan-on-1st-axis">
+<span id="scan1"></span><h2>Scan on 1st axis (\.)<a class="headerlink" href="#scan-on-1st-axis" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="expand-on-1st-axis">
+<span id="exp1"></span><h2>Expand on 1st axis (\.)<a class="headerlink" href="#expand-on-1st-axis" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="assign">
+<span id="id9"></span><h2>Assign (&lt;-)<a class="headerlink" href="#assign" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-none"><div class="highlight"><pre><span></span>      A&lt;-&#39;BC&#39;
+      ch&lt;-&#39;abcde&#39;&#39;1234&#39;
+      ch
+abcde&#39;1234
+      A
+BC
+</pre></div>
+</div>
+</div>
+<div class="section" id="branch">
+<span id="id10"></span><h2>Branch (-&gt;)<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="nand">
+<span id="id11"></span><h2>Nand (~^)<a class="headerlink" href="#nand" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="nor">
+<span id="id12"></span><h2>Nor (~&amp;)<a class="headerlink" href="#nor" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="not-equal">
+<span id="neq"></span><h2>Not equal (~=)<a class="headerlink" href="#not-equal" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="less-than-equal">
+<span id="leq"></span><h2>Less than equal (&lt;=)<a class="headerlink" href="#less-than-equal" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="greater-than-equal">
+<span id="geq"></span><h2>Greater than equal (&gt;=)<a class="headerlink" href="#greater-than-equal" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="comment">
+<span id="id13"></span><h2>Comment (//)<a class="headerlink" href="#comment" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="quad">
+<span id="id14"></span><h2>Quad ([])<a class="headerlink" href="#quad" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="bare-quad">
+<span id="bquad"></span><h2>Bare quad ([)<a class="headerlink" href="#bare-quad" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">ELI 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Hanfeng Chen.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

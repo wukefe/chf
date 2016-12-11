@@ -1,0 +1,561 @@
+Monadic
+=======
+
+A monadic function only takes one argument. For example, ``f x`` where ``f`` is the monadic function and ``x`` is the only argument the function takes.  Usually, the function ``f`` has different behaviors based on different types of input data.
+
+.. _uniq:
+
+Unique (=)
+~~~~~~~~~~
+
+.. ✓, ✗
+
+- Domain of the parameter ``x``
+
+  +------------+-----+------------+-----+------------+-----+
+  | Boolean    | ✓   | Month      | ✓   | List       | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Integer    | ✓   | Date       | ✓   | Enumeration| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Float      | ✓   | Datetime   | ✓   | Dictionary | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Char       | ✓   | Minute     | ✓   | Keyed table| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Complex    | ✓   | Second     | ✓   | Table      | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Symbol     | ✓   | Time       | ✓   |            |     |
+  +------------+-----+------------+-----+------------+-----+
+
+- Code examples
+
+  .. code-block:: none
+
+            V
+      86 25 55 48 78 95 36 36 14 65
+            =V
+      86 25 55 48 78 95 36 14 65
+            V=36
+      0 0 0 0 0 0 1 1 0 0
+
+
+.. include:: primt/end.rst
+
+
+.. _neg:
+
+Negate (-)
+~~~~~~~~~~
+
+- Domain of the parameter ``x``
+
+  +------------+-----+------------+-----+------------+-----+
+  | Boolean    | ✓   | Month      | ✗   | List       | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Integer    | ✓   | Date       | ✗   | Enumeration| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Float      | ✓   | Datetime   | ✗   | Dictionary | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Char       | ✓   | Minute     | ✗   | Keyed table| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Complex    | ✓   | Second     | ✗   | Table      | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Symbol     | ✗   | Time       | ✗   |            |     |
+  +------------+-----+------------+-----+------------+-----+
+
+- Code examples
+
+  .. code-block:: none
+
+            V
+      86 25 55 48 78 95 36 36 14 65
+            -V
+      _86 _25 _55 _48 _78 _95 _36 _36 _14 _65
+
+.. include:: primt/end.rst
+
+
+.. _pi:
+
+Pi (@)
+~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            @0 1 2 3
+      0 3.141592654 6.283185307 9.424777961
+
+.. include:: primt/end.rst
+
+
+.. _sig:
+
+Signum (*)
+~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+          V
+      86 25 55 48 78 95 36 36 14 65 
+          P
+      17.3 22.3 24.3 17.5 21.4 18.4 17.2 15 20.8 21.8
+          *P-P0<-20
+      _1 1 1 _1 1 _1 _1 _1 1 1
+          V**P-P0
+      _86 25 55 _48 78 _95 _36 _36 14 65
+
+.. include:: primt/end.rst
+
+
+.. _rec:
+
+Reciprocal (%)
+~~~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            %0
+      Error: domain error
+            %0
+            ^
+            %1 2 4 8
+      1 0.5 0.25 0.125
+
+.. include:: primt/end.rst
+
+
+.. _abs:
+
+Absolute (|)
+~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            | _1 2 _3.2 5 0 _10
+      1 2 3.2 5 0 10
+
+.. include:: primt/end.rst
+
+
+.. _shape:
+
+Shape (#)
+~~~~~~~~~
+
+- Domain of the parameter ``x``
+
+  +------------+-----+------------+-----+------------+-----+
+  | Boolean    | ✓   | Month      | ✓   | List       | ✓   |
+  +------------+-----+------------+-----+------------+-----+
+  | Integer    | ✓   | Date       | ✓   | Enumeration| ✓   |
+  +------------+-----+------------+-----+------------+-----+
+  | Float      | ✓   | Datetime   | ✓   | Dictionary | ✓   |
+  +------------+-----+------------+-----+------------+-----+
+  | Char       | ✓   | Minute     | ✓   | Keyed table| ✓   |
+  +------------+-----+------------+-----+------------+-----+
+  | Complex    | ✓   | Second     | ✓   | Table      | ✓   |
+  +------------+-----+------------+-----+------------+-----+
+  | Symbol     | ✓   | Time       | ✓   |            |     |
+  +------------+-----+------------+-----+------------+-----+
+
+
+- Code examples
+
+  .. code-block:: none
+
+            a<-2 3#9 2 3 4 5 6
+            a
+      9 2 3
+      4 5 6
+            #a
+      2 3
+            #empv<-0#a
+      0
+            #empm<-0 10#'A'
+      0 10
+
+.. include:: primt/end.rst
+
+
+
+.. _rev:
+
+Reverse ($)
+~~~~~~~~~~~
+
+- Domain of the parameter ``x``
+
+  +------------+-----+------------+-----+------------+-----+
+  | Boolean    | ✓   | Month      | ✓   | List       | ✓   |
+  +------------+-----+------------+-----+------------+-----+
+  | Integer    | ✓   | Date       | ✓   | Enumeration| ✓   |
+  +------------+-----+------------+-----+------------+-----+
+  | Float      | ✓   | Datetime   | ✓   | Dictionary | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Char       | ✓   | Minute     | ✓   | Keyed table| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Complex    | ✓   | Second     | ✓   | Table      | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Symbol     | ✓   | Time       | ✓   |            |     |
+  +------------+-----+------------+-----+------------+-----+
+
+- Code examples
+
+  .. code-block:: none
+
+            V
+      86 25 55 48 78 95 36 36 14 65
+            $V
+      65 14 36 36 95 78 48 55 25 86
+
+.. include:: primt/end.rst
+
+
+
+.. _gup:
+
+Grade Up (<)
+~~~~~~~~~~~~
+
+- Domain of the parameter ``x``
+
+  +------------+-----+------------+-----+------------+-----+
+  | Boolean    | ✓   | Month      | ✓   | List       | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Integer    | ✓   | Date       | ✓   | Enumeration| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Float      | ✓   | Datetime   | ✓   | Dictionary | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Char       | ✓   | Minute     | ✓   | Keyed table| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Complex    | ✓   | Second     | ✓   | Table      | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Symbol     | ✓   | Time       | ✓   |            |     |
+  +------------+-----+------------+-----+------------+-----+
+
+- Code examples
+
+  .. code-block:: none
+
+            V
+      86 25 55 48 78 95 36 36 14 65
+            <V
+      9 2 7 8 4 3 10 5 1 6
+            V[<V]
+      14 25 36 36 48 55 65 78 86 95
+
+.. include:: primt/end.rst
+
+
+.. _gdw:
+
+Grade Down (>)
+~~~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `grade up <gup_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            V
+      86 25 55 48 78 95 36 36 14 65
+            >V
+      6 1 5 10 3 4 7 8 2 9
+            V[>V]
+      95 86 78 65 55 48 36 36 25 14
+
+
+.. include:: primt/end.rst
+
+
+
+.. _itv:
+
+Interval (\!)
+~~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `not <not_>`_)
+- Code examples
+
+  .. code-block:: none
+      
+          !5
+      1 2 3 4 5
+          !2.3
+      Error: domain error
+          !2.3
+          ^
+
+  The generated interval is influenced by the system variable `[]IO`.
+
+  .. code-block:: none
+
+            []IO<-0
+      0
+            !12
+      0 1 2 3 4 5 6 7 8 9 10 11
+
+.. include:: primt/end.rst
+
+
+.. _cnt:
+
+Count (^)
+~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `shape <shape_>`_)
+- Code examples
+
+  .. code-block:: none
+
+          ^`abc
+      1
+          s3<-`abc `ddl `comp
+          ^s3
+      4
+
+.. include:: primt/end.rst
+
+
+.. _conj:
+
+Conjugate (+)
+~~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            +_1 2 _3.2 5 0 _10
+      _1 2 _3.2 5 0 _10
+            +1j2 2.3j_3
+      1j_2 2.3j3
+
+.. include:: primt/end.rst
+
+
+
+.. _hmin:
+
+High_minus (_)
+~~~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            _1 2 3
+      _1 2 3
+
+.. include:: primt/end.rst
+
+
+.. _not:
+
+Not (~)
+~~~~~~~
+
+- Domain of the parameter ``x``
+
+  +------------+-----+------------+-----+------------+-----+
+  | Boolean    | ✓   | Month      | ✗   | List       | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Integer    | ✓   | Date       | ✗   | Enumeration| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Float      | ✗   | Datetime   | ✗   | Dictionary | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Char       | ✗   | Minute     | ✗   | Keyed table| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Complex    | ✗   | Second     | ✗   | Table      | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Symbol     | ✗   | Time       | ✗   |            |     |
+  +------------+-----+------------+-----+------------+-----+
+
+- Code examples
+
+  .. code-block:: none
+
+            ~0 1 1 0
+      1 0 0 1
+
+.. include:: primt/end.rst
+
+
+.. _nlog:
+
+Natural logarithm (\*.)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            e<-*.1
+            e
+      2.7182818
+            *. _1 0 1 2 3
+      0.36787944 1 2.7182818 7.3890561 20.085537
+            e*. _1 0 1 2 3
+      0.36787944 1 2.7182818 7.3890561 20.085537
+
+.. include:: primt/end.rst
+
+
+
+.. _fact:
+
+Factorial (\|.)
+~~~~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            |.1 2 3 4 5
+      1 2 6 24 120
+
+- Note: non-negative integer is required.
+
+.. include:: primt/end.rst
+
+
+.. _domino:
+
+Domino (\#.)
+~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _rv1:
+
+Reverse on 1st axis ($.)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+.. _encs:
+
+Enclose (<.)
+~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _gp:
+
+Grouping (>.)
+~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _exe:
+
+Execute (\!.)
+~~~~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _first:
+
+First (^.)
+~~~~~~~~~~
+
+.. include:: primt/end.rst
+
+
+
+.. _floor:
+
+Floor (_.)
+~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            _. 0.5 _1.2 0 3 _5
+      0 _2 0 3 _5
+- Note: similar to the function ``floor`` in C
+
+
+.. include:: primt/end.rst
+
+
+
+.. _ceil:
+
+Ceiling (~.)
+~~~~~~~~~~~~
+
+- Domain of the parameter ``x`` (The same as `negate <neg_>`_)
+- Code examples
+
+  .. code-block:: none
+
+            ~. 0.5 _1.2 0 3 _5
+      1 _1 0 3 _5
+- Note: similar to the function ``ceil`` in C
+
+.. include:: primt/end.rst
+
+
+
+.. _raze:
+
+Raze (,.)
+~~~~~~~~~
+
+- Domain of the parameter ``x``
+
+  +------------+-----+------------+-----+------------+-----+
+  | Boolean    | ✓   | Month      | ✓   | List       | ✓   |
+  +------------+-----+------------+-----+------------+-----+
+  | Integer    | ✓   | Date       | ✓   | Enumeration| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Float      | ✓   | Datetime   | ✓   | Dictionary | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Char       | ✓   | Minute     | ✓   | Keyed table| ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Complex    | ✓   | Second     | ✓   | Table      | ✗   |
+  +------------+-----+------------+-----+------------+-----+
+  | Symbol     | ✓   | Time       | ✓   |            |     |
+  +------------+-----+------------+-----+------------+-----+
+
+- Code examples
+
+  .. code-block:: none
+
+            ,(1 2;3 4)
+      <1 2
+      <3 4
+            ,.(1 2;3 4)
+      1 2 3 4
+
+- Note: currently designed for flattening lists
+
+.. include:: primt/end.rst
+
